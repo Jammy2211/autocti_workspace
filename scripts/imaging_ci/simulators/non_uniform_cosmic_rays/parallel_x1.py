@@ -22,43 +22,64 @@ gives it a descriptive name. They define the folder the dataset is output to on 
 
  - The image will be output to '/autocti_workspace/dataset/dataset_label/dataset_name/image.fits'.
  - The noise-map will be output to '/autocti_workspace/dataset/dataset_label/dataset_name/noise_map.fits'.
- - The ci_pre_cti will be output to '/autocti_workspace/dataset/dataset_label/dataset_name/ci_pre_cti.fits'.
+ - The pre_cti_image will be output to '/autocti_workspace/dataset/dataset_label/dataset_name/pre_cti_image.fits'.
 """
-dataset_type = "ci_imaging"
+dataset_type = "imaging_ci"
 dataset_label = "non_uniform_cosmic_rays"
 dataset_name = "parallel_x1"
 dataset_path = path.join("dataset", dataset_type, dataset_label, dataset_name)
-
 """
 The 2D shape of the image.
 """
 shape_native = (2000, 100)
 
 """
-The locations of the prescans and overscans on the image.
+The locations (using NumPy array indexes) of the parallel overscan, serial prescan and serial overscan on the image.
 """
-scans = ac.Scans(
-    parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
-    serial_prescan=ac.Region2D((0, 2000, 0, 5)),
-    serial_overscan=ac.Region2D((0, 1980, 95, 100)),
-)
+parallel_overscan = ac.Region2D((1980, 2000, 5, 95))
+serial_prescan = ac.Region2D((0, 2000, 0, 5))
+serial_overscan = ac.Region2D((0, 1980, 95, 100))
 
 """
-Specify the charge injection regions on the CCD, which in this case is 3 equally spaced rectangular blocks.
+Specify the charge injection regions on the CCD, which in this case is 5 equally spaced rectangular blocks.
 """
-ci_regions = [
-    (0, 200, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (400, 600, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (800, 1000, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1200, 1400, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1600, 1800, scans.serial_prescan[3], scans.serial_overscan[2]),
+regions_list = [
+    (0, 200, serial_prescan[3], serial_overscan[2]),
+    (400, 600, serial_prescan[3], serial_overscan[2]),
+    (800, 1000, serial_prescan[3], serial_overscan[2]),
+    (1200, 1400, serial_prescan[3], serial_overscan[2]),
+    (1600, 1800, serial_prescan[3], serial_overscan[2]),
 ]
-
 
 """
 The normalization of every charge injection image, which determines how many images are simulated.
 """
-normalizations = [100, 5000, 25000, 84700]
+normalization_list = [100, 5000, 25000, 84700]
+
+"""
+These describe the non-uniformity pattern of the image.
+"""
+column_sigma_list = [100.0] * len(normalization_list)
+row_slope_list = [0.0] * len(normalization_list)
+
+"""
+Create the layout of the charge injection pattern for every charge injection normalization.
+"""
+layout_list = [
+    ac.ci.Layout2DCINonUniform(
+        shape_2d=shape_native,
+        region_list=regions_list,
+        normalization=normalization,
+        parallel_overscan=parallel_overscan,
+        serial_prescan=serial_prescan,
+        serial_overscan=serial_overscan,
+        column_sigma=column_sigma,
+        row_slope=row_slope,
+    )
+    for (normalization, column_sigma, row_slope) in zip(
+        normalization_list, column_sigma_list, row_slope_list
+    )
+]
 
 """
 The `Clocker` models the CCD read-out, including CTI. 
@@ -77,26 +98,12 @@ parallel_trap = ac.TrapInstantCapture(density=0.5, release_timescale=4.0)
 parallel_ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
 
 """
-Use the charge injection normalizations and regions to create *CIPatternNonUniform* of every image we'll simulate.
-"""
-column_sigmas = [100.0] * len(normalizations)
-row_slopes = [0.0] * len(normalizations)
-ci_patterns = [
-    ac.ci.CIPatternNonUniform(
-        normalization=normalization, regions=ci_regions, row_slope=row_slope
-    )
-    for (normalization, row_slope) in zip(normalizations, row_slopes)
-]
-
-"""
-To simulate charge injection imaging, we pass the charge injection pattern to a *SimulatorCIImaging*, which adds CTI 
+To simulate charge injection imaging, we pass the charge injection pattern to a `SimulatorImagingCI`, which adds CTI 
 via arCTIc and read-noise to the data.
 
-This creates instances of the *CIImaging* class, which include the images, noise-maps and ci_pre_cti images.
+This creates instances of the `ImagingCI` class, which include the images, noise-maps and pre_cti_image images.
 """
-simulator = ac.ci.SimulatorCIImaging(
-    shape_native=shape_native, read_noise=4.0, scans=scans, pixel_scales=0.1
-)
+simulator = ac.ci.SimulatorImagingCI(read_noise=4.0, pixel_scales=0.1)
 
 """
 We use the LA Cosmic algorithm to simulate and add cosmic rays to our ci pre cti image. This routine randomly
@@ -118,7 +125,7 @@ cosmic_ray_maps = list(
         lambda i: cosmic_ray_maker.drawEventsToCoveringFactor(
             limit=clocker.parallel.well_depth
         ),
-        range(len(normalizations)),
+        range(len(normalization_list)),
     )
 )
 
@@ -128,35 +135,35 @@ and before passing each image to arCTIc does the following:
 
  - Uses an input read-out electronics corner to perform all rotations of the image before / after adding CTI.
  - Stores this corner so that if we output the files to .fits,they are output in their original and true orientation.
- - Includes information on the different scan regions of the image, such as the serial prescan and overscans.
+ - Includes information on the different scan regions of the image, such as the serial prescan and serial overscan.
 """
-ci_datasets = [
-    simulator.from_ci_pattern(
+dataset_ci_list = [
+    simulator.from_layout(
+        layout=layout,
         clocker=clocker,
-        ci_pattern=ci_pattern,
         parallel_traps=[parallel_trap],
         parallel_ccd=parallel_ccd,
         cosmic_ray_map=cosmic_ray_map,
     )
-    for ci_pattern, cosmic_ray_map in zip(ci_patterns, cosmic_ray_maps)
+    for layout, cosmic_ray_map in zip(layout_list, cosmic_ray_maps)
 ]
 
 """
 Finally output the image, noise-map and pre cti image of the charge injection dataset to .fits files.
 """
 [
-    ci_dataset.output_to_fits(
+    dataset_ci.output_to_fits(
         image_path=path.join(
-            dataset_path, f"image_{int(ci_dataset.ci_pattern.normalization)}"
+            dataset_path, f"image_{int(dataset_ci.pattern_ci.normalization)}"
         ),
         noise_map_path=path.join(
-            dataset_path, f"noise_map_{int(ci_dataset.ci_pattern.normalization)}"
+            dataset_path, f"noise_map_{int(dataset_ci.pattern_ci.normalization)}"
         ),
-        ci_pre_cti_path=path.join(
-            dataset_path, f"ci_pre_cti_{int(ci_dataset.ci_pattern.normalization)}"
+        pre_cti_image_path=path.join(
+            dataset_path, f"pre_cti_image_{int(dataset_ci.pattern_ci.normalization)}"
         ),
     )
-    for ci_dataset in ci_datasets
+    for dataset_ci in dataset_ci_list
 ]
 
 """

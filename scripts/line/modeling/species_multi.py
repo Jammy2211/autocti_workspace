@@ -27,10 +27,10 @@ dataset_name = "species_x2"
 dataset_path = path.join("dataset", "line", dataset_name)
 
 """
-The locations of the prescans and overscans on the image, which is used to visualize the cti-line during the model-fit
+The locations of the serial prescan and serial overscan on the image, which is used to visualize the cti-line during the model-fit
 and customize aspects of the model-fit.
 """
-scans = ac.Scans(
+layout_list = ac.Scans(
     parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
     serial_prescan=ac.Region2D((0, 2000, 0, 5)),
     serial_overscan=ac.Region2D((0, 1980, 95, 100)),
@@ -45,15 +45,15 @@ regions = [(10, 20, 0, 1)]
 """
 We require the normalization of the charge in every cti line dataset, as the names of the files are tagged with this.
 """
-normalizations = [100, 5000, 25000, 84700]
+normalization_list = [100, 5000, 25000, 84700]
 
 """
-We use the regions and normalizations above to create the `Pattern` of every cti-line we fit. This pattern is used for
+We use the regions and normalization_list above to create the `Pattern` of every cti-line we fit. This pattern is used for
 visualizing the model-fit.
 """
 patterns = [
-    ac.ci.CIPatternUniform(normalization=normalization, regions=regions)
-    for normalization in normalizations
+    ac.ci.PatternCIUniform(normalization=normalization, regions=regions)
+    for normalization in normalization_list
 ]
 
 """
@@ -61,7 +61,7 @@ We now load every cti-line dataset, including a noise-map and pre-CTI line conta
 therefore without CTI. This uses a`LineDataset` object.
 """
 imaging_list = [
-    ac.ci.CIImaging.from_fits(
+    ac.ci.ImagingCI.from_fits(
         image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
         noise_map_path=path.join(
             dataset_path, f"noise_map_{pattern.normalization}.fits"
@@ -76,7 +76,7 @@ imaging_list = [
 """
 Lets plot the first `LineDataset`.
 """
-imaging_plotter = aplt.CIImagingPlotter(imaging=imaging_list[0])
+imaging_plotter = aplt.ImagingCIPlotter(imaging=imaging_list[0])
 imaging_plotter.subplot_imaging()
 
 """
@@ -134,7 +134,7 @@ __Analysis__
 The `AnalysisLineDataset` object defines the `log_likelihood_function` used by the non-linear search to fit the model 
 to the `LineDataset`dataset.
 """
-analysis = ac.AnalysisCIImaging(dataset_list=[imaging_list], clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=[imaging_list], clocker=clocker)
 
 """
 __Model-Fit__
@@ -156,7 +156,7 @@ The search returns a result object, which includes:
 """
 print(result.max_log_likelihood_instance)
 
-fit_plotter = aplt.CIFitPlotter(fit=result.max_log_likelihood_fit)
+fit_plotter = aplt.FitImagingCIPlotter(fit=result.max_log_likelihood_fit)
 fit_plotter.subplot_fit_imaging()
 
 """

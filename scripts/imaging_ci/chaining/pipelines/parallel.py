@@ -2,7 +2,7 @@
 Pipelines: Parallel CTI
 ========================
 
-By chaining together three searches this script fits A CTI model using `CIImaging`, where in the final model:
+By chaining together three searches this script fits A CTI model using `ImagingCI`, where in the final model:
 
  - The CTI model consists of an input number of parallel trap species.
  - The `CCD` volume filling is an input.
@@ -21,50 +21,50 @@ import autocti.plot as aplt
 """
 __Dataset + Masking__ 
 
-Load, plot and mask the `CIImaging` data, including the set up of its charge injection region, pattern, normalizations,
+Load, plot and mask the `ImagingCI` data, including the set up of its charge injection region, pattern, normalization_list,
 etc.
 """
 dataset_name = "parallel_x2"
-dataset_path = path.join("dataset", "ci_imaging", "uniform", dataset_name)
+dataset_path = path.join("dataset", "imaging_ci", "uniform", dataset_name)
 
-scans = ac.Scans(
+layout_list = ac.Scans(
     parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
     serial_prescan=ac.Region2D((0, 2000, 0, 5)),
     serial_overscan=ac.Region2D((0, 1980, 95, 100)),
 )
 
-ci_regions = [
-    (0, 200, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (400, 600, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (800, 1000, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1200, 1400, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1600, 1800, scans.serial_prescan[3], scans.serial_overscan[2]),
+regions_ci = [
+    (0, 200, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (400, 600, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (800, 1000, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1200, 1400, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1600, 1800, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
 ]
 
-normalizations = [100, 5000, 25000, 84700]
+normalization_list = [100, 5000, 25000, 84700]
 
-ci_patterns = [
-    ac.ci.CIPatternUniform(normalization=normalization, regions=ci_regions)
-    for normalization in normalizations
+pattern_cis = [
+    ac.ci.PatternCIUniform(normalization=normalization, regions=regions_ci)
+    for normalization in normalization_list
 ]
 
-ci_imaging_list = [
-    ac.ci.CIImaging.from_fits(
+imaging_ci_list = [
+    ac.ci.ImagingCI.from_fits(
         image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
         noise_map_path=path.join(
             dataset_path, f"noise_map_{pattern.normalization}.fits"
         ),
-        ci_pre_cti_path=path.join(
-            dataset_path, f"ci_pre_cti_{pattern.normalization}.fits"
+        pre_cti_image_path=path.join(
+            dataset_path, f"pre_cti_image_{pattern.normalization}.fits"
         ),
         pixel_scales=0.1,
-        ci_pattern=pattern,
+        pattern_ci=pattern,
         roe_corner=(1, 0),
     )
-    for pattern in ci_patterns
+    for pattern in pattern_cis
 ]
 
-imaging_plotter = aplt.CIImagingPlotter(imaging=ci_imaging_list[0])
+imaging_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
 imaging_plotter.subplot_imaging()
 
 """
@@ -72,7 +72,7 @@ __Paths__
 
 The path the results of all chained searches are output:
 """
-path_prefix = path.join("ci_imaging", "chaining", "parallel")
+path_prefix = path.join("imaging_ci", "chaining", "parallel")
 
 """
 __Clocking__
@@ -107,25 +107,25 @@ model = af.Model(
 """
 __Search + Analysis + Model-Fit (Search 1)__
 
-To reduce run-times, we trim the `CIImaging` data from the high resolution data (e.g. 2000 columns) to just 50 columns 
+To reduce run-times, we trim the `ImagingCI` data from the high resolution data (e.g. 2000 columns) to just 50 columns 
 to speed up the model-fit at the expense of inferring larger errors on the CTI model.
 """
 search = af.DynestyStatic(
     path_prefix=path_prefix, name="search[1]_parallel[x1]", n_live_points=50
 )
 
-ci_imaging_trimmed_list = [
-    ac.ci.MaskedCIImaging(
-        ci_imaging=ci_imaging,
-        mask=ac.ci.CIMask2D.unmasked(
-            shape_native=ci_imaging.shape_native, pixel_scales=ci_imaging.pixel_scales
+imaging_ci_trimmed_list = [
+    ac.ci.ImagingCI(
+        imaging_ci=imaging_ci,
+        mask=ac.ci.Mask2DCI.unmasked(
+            shape_native=imaging_ci.shape_native, pixel_scales=imaging_ci.pixel_scales
         ),
-        settings=ac.ci.SettingsMaskedCIImaging(parallel_columns=(0, 50)),
+        settings=ac.ci.SettingsImagingCI(parallel_columns=(0, 50)),
     )
-    for ci_imaging in ci_imaging_list
+    for imaging_ci in imaging_ci_list
 ]
 
-analysis = ac.AnalysisCIImaging(dataset_list=ci_imaging_list, clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
 
 result_1 = search.fit(model=model, analysis=analysis)
 
@@ -163,13 +163,15 @@ __Search + Analysis + Model-Fit (Search 2)__
 We use a non-linear search with slower more thorough settings, so it can robustly sample the complex parameter space. 
 This is necessary given that  many parameters in the model are not yet initialized and assume broad uniform priors. 
 
-We again use the trimmed `CIImaging` data to speed up run-times.
+We again use the trimmed `ImagingCI` data to speed up run-times.
 """
 search = af.DynestyStatic(
     path_prefix=path_prefix, name="search[2]_parallel[multi]", n_live_points=50
 )
 
-analysis = ac.AnalysisCIImaging(dataset_list=ci_imaging_trimmed_list, clocker=clocker)
+analysis = ac.AnalysisImagingCI(
+    dataset_ci_list=imaging_ci_trimmed_list, clocker=clocker
+)
 
 result_2 = search.fit(model=model, analysis=analysis)
 
@@ -202,7 +204,7 @@ search = af.DynestyStatic(
     path_prefix=path_prefix, name="search[3]_parallel[multi]", n_live_points=50
 )
 
-analysis = ac.AnalysisCIImaging(dataset_list=ci_imaging_list, clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
 
 result_3 = search.fit(model=model, analysis=analysis)
 

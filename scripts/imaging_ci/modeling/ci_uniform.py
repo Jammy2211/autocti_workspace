@@ -6,7 +6,7 @@ In this script, we will fit charge injection imaging to calibrate CTI, where:
 
  - The CTI model consists of two parallel `TrapInstantCapture` species.
  - The `CCD` volume filling is a simple parameterization with just a `well_fill_power` parameter.
- - The `CIImaging` is simulated with uniform charge injection lines and no cosmic rays.
+ - The `ImagingCI` is simulated with uniform charge injection lines and no cosmic rays.
 """
 # %matplotlib inline
 # from pyprojroot import here
@@ -22,17 +22,17 @@ import autocti.plot as aplt
 """
 __Dataset__
 
-Load the charge injection dataset 'ci_imaging/uniform/parallel_x2' 'from .fits files, which is the dataset we will
+Load the charge injection dataset 'imaging_ci/uniform/parallel_x2' 'from .fits files, which is the dataset we will
 use to perform CTI modeling.
 """
 dataset_name = "parallel_x2"
-dataset_path = path.join("dataset", "ci_imaging", "uniform", dataset_name)
+dataset_path = path.join("dataset", "imaging_ci", "uniform", dataset_name)
 
 """
-The locations of the prescans and overscans on the image, which is used to visualize the `CIImaging` during the 
+The locations of the serial prescan and serial overscan on the image, which is used to visualize the `ImagingCI` during the 
 model-fit.
 """
-scans = ac.Scans(
+layout_list = ac.Scans(
     parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
     serial_prescan=ac.Region2D((0, 2000, 0, 5)),
     serial_overscan=ac.Region2D((0, 1980, 95, 100)),
@@ -41,12 +41,12 @@ scans = ac.Scans(
 """
 Specify the charge injection regions on the CCD, which in this case is 3 equally spaced rectangular blocks.
 """
-ci_regions = [
-    (0, 200, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (400, 600, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (800, 1000, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1200, 1400, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1600, 1800, scans.serial_prescan[3], scans.serial_overscan[2]),
+regions_ci = [
+    (0, 200, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (400, 600, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (800, 1000, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1200, 1400, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1600, 1800, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
 ]
 
 
@@ -54,40 +54,40 @@ ci_regions = [
 We require the normalization of every charge injection image, as the names of the files are tagged with the charge
 injection normalization level.
 """
-normalizations = [100, 5000, 25000, 84700]
+normalization_list = [100, 5000, 25000, 84700]
 
 """
-Use the charge injection normalizations and regions to create `CIPatternUniform` of every image we'll fit. The
-`CIPattern` is used for visualizing the model-fit.
+Use the charge injection normalization_list and regions to create `PatternCIUniform` of every image we'll fit. The
+`PatternCI` is used for visualizing the model-fit.
 """
-ci_patterns = [
-    ac.ci.CIPatternUniform(normalization=normalization, regions=ci_regions)
-    for normalization in normalizations
+pattern_cis = [
+    ac.ci.PatternCIUniform(normalization=normalization, regions=regions_ci)
+    for normalization in normalization_list
 ]
 
 """
-We can now load every image, noise-map and pre-CTI charge injection image as instances of the `CIImaging` object.
+We can now load every image, noise-map and pre-CTI charge injection image as instances of the `ImagingCI` object.
 """
-ci_imaging_list = [
-    ac.ci.CIImaging.from_fits(
+imaging_ci_list = [
+    ac.ci.ImagingCI.from_fits(
         image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
         noise_map_path=path.join(
             dataset_path, f"noise_map_{pattern.normalization}.fits"
         ),
-        ci_pre_cti_path=path.join(
-            dataset_path, f"ci_pre_cti_{pattern.normalization}.fits"
+        pre_cti_image_path=path.join(
+            dataset_path, f"pre_cti_image_{pattern.normalization}.fits"
         ),
         pixel_scales=0.1,
-        ci_pattern=pattern,
+        pattern_ci=pattern,
     )
-    for pattern in ci_patterns
+    for pattern in pattern_cis
 ]
 
 """
-Lets plot the first `CIImaging`.
+Lets plot the first `ImagingCI`.
 """
-ci_imaging_plotter = aplt.CIImagingPlotter(imaging=ci_imaging_list[0])
-ci_imaging_plotter.subplot_ci_imaging()
+imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
+imaging_ci_plotter.subplot_imaging_ci()
 
 """
 __Clocking__
@@ -134,10 +134,10 @@ operates, checkout chapter 2 of the HowToCTI lecture series.
 
 The `name` and `path_prefix` below specify the path where results ae stored in the output folder:  
 
- `/autolens_workspace/output/ci_imaging/parallel[x2]`.
+ `/autolens_workspace/output/imaging_ci/parallel[x2]`.
 """
 search = af.MultiNest(
-    path_prefix=path.join("ci_imaging", dataset_name),
+    path_prefix=path.join("imaging_ci", dataset_name),
     name="parallel[x2]",
     n_live_points=50,
 )
@@ -145,10 +145,10 @@ search = af.MultiNest(
 """
 __Analysis__
 
-The `AnalysisCIImaging` object defines the `log_likelihood_function` used by the non-linear search to fit the model to 
-the `MaskedCIImaging`dataset.
+The `AnalysisImagingCI` object defines the `log_likelihood_function` used by the non-linear search to fit the model to 
+the `ImagingCI`dataset.
 """
-analysis = ac.AnalysisCIImaging(dataset_list=[ci_imaging_list], clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=[imaging_ci_list], clocker=clocker)
 
 """
 __Model-Fit__
@@ -156,7 +156,7 @@ __Model-Fit__
 We can now begin the model-fit by passing the model and analysis object to the search, which performs a non-linear
 search to find which models fit the data with the highest likelihood.
 
-Checkout the folder `autocti_workspace/output/ci_imaging/parallel[x2]` for live outputs 
+Checkout the folder `autocti_workspace/output/imaging_ci/parallel[x2]` for live outputs 
 of the results of the fit, including on-the-fly visualization of the best fit model!
 """
 result = search.fit(model=model, analysis=analysis)
@@ -170,9 +170,9 @@ The search returns a result object, which includes:
 """
 print(result.max_log_likelihood_instance)
 
-ci_fit_plotter = aplt.CIFitPlotter(fit=result.max_log_likelihood_fit)
-ci_fit_plotter.subplot_fit_imaging()
+fit_ci_plotter = aplt.FitImagingCIPlotter(fit=result.max_log_likelihood_fit)
+fit_ci_plotter.subplot_fit_imaging()
 
 """
-Checkout `autocti_workspace/notebooks/ci_imaging/modeling/results.py` for a full description of the result object.
+Checkout `autocti_workspace/notebooks/imaging_ci/modeling/results.py` for a full description of the result object.
 """

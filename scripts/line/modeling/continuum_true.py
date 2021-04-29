@@ -81,30 +81,30 @@ regions = [(10, 20, 0, 1)]
 """
 The normalization of every `Line`, this list determines how many `Line`'s are simulated.
 """
-normalizations = [100, 500, 1000, 5000, 10000, 25000, 50000, 84700]
+normalization_list = [100, 500, 1000, 5000, 10000, 25000, 50000, 84700]
 
 """
-Use the `Line` normalizations and regions to create `LinePattern` of every `Line` we fit.
+Use the `Line` normalization_list and regions to create `LinePattern` of every `Line` we fit.
 """
 line_pattern_list = [
-    ac.ci.CIPatternUniform(normalization=normalization, regions=regions)
-    for normalization in normalizations
+    ac.ci.PatternCIUniform(normalization=normalization, regions=regions)
+    for normalization in normalization_list
 ]
 
 """
 We can now load every `Line`, noise-map and pre-CTI line as instances of the `LineDataset` object.
 """
 line_list = [
-    ac.ci.CIImaging.from_fits(
+    ac.ci.ImagingCI.from_fits(
         image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
         noise_map_path=path.join(
             dataset_path, f"noise_map_{pattern.normalization}.fits"
         ),
-        ci_pre_cti_path=path.join(
-            dataset_path, f"line_pre_cti_{pattern.normalization}.fits"
+        pre_cti_image_path=path.join(
+            dataset_path, f"pre_cti_line_{pattern.normalization}.fits"
         ),
         pixel_scales=0.1,
-        ci_pattern=pattern,
+        pattern_ci=pattern,
         roe_corner=(1, 0),
     )
     for pattern in line_pattern_list
@@ -113,22 +113,22 @@ line_list = [
 """
 Lets plot the first `LineDataset` with its `Mask1D`
 """
-ci_imaging_plotter = aplt.CIImagingPlotter(imaging=line_list[0])
-ci_imaging_plotter.subplot_ci_imaging()
+imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=line_list[0])
+imaging_ci_plotter.subplot_imaging_ci()
 
 """
 We now need to mask the data, so that regions where there is no signal (e.g. the edges) are omitted from the fit.
 """
 mask_list = [
-    ac.ci.CIMask2D.unmasked(
+    ac.ci.Mask2DCI.unmasked(
         shape_native=line.shape_native, pixel_scales=line.pixel_scales
     )
     for line in line_list
 ]
 
 mask_list = [
-    ac.ci.CIMask2D.masked_front_edges_and_trails_from_ci_frame(
-        mask=mask, ci_frame=line_list[0].image, settings=ac.ci.SettingsCIMask()
+    ac.ci.Mask2DCI.masked_front_edges_and_trails_from_frame_ci(
+        mask=mask, frame_ci=line_list[0].image, settings=ac.ci.SettingsMask2DCI()
     )
     for mask in mask_list
 ]
@@ -137,15 +137,15 @@ mask_list = [
 The MaskedImaging object combines the dataset with the mask.
 """
 masked_line_list = [
-    ac.ci.MaskedCIImaging(ci_imaging=line, mask=mask)
+    ac.ci.ImagingCI(imaging_ci=line, mask=mask)
     for line, mask in zip(line_list, mask_list)
 ]
 
 """
 Here is what our image looks like with the mask applied.
 """
-ci_imaging_plotter = aplt.CIImagingPlotter(imaging=line_list[0])
-ci_imaging_plotter.figures(image=True)
+imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=line_list[0])
+imaging_ci_plotter.figures_2d(image=True)
 
 """
 The `Clocker` models the `Line` read-out, including CTI. 
@@ -156,9 +156,9 @@ clocker = ac.Clocker(parallel_express=2)
 Following the clocking.py example, we can make a post-CTI image from the pre-CTI image in our calibration dataset,
 using the `Clocker`.
 """
-line_post_cti_list = [
+post_cti_line_list = [
     clocker.add_cti(
-        image=masked_line.ci_pre_cti, parallel_traps=traps, parallel_ccd=ccd
+        image=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
     )
     for masked_line in masked_line_list
 ]
@@ -167,8 +167,8 @@ line_post_cti_list = [
 We can now quantify how well this CTI model fits the CTI `Line` in our dataset, by performing a `FitLine`.
 """
 fit_list = [
-    ac.ci.CIFitImaging(masked_ci_imaging=masked_line, ci_post_cti=line_post_cti)
-    for masked_line, line_post_cti in zip(masked_line_list, line_post_cti_list)
+    ac.ci.FitImagingCI(imaging=masked_line, post_cti_image=post_cti_line)
+    for masked_line, post_cti_line in zip(masked_line_list, post_cti_line_list)
 ]
 
 """
@@ -183,8 +183,8 @@ we'll plot all 3 of these, alongside a subplot containing them all.
 For a good lens model where the model image and tracer are representative of the strong lens system the
 residuals, normalized residuals and chi-squareds are minimized:
 """
-ci_fit_plotter = aplt.CIFitPlotter(fit=fit_list[0])
-ci_fit_plotter.figures(
+fit_ci_plotter = aplt.FitImagingCIPlotter(fit=fit_list[0])
+fit_ci_plotter.figures_2d(
     residual_map=True, normalized_residual_map=True, chi_squared_map=True
 )
 

@@ -2,7 +2,7 @@
 Chaining: x1 Species to x2 Species
 ==================================
 
-In this script, we chain two searches to fit `CIImaging` with a CTI model where:
+In this script, we chain two searches to fit `ImagingCI` with a CTI model where:
 
  - The final CTI model consists of two parallel `Trap` species.
  - The `CCD` volume filling is a simple parameterization with just a `well_fill_power` parameter.
@@ -40,51 +40,51 @@ import autocti.plot as aplt
 """
 __Dataset + Masking__ 
 
-Load, plot and mask the `CIImaging` data, including the set up of its charge injection region, pattern, normalizations,
+Load, plot and mask the `ImagingCI` data, including the set up of its charge injection region, pattern, normalization_list,
 etc.
 """
 dataset_name = "parallel_x2"
-dataset_path = path.join("dataset", "ci_imaging", "uniform", dataset_name)
+dataset_path = path.join("dataset", "imaging_ci", "uniform", dataset_name)
 
-scans = ac.Scans(
+layout_list = ac.Scans(
     parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
     serial_prescan=ac.Region2D((0, 2000, 0, 5)),
     serial_overscan=ac.Region2D((0, 1980, 95, 100)),
 )
 
-ci_regions = [
-    (0, 200, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (400, 600, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (800, 1000, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1200, 1400, scans.serial_prescan[3], scans.serial_overscan[2]),
-    (1600, 1800, scans.serial_prescan[3], scans.serial_overscan[2]),
+regions_ci = [
+    (0, 200, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (400, 600, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (800, 1000, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1200, 1400, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+    (1600, 1800, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
 ]
 
 
-normalizations = [100, 5000, 25000, 84700]
+normalization_list = [100, 5000, 25000, 84700]
 
-ci_patterns = [
-    ac.ci.CIPatternUniform(normalization=normalization, regions=ci_regions)
-    for normalization in normalizations
+pattern_cis = [
+    ac.ci.PatternCIUniform(normalization=normalization, regions=regions_ci)
+    for normalization in normalization_list
 ]
 
-ci_imaging_list = [
-    ac.ci.CIImaging.from_fits(
+imaging_ci_list = [
+    ac.ci.ImagingCI.from_fits(
         image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
         noise_map_path=path.join(
             dataset_path, f"noise_map_{pattern.normalization}.fits"
         ),
-        ci_pre_cti_path=path.join(
-            dataset_path, f"ci_pre_cti_{pattern.normalization}.fits"
+        pre_cti_image_path=path.join(
+            dataset_path, f"pre_cti_image_{pattern.normalization}.fits"
         ),
         pixel_scales=0.1,
-        ci_pattern=pattern,
+        pattern_ci=pattern,
         roe_corner=(1, 0),
     )
-    for pattern in ci_patterns
+    for pattern in pattern_cis
 ]
 
-imaging_plotter = aplt.CIImagingPlotter(imaging=ci_imaging_list[0])
+imaging_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
 imaging_plotter.subplot_imaging()
 
 """
@@ -92,7 +92,7 @@ __Paths__
 
 The path the results of all chained searches are output:
 """
-path_prefix = path.join("ci_imaging", "chaining", "x1_species_to_x2_species")
+path_prefix = path.join("imaging_ci", "chaining", "x1_species_to_x2_species")
 
 """
 __Clocking__
@@ -136,7 +136,7 @@ search = af.DynestyStatic(
     path_prefix=path_prefix, name="search[1]_species[x1]", n_live_points=50
 )
 
-analysis = ac.AnalysisCIImaging(dataset_list=ci_imaging_list, clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
 
 result_1 = search.fit(model=model, analysis=analysis)
 
@@ -182,7 +182,7 @@ search = af.DynestyStatic(
     path_prefix=path_prefix, name="search[2]_species[x2]", n_live_points=50
 )
 
-analysis = ac.AnalysisCIImaging(dataset_list=ci_imaging_list, clocker=clocker)
+analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
 
 result_2 = search.fit(model=model, analysis=analysis)
 
