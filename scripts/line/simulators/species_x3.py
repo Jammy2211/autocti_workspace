@@ -18,6 +18,8 @@ import autocti as ac
 import autocti.plot as aplt
 
 """
+__Dataset Paths__
+
 The 'dataset_label' describes the type of data being simulated (in this case, imaging data) and 'dataset_name' 
 gives it a descriptive name. They define the folder the dataset is output to on your hard-disk:
 
@@ -58,6 +60,8 @@ The `Clocker` models the `Line` read-out, including CTI.
 clocker = ac.Clocker(parallel_express=2)
 
 """
+__CTI Model__
+
 The CTI model used by arCTIc to add CTI to the input `Line`, which contains: 
 
  - 2 `Trap` species.
@@ -67,7 +71,7 @@ trap_0 = ac.TrapInstantCapture(density=0.0442, release_timescale=0.8)
 trap_1 = ac.TrapInstantCapture(density=0.1326, release_timescale=4.0)
 trap_2 = ac.TrapInstantCapture(density=3.9782, release_timescale=20.0)
 traps = [trap_0, trap_1, trap_2]
-ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
+ccd = ac.CCDPhase(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700.0)
 
 """
 Use the `Line` normalization_list and regions to create `LinePattern` of every image we'll simulate.
@@ -78,6 +82,8 @@ line_pattern_list = [
 ]
 
 """
+__Simulate__
+
 To simulate charge injection imaging, we pass theline pattern to a `SimulatorLine`, which adds CTI via arCTIc and 
 read-noise to the data.
 
@@ -105,7 +111,9 @@ imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=line_dataset_list[0])
 imaging_ci_plotter.subplot_imaging_ci()
 
 """
-Finally output the `Line`, noise-map and pre cti image of the charge injection dataset to .fits files.
+__Output__
+
+Output the `Line`, noise-map and pre cti image of the charge injection dataset to .fits files.
 """
 [
     line_dataset.output_to_fits(

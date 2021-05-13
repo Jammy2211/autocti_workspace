@@ -84,6 +84,8 @@ The `Clocker` models the `Line` read-out, including CTI.
 clocker = ac.Clocker(parallel_express=2, parallel_charge_injection_mode=True)
 
 """
+__CTI Model__
+
 The CTI model used by arCTIc to add CTI to the input image in the parallel direction, which contains: 
 
  - 2 `Trap` species in the parallel direction.
@@ -93,14 +95,16 @@ This is the true CTI model used to simulate the dataset.
 """
 parallel_trap_0 = ac.TrapInstantCapture(density=0.13, release_timescale=1.25)
 parallel_trap_1 = ac.TrapInstantCapture(density=0.25, release_timescale=4.4)
-parallel_ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
+parallel_ccd = ac.CCDPhase(
+    well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700.0
+)
 
 """
 Make a post-CTI image from the pre-CTI images in our `ImagingCI` dataset, using the `Clocker`.
 """
 post_cti_image_list = [
     clocker.add_cti(
-        image=imaging_ci.pre_cti_image,
+        image_pre_cti=imaging_ci.pre_cti_image,
         parallel_traps=[parallel_trap_0, parallel_trap_1],
         parallel_ccd=parallel_ccd,
     )

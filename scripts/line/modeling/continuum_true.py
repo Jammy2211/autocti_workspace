@@ -63,6 +63,8 @@ trap_1 = ac.TrapLogNormalLifetimeContinuum(
 dataset_path = path.join("dataset", "line", dataset_name)
 
 """
+__CTI Model__
+
 The CTI model used by arCTIc to add CTI to the input `Line`, which contains: 
 
  - 1 `Trap` species.
@@ -71,7 +73,7 @@ The CTI model used by arCTIc to add CTI to the input `Line`, which contains:
 This is the true model and thus will give us the log likelihood the best-fit model gives.
 """
 traps = [trap_0, trap_1]
-ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
+ccd = ac.CCDPhase(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700.0)
 
 """
 Specify the regions on the `Line` where charge was present before CTI, 10 pixels after the serial prescan.
@@ -158,7 +160,7 @@ using the `Clocker`.
 """
 post_cti_line_list = [
     clocker.add_cti(
-        image=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
+        image_pre_cti=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
     )
     for masked_line in masked_line_list
 ]

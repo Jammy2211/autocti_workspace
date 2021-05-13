@@ -102,11 +102,11 @@ The number of free parameters and therefore the dimensionality of non-linear par
 parallel_trap_0 = af.PriorModel(ac.TrapInstantCapture)
 parallel_trap_1 = af.PriorModel(ac.TrapInstantCapture)
 parallel_traps = [parallel_trap_0, parallel_trap_1]
-parallel_ccd = af.PriorModel(ac.CCD)
+parallel_ccd = af.PriorModel(ac.CCDPhase)
 parallel_ccd.well_notch_depth = 0.0
-parallel_ccd.full_well_depth = 84700
+parallel_ccd.full_well_depth = 84700.0
 
-model = af.Model(
+model = af.Collection(cti=af.Model(
     ac.CTI, parallel_traps=[parallel_trap_0, parallel_trap_1], parallel_ccd=parallel_ccd
 )
 
@@ -122,10 +122,10 @@ operates, checkout chapter 2 of the HowToCTI lecture series.
 
 The `name` and `path_prefix` below specify the path where results ae stored in the output folder:  
 
- `/autolens_workspace/output/line/parallel[x2]`.
+ `/autocti_workspace/output/line/parallel[x2]`.
 """
-search = af.MultiNest(
-    path_prefix=path.join("line", dataset_name), name="parallel[x2]", n_live_points=50
+search = af.DynestyStatic(
+    path_prefix=path.join("line", dataset_name), name="parallel[x2]", nlive=50
 )
 
 """

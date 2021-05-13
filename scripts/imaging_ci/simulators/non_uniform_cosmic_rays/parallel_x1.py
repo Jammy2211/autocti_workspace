@@ -17,6 +17,8 @@ from os import path
 import autocti as ac
 
 """
+__Dataset Paths__
+
 The 'dataset_label' describes the type of data being simulated (in this case, imaging data) and 'dataset_name' 
 gives it a descriptive name. They define the folder the dataset is output to on your hard-disk:
 
@@ -27,8 +29,16 @@ gives it a descriptive name. They define the folder the dataset is output to on 
 dataset_type = "imaging_ci"
 dataset_label = "non_uniform_cosmic_rays"
 dataset_name = "parallel_x1"
-dataset_path = path.join("dataset", dataset_type, dataset_label, dataset_name)
+
 """
+Returns the path where the dataset will be output, which in this case is
+'/autocti_workspace/dataset/imaging_ci/non_uniform_cosmic_rays/parallel_x1'
+"""
+dataset_path = path.join("dataset", dataset_type, dataset_label, dataset_name)
+
+"""
+__Layout__
+
 The 2D shape of the image.
 """
 shape_native = (2000, 100)
@@ -82,6 +92,8 @@ layout_list = [
 ]
 
 """
+__Clocker__
+
 The `Clocker` models the CCD read-out, including CTI. 
 
 For parallel clocking, we use 'charge injection mode' which transfers the charge of every pixel over the full CCD.
@@ -89,15 +101,21 @@ For parallel clocking, we use 'charge injection mode' which transfers the charge
 clocker = ac.Clocker(parallel_express=2, parallel_charge_injection_mode=True)
 
 """
+__CTI Model__
+
 The CTI model used by arCTIc to add CTI to the input image in the parallel direction, which contains: 
 
  - 1 `Trap` species in the parallel direction.
  - A simple CCD volume beta parametrization.
 """
 parallel_trap = ac.TrapInstantCapture(density=0.5, release_timescale=4.0)
-parallel_ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
+parallel_ccd = ac.CCDPhase(
+    well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700.0
+)
 
 """
+__Simulate__
+
 To simulate charge injection imaging, we pass the charge injection pattern to a `SimulatorImagingCI`, which adds CTI 
 via arCTIc and read-noise to the data.
 
@@ -149,18 +167,20 @@ dataset_ci_list = [
 ]
 
 """
-Finally output the image, noise-map and pre cti image of the charge injection dataset to .fits files.
+__Output__
+
+Output the image, noise-map and pre cti image of the charge injection dataset to .fits files.
 """
 [
     dataset_ci.output_to_fits(
         image_path=path.join(
-            dataset_path, f"image_{int(dataset_ci.pattern_ci.normalization)}"
+            dataset_path, f"image_{int(dataset_ci.layout.normalization)}"
         ),
         noise_map_path=path.join(
-            dataset_path, f"noise_map_{int(dataset_ci.pattern_ci.normalization)}"
+            dataset_path, f"noise_map_{int(dataset_ci.layout.normalization)}"
         ),
         pre_cti_image_path=path.join(
-            dataset_path, f"pre_cti_image_{int(dataset_ci.pattern_ci.normalization)}"
+            dataset_path, f"pre_cti_image_{int(dataset_ci.layout.normalization)}"
         ),
     )
     for dataset_ci in dataset_ci_list

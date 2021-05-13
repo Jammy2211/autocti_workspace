@@ -95,6 +95,8 @@ The `Clocker` models the `Line` read-out, including CTI.
 clocker = ac.Clocker(parallel_express=2)
 
 """
+__CTI Model__
+
 The CTI model used by arCTIc to add CTI to the input `Line`, which contains: 
 
  - 2 `Trap` species.
@@ -104,7 +106,7 @@ trap_0 = ac.TrapInstantCapture(density=0.0442, release_timescale=0.8)
 trap_1 = ac.TrapInstantCapture(density=0.1326, release_timescale=4.0)
 trap_2 = ac.TrapInstantCapture(density=3.9782, release_timescale=20.0)
 traps = [trap_0, trap_1, trap_2]
-ccd = ac.CCD(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700)
+ccd = ac.CCDPhase(well_fill_power=0.8, well_notch_depth=0.0, full_well_depth=84700.0)
 
 """
 Following the clocking.py example, we can make a post-CTI image from the pre-CTI image in our calibration dataset,
@@ -112,7 +114,7 @@ using the `Clocker`.
 """
 post_cti_line_list = [
     clocker.add_cti(
-        image=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
+        image_pre_cti=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
     )
     for masked_line in masked_line_list
 ]
@@ -157,7 +159,7 @@ traps = [trap_0, trap_1, trap_2]
 
 post_cti_line_list = [
     clocker.add_cti(
-        image=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
+        image_pre_cti=masked_line.pre_cti_image, parallel_traps=traps, parallel_ccd=ccd
     )
     for masked_line in masked_line_list
 ]

@@ -19,53 +19,74 @@ import autocti as ac
 import autocti.plot as aplt
 
 """
-__Dataset + Masking__ 
+__Dataset__ 
 
-Load, plot and mask the `ImagingCI` data, including the set up of its charge injection region, pattern, normalization_list,
-etc.
+The paths pointing to the dataset we will use for cti modeling.
 """
 dataset_name = "parallel_x2_serial_x2"
 dataset_path = path.join("dataset", "imaging_ci", "uniform", dataset_name)
 
-layout_list = ac.Scans(
-    parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
-    serial_prescan=ac.Region2D((0, 2000, 0, 5)),
-    serial_overscan=ac.Region2D((0, 1980, 95, 100)),
-)
+"""
+__Layout__
 
-regions_ci = [
-    (0, 200, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (400, 600, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (800, 1000, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (1200, 1400, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (1600, 1800, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+Set up the 2D layout of the charge injection data and load it using this layout.
+"""
+shape_native = (2000, 100)
+
+parallel_overscan = ac.Region2D((1980, 2000, 5, 95))
+serial_prescan = ac.Region2D((0, 2000, 0, 5))
+serial_overscan = ac.Region2D((0, 1980, 95, 100))
+
+regions_list = [
+    (0, 200, serial_prescan[3], serial_overscan[2]),
+    (400, 600, serial_prescan[3], serial_overscan[2]),
+    (800, 1000, serial_prescan[3], serial_overscan[2]),
+    (1200, 1400, serial_prescan[3], serial_overscan[2]),
+    (1600, 1800, serial_prescan[3], serial_overscan[2]),
 ]
 
 normalization_list = [100, 5000, 25000, 84700]
 
-pattern_cis = [
-    ac.ci.PatternCIUniform(normalization=normalization, regions=regions_ci)
+layout_list = [
+    ac.ci.Layout2DCIUniform(
+        shape_2d=shape_native,
+        region_list=regions_list,
+        normalization=normalization,
+        parallel_overscan=parallel_overscan,
+        serial_prescan=serial_prescan,
+        serial_overscan=serial_overscan,
+    )
     for normalization in normalization_list
 ]
 
 imaging_ci_list = [
     ac.ci.ImagingCI.from_fits(
-        image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
+        image_path=path.join(dataset_path, f"image_{layout.normalization}.fits"),
         noise_map_path=path.join(
-            dataset_path, f"noise_map_{pattern.normalization}.fits"
+            dataset_path, f"noise_map_{layout.normalization}.fits"
         ),
         pre_cti_image_path=path.join(
-            dataset_path, f"pre_cti_image_{pattern.normalization}.fits"
+            dataset_path, f"pre_cti_image_{layout.normalization}.fits"
         ),
+        layout=layout,
         pixel_scales=0.1,
-        pattern_ci=pattern,
-        roe_corner=(1, 0),
     )
-    for pattern in pattern_cis
+    for layout in layout_list
 ]
 
-imaging_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
-imaging_plotter.subplot_imaging()
+imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
+imaging_ci_plotter.subplot_imaging_ci()
+
+"""
+__Masking__
+"""
+mask = ac.ci.Mask2DCI.unmasked(
+    shape_native=shape_native, pixel_scales=imaging_ci_list[0].pixel_scales
+)
+
+imaging_ci_masked_list = [
+    imaging_ci.apply_mask(mask=mask) for imaging_ci in imaging_ci_list
+]
 
 """
 __Paths__
@@ -100,14 +121,16 @@ In Search 1 we fit a CTI model with:
 
 The number of free parameters and therefore the dimensionality of non-linear parameter space is N=3.
 """
-parallel_ccd = af.PriorModel(ac.CCD)
+parallel_ccd = af.PriorModel(ac.CCDPhase)
 parallel_ccd.well_notch_depth = 0.0
-parallel_ccd.full_well_depth = 84700
+parallel_ccd.full_well_depth = 84700.0
 
-model = af.Model(
-    ac.CTI,
-    parallel_traps=[af.PriorModel(ac.TrapInstantCapture)],
-    parallel_ccd=parallel_ccd,
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        parallel_traps=[af.PriorModel(ac.TrapInstantCapture)],
+        parallel_ccd=parallel_ccd,
+    )
 )
 
 """
@@ -117,22 +140,18 @@ To reduce run-times, we trim the `ImagingCI` data from the high resolution data 
 to speed up the model-fit at the expense of inferring larger errors on the CTI model.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_parallel[x1]", n_live_points=50
+    path_prefix=path_prefix, name="search[1]_parallel[x1]", nlive=50
 )
 
 imaging_ci_trimmed_list = [
-    ac.ci.ImagingCI(
-        imaging_ci=imaging_ci,
-        mask=ac.ci.Mask2DCI.unmasked(
-            shape_native=imaging_ci.shape_native, pixel_scales=imaging_ci.pixel_scales
-        ),
-        settings=ac.ci.SettingsImagingCI(parallel_columns=(0, 50)),
+    imaging_ci.apply_settings(
+        settings=ac.ci.SettingsImagingCI(parallel_columns=(0, 50))
     )
     for imaging_ci in imaging_ci_list
 ]
 
 analysis = ac.AnalysisImagingCI(
-    dataset_ci_list=imaging_ci_list, clocker=parallel_clocker
+    dataset_ci_list=imaging_ci_trimmed_list, clocker=parallel_clocker
 )
 
 result_1 = search.fit(model=model, analysis=analysis)
@@ -161,8 +180,12 @@ parallel_trap_1.density = af.UniformPrior(
 
 parallel_ccd = result_1.model.cti.parallel_ccd
 
-model = af.Model(
-    ac.CTI, parallel_traps=[parallel_trap_0, parallel_trap_1], parallel_ccd=parallel_ccd
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        parallel_traps=[parallel_trap_0, parallel_trap_1],
+        parallel_ccd=parallel_ccd,
+    )
 )
 
 """
@@ -174,7 +197,7 @@ This is necessary given that  many parameters in the model are not yet initializ
 We again use the trimmed `ImagingCI` data to speed up run-times.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_parallel[multi]", n_live_points=50
+    path_prefix=path_prefix, name="search[2]_parallel[multi]", nlive=50
 )
 
 analysis = ac.AnalysisImagingCI(
@@ -194,12 +217,16 @@ In Search 3 we fit a CTI model with:
 
 The number of free parameters and therefore the dimensionality of non-linear parameter space is N=3.
 """
-serial_ccd = af.PriorModel(ac.CCD)
+serial_ccd = af.PriorModel(ac.CCDPhase)
 serial_ccd.well_notch_depth = 0.0
-serial_ccd.full_well_depth = 84700
+serial_ccd.full_well_depth = 84700.0
 
-model = af.Model(
-    ac.CTI, serial_traps=[af.PriorModel(ac.TrapInstantCapture)], serial_ccd=serial_ccd
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        serial_traps=[af.PriorModel(ac.TrapInstantCapture)],
+        serial_ccd=serial_ccd,
+    )
 )
 
 """
@@ -209,21 +236,17 @@ To reduce run-times, we trim the `ImagingCI` data from the high resolution data 
 every charge injection region to speed up the model-fit at the expense of inferring larger errors on the CTI model.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[3]_serial[x1]", n_live_points=50
+    path_prefix=path_prefix, name="search[3]_serial[x1]", nlive=50
 )
 
 imaging_ci_trimmed_list = [
-    ac.ci.ImagingCI(
-        imaging_ci=imaging_ci,
-        mask=ac.ci.Mask2DCI.unmasked(
-            shape_native=imaging_ci.shape_native, pixel_scales=imaging_ci.pixel_scales
-        ),
-        settings=ac.ci.SettingsImagingCI(serial_rows=(0, 10)),
-    )
+    imaging_ci.apply_settings(settings=ac.ci.SettingsImagingCI(serial_rows=(0, 10)))
     for imaging_ci in imaging_ci_list
 ]
 
-analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=serial_clocker)
+analysis = ac.AnalysisImagingCI(
+    dataset_ci_list=imaging_ci_trimmed_list, clocker=serial_clocker
+)
 
 result_3 = search.fit(model=model, analysis=analysis)
 
@@ -251,8 +274,10 @@ serial_trap_1.density = af.UniformPrior(
 
 serial_ccd = result_3.model.cti.serial_ccd
 
-model = af.Model(
-    ac.CTI, serial_traps=[serial_trap_0, serial_trap_1], serial_ccd=serial_ccd
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI, serial_traps=[serial_trap_0, serial_trap_1], serial_ccd=serial_ccd
+    )
 )
 
 """
@@ -264,7 +289,7 @@ This is necessary given that  many parameters in the model are not yet initializ
 We again use the trimmed `ImagingCI` data to speed up run-times.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[4]_serial[multi]", n_live_points=50
+    path_prefix=path_prefix, name="search[4]_serial[multi]", nlive=50
 )
 
 analysis = ac.AnalysisImagingCI(
@@ -288,12 +313,14 @@ We use the results of searches 2 & 4 to create the CTI model fitted in search 5,
 
 The number of free parameters and therefore the dimensionality of non-linear parameter space is N=10 or more.
 """
-model = af.Model(
-    ac.CTI,
-    parallel_traps=result_4.model.cti.parallel_traps,
-    parallel_ccd=result_4.model.cti.parallel_ccd,
-    serial_traps=result_4.model.cti.serial_traps,
-    serial_ccd=result_4.model.cti.serial_ccd,
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        parallel_traps=result_4.model.cti.parallel_traps,
+        parallel_ccd=result_4.model.cti.parallel_ccd,
+        serial_traps=result_4.model.cti.serial_traps,
+        serial_ccd=result_4.model.cti.serial_ccd,
+    )
 )
 
 """
@@ -307,12 +334,12 @@ To accurately clock parallel and serial CTI we cannot trim the data, thus the `I
 used.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix,
-    name="search[5]_parallel[multi]_serial[multi]",
-    n_live_points=100,
+    path_prefix=path_prefix, name="search[5]_parallel[multi]_serial[multi]", nlive=100
 )
 
-analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=serial_clocker)
+analysis = ac.AnalysisImagingCI(
+    dataset_ci_list=imaging_ci_masked_list, clocker=serial_clocker
+)
 
 result_4 = search.fit(model=model, analysis=analysis)
 

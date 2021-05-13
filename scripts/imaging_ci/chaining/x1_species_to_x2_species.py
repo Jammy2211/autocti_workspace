@@ -38,54 +38,63 @@ import autocti as ac
 import autocti.plot as aplt
 
 """
-__Dataset + Masking__ 
+__Dataset__ 
 
-Load, plot and mask the `ImagingCI` data, including the set up of its charge injection region, pattern, normalization_list,
-etc.
+The paths pointing to the dataset we will use for cti modeling.
 """
 dataset_name = "parallel_x2"
 dataset_path = path.join("dataset", "imaging_ci", "uniform", dataset_name)
 
-layout_list = ac.Scans(
-    parallel_overscan=ac.Region2D((1980, 2000, 5, 95)),
-    serial_prescan=ac.Region2D((0, 2000, 0, 5)),
-    serial_overscan=ac.Region2D((0, 1980, 95, 100)),
-)
+"""
+__Layout__
 
-regions_ci = [
-    (0, 200, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (400, 600, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (800, 1000, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (1200, 1400, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
-    (1600, 1800, layout_list.serial_prescan[3], layout_list.serial_overscan[2]),
+Set up the 2D layout of the charge injection data and load it using this layout.
+"""
+shape_native = (2000, 100)
+
+parallel_overscan = ac.Region2D((1980, 2000, 5, 95))
+serial_prescan = ac.Region2D((0, 2000, 0, 5))
+serial_overscan = ac.Region2D((0, 1980, 95, 100))
+
+regions_list = [
+    (0, 200, serial_prescan[3], serial_overscan[2]),
+    (400, 600, serial_prescan[3], serial_overscan[2]),
+    (800, 1000, serial_prescan[3], serial_overscan[2]),
+    (1200, 1400, serial_prescan[3], serial_overscan[2]),
+    (1600, 1800, serial_prescan[3], serial_overscan[2]),
 ]
-
 
 normalization_list = [100, 5000, 25000, 84700]
 
-pattern_cis = [
-    ac.ci.PatternCIUniform(normalization=normalization, regions=regions_ci)
+layout_list = [
+    ac.ci.Layout2DCIUniform(
+        shape_2d=shape_native,
+        region_list=regions_list,
+        normalization=normalization,
+        parallel_overscan=parallel_overscan,
+        serial_prescan=serial_prescan,
+        serial_overscan=serial_overscan,
+    )
     for normalization in normalization_list
 ]
 
 imaging_ci_list = [
     ac.ci.ImagingCI.from_fits(
-        image_path=path.join(dataset_path, f"image_{pattern.normalization}.fits"),
+        image_path=path.join(dataset_path, f"image_{layout.normalization}.fits"),
         noise_map_path=path.join(
-            dataset_path, f"noise_map_{pattern.normalization}.fits"
+            dataset_path, f"noise_map_{layout.normalization}.fits"
         ),
         pre_cti_image_path=path.join(
-            dataset_path, f"pre_cti_image_{pattern.normalization}.fits"
+            dataset_path, f"pre_cti_image_{layout.normalization}.fits"
         ),
+        layout=layout,
         pixel_scales=0.1,
-        pattern_ci=pattern,
-        roe_corner=(1, 0),
     )
-    for pattern in pattern_cis
+    for layout in layout_list
 ]
 
-imaging_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
-imaging_plotter.subplot_imaging()
+imaging_ci_plotter = aplt.ImagingCIPlotter(imaging=imaging_ci_list[0])
+imaging_ci_plotter.subplot_imaging_ci()
 
 """
 __Paths__
@@ -114,14 +123,16 @@ In Search 1 we fit a CTI model with:
 
 The number of free parameters and therefore the dimensionality of non-linear parameter space is N=3.
 """
-parallel_ccd = af.PriorModel(ac.CCD)
+parallel_ccd = af.PriorModel(ac.CCDPhase)
 parallel_ccd.well_notch_depth = 0.0
-parallel_ccd.full_well_depth = 84700
+parallel_ccd.full_well_depth = 84700.0
 
-model = af.Model(
-    ac.CTI,
-    parallel_traps=[af.PriorModel(ac.TrapInstantCapture)],
-    parallel_ccd=parallel_ccd,
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        parallel_traps=[af.PriorModel(ac.TrapInstantCapture)],
+        parallel_ccd=parallel_ccd,
+    )
 )
 
 """
@@ -133,7 +144,7 @@ You may wish to inspect the results of the search 1 model-fit to ensure a fast n
 provides a reasonably accurate CTI model.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_species[x1]", n_live_points=50
+    path_prefix=path_prefix, name="search[1]_species[x1]", nlive=50
 )
 
 analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
@@ -169,8 +180,12 @@ parallel_trap_1.density = af.UniformPrior(
 
 parallel_ccd = result_1.model.cti.parallel_ccd
 
-model = af.Model(
-    ac.CTI, parallel_traps=[parallel_trap_0, parallel_trap_1], parallel_ccd=parallel_ccd
+model = af.Collection(
+    cti=af.Model(
+        ac.CTI,
+        parallel_traps=[parallel_trap_0, parallel_trap_1],
+        parallel_ccd=parallel_ccd,
+    )
 )
 
 """
@@ -179,7 +194,7 @@ __Search + Analysis + Model-Fit (Search 2)__
 We now create the non-linear search, analysis and perform the model-fit using this model.
 """
 search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_species[x2]", n_live_points=50
+    path_prefix=path_prefix, name="search[2]_species[x2]", nlive=50
 )
 
 analysis = ac.AnalysisImagingCI(dataset_ci_list=imaging_ci_list, clocker=clocker)
