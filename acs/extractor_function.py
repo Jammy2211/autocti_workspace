@@ -8,15 +8,21 @@ import numpy as np
 
 import autoarray as aa
 import autoarray.plot as aplt
+from autoarray import exc
 from os import path
 
 
-def extract_quadrant_a(file_path, bias_path=None):
+def extract_quadrant(file_path, quadrant_letter, bias_path=None):
 
     """
-    Quadrant A is in HDU 4
+    Map quadrant to its letter.
     """
-    hdu = 4
+    if quadrant_letter == "D" or quadrant_letter == "C":
+        hdu = 1
+    elif quadrant_letter == "B" or quadrant_letter == "A":
+        hdu = 4
+    else:
+        raise exc.ArrayException("Quadrant letter for FrameACS must be A, B, C or D.")
 
     """
     Load relevent fits info from image file.
@@ -24,6 +30,16 @@ def extract_quadrant_a(file_path, bias_path=None):
     hdulist = fits.open(file_path)
 
     sci_header = hdulist[0].header
+
+    if sci_header["TELESCOP"] != "HST":
+        raise exc.ArrayException(
+            f"The file {file_path} does not point to a valid HST ACS dataset."
+        )
+
+    if sci_header["INSTRUME"] != "ACS":
+        raise exc.ArrayException(
+            f"The file {file_path} does not point to a valid HST ACS dataset."
+        )
 
     exposure_time = sci_header["EXPTIME"]
     date_of_observation = sci_header["DATE-OBS"]
@@ -38,12 +54,9 @@ def extract_quadrant_a(file_path, bias_path=None):
     hdu_list = fits.open(file_path, do_not_scale_image_data=True)
 
     """
-    Load image data and convert to electrons.
+    Load image data and convert using bscale.
     """
     array = np.array(hdu_list[hdu].data)
-
-    print(array)
-
 
     if units in "COUNTS":
         array_electrons = (array * bscale) + bzero
@@ -53,47 +66,85 @@ def extract_quadrant_a(file_path, bias_path=None):
         array_electrons = array
 
     """
+    Use GAIN to convert to electrons.
+    """
+    gain = sci_header["CCDGAIN"]
+
+    if round(gain) == 1:
+        calibrated_gain = [0.99989998, 0.97210002, 1.01070000, 1.01800000]
+    elif round(gain) == 2:
+        calibrated_gain = [0.99989998, 0.97210002, 1.01070000, 1.01800000]
+    elif round(gain) == 4:
+        calibrated_gain = [4.011, 3.902, 4.074, 3.996]
+    else:
+        raise exc.ArrayException(
+            "Calibrated gain of ACS file does not round to 1, 2 or 4."
+        )
+
+    """
+    NOT 100% SURE THAT A = 0, B = 1. C = 2, D = 3
+    """
+    if quadrant_letter == "A":
+        calibrated_gain = calibrated_gain[0]
+    elif quadrant_letter == "B":
+        calibrated_gain = calibrated_gain[1]
+    elif quadrant_letter == "C":
+        calibrated_gain = calibrated_gain[2]
+    elif quadrant_letter == "D":
+        calibrated_gain = calibrated_gain[3]
+
+    array_electrons = array_electrons * calibrated_gain
+
+    """
     Flip up-down for A
     """
-    array_electrons = np.flipud(array_electrons)
+    if quadrant_letter == "B" or quadrant_letter == "A":
+        array_electrons = np.flipud(array_electrons)
 
     """
     Repeat for Bias.
     """
-    hdu_list = fits.open(bias_path, do_not_scale_image_data=True)
+    bias_hdu_list = fits.open(bias_path, do_not_scale_image_data=True)
 
-    bias = np.array(hdu_list[hdu].data)
+    bias = np.array(bias_hdu_list[hdu].data)
 
+    bias_ext_header = bias_hdu_list[hdu].header
 
-    """
-    Dont convert?
-    """
-    # if units in "COUNTS":
-    #     bias_electrons = (bias * bscale) + bzero
-    # elif units in "CPS":
-    #     bias_electrons = (bias * exposure_time * bscale) + bzero
-    # else:
-    bias_electrons = bias
+    bias_units = bias_ext_header["BUNIT"]
 
     """
-    Flip up down for quadrant A
+    There are no BSCALE / BZERO params in the bias frame, and when I use them I get a dodgy result. So don't allow for
+    a bias frame that isn't in COUNTS for now.
     """
-    bias_electrons = np.flipud(bias_electrons)
+    if bias_units != "COUNTS":
+        raise exc.ArrayException("Cannot use bias frame not in counts.")
+
+    bias_electrons = bias * calibrated_gain
 
     """
-    Extract region for quadrant A:
+    Flip up down for quadrant A or B
     """
-    parallel_size = 2068
-    serial_size = 2072
-
-    array_electrons = array_electrons[0:parallel_size, 0:serial_size]
-    bias_electrons = bias_electrons[0:parallel_size, 0:serial_size]
+    if quadrant_letter == "B" or quadrant_letter == "A":
+        bias_electrons = np.flipud(bias_electrons)
 
     """
-    Rotate to orient for CTI clicking in arctic (no rotation for quadrant A)
+    Extract region for quadrant:
     """
-    array_electrons = array_electrons
-    bias_electrons = bias_electrons
+    if quadrant_letter == "A" or quadrant_letter == "C":
+        array_electrons = array_electrons[0:2068, 0:2072]
+        bias_electrons = bias_electrons[0:2068, 0:2072]
+    elif quadrant_letter == "B" or quadrant_letter == "D":
+        array_electrons = array_electrons[0:2068, 2072:4144]
+        bias_electrons = bias_electrons[0:2068, 2072:4144]
+    else:
+        raise exc.ArrayException("Quadrant letter for FrameACS must be A, B, C or D.")
+
+    """
+    Rotate to orient for CTI clicking in arctic (no rotation for quadrant A or C)
+    """
+    if quadrant_letter == "B" or quadrant_letter == "D":
+        array_electrons = array_electrons[:, ::-1].copy()
+        bias_electrons = bias_electrons[:, ::-1].copy()
 
     """
     Bias subtractions.
@@ -165,20 +216,20 @@ The dataset path to the ACS data.
 dataset_path = path.join("acs", "dataset")
 
 """
-Load and plot the already complete ACS data reduction of this example image, for extraction in half A.
+Load and plot the already complete ACS data reduction of this example image, for extraction.
 """
 file_path = path.join(dataset_path, "j9epf6kjq_raw.fits")
 bias_path = path.join(dataset_path, "q4a1532mj_bia.fits")
 
-image = extract_quadrant_a(file_path=file_path, bias_path=bias_path)
+image = extract_quadrant(file_path=file_path, quadrant_letter="D", bias_path=bias_path)
 
 mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=0.0, vmax=10.0))
 array_plotter = aplt.Array2DPlotter(array=image, mat_plot_2d=mat_plot_2d)
 array_plotter.figure_2d()
 
-print("\n\nA Via Explicit function RESULTS:\n")
+print("\n\nVia Explicit function RESULTS:\n")
 print(
     f"Corner Values = {image.native[0,0]}, {image.native[0, -1]}, {image.native[-1, 0]}, {image.native[-1, -1]}"
 )
-print(f"Min / Max Values = {np.max(image)}, {np.min(image)}")
-print(f"Shape of Bias Extraction A (via autoarray) = {image.shape_native}")
+print(f"Min / Max Values = {np.min(image)}, {np.max(image)}")
+print(f"Shape of Bias Extraction (via autoarray) = {image.shape_native}")

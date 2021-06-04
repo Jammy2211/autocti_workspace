@@ -76,7 +76,7 @@ To correct the ACS data, we need a CTI model describing:
 using the date of observation loaded in the `ACSFrame` object to choose a model based on the date of observation.
 """
 
-# traps = ac.acs.Traps.from_exposure_info(exposure_info=exposure_info)
+# traps = ac.acs.Traps.from_header(header=header)
 # ccd = ac.acs.CCD()
 
 traps = [ac.TrapInstantCapture(density=0.1, release_timescale=1.0)]

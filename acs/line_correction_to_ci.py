@@ -39,7 +39,7 @@ for i in range(lines.n_lines):
         array=lines.lines[i].line[:, None],
         pixel_scales=0.05,
         ci_pattern=ci_pattern,
-        exposure_info=ac.ExposureInfo(readout_offsets=readout_offsets),
+        header=ac.Header(readout_offsets=readout_offsets),
     )
 
     noise_map = ac.ci.CIFrame.manual(
@@ -47,7 +47,7 @@ for i in range(lines.n_lines):
         array=np.ones(shape=image.shape_2d),
         pixel_scales=0.05,
         ci_pattern=ci_pattern,
-        exposure_info=ac.ExposureInfo(readout_offsets=readout_offsets),
+        header=ac.Header(readout_offsets=readout_offsets),
     )
 
     ci_pre_cti = ci_pattern.ci_pre_cti_from(

@@ -33,7 +33,7 @@ print("\nRAW A FILE RESULTS:\n")
 print(
     f"Corner Values = {image.native[0,0]}, {image.native[0, -1]}, {image.native[-1, 0]}, {image.native[-1, -1]}"
 )
-print(f"Min / Max Values = {np.max(image)}, {np.min(image)}")
+print(f"Min / Max Values = {np.min(image)}, {np.max(image)}")
 print(f"Shape of Extraction A (HST reduction) = {image.shape_native}")
 
 """
@@ -49,29 +49,49 @@ file_path = path.join(dataset_path, "j9epf6kjq_raw.fits")
 bias_path = path.join(dataset_path, "q4a1532mj_bia.fits")
 
 image_aa = aa.acs.ImageACS.from_fits(
-    file_path=file_path, quadrant_letter="A", bias_path=bias_path
+    file_path=file_path,
+    quadrant_letter="A",
+    bias_path=bias_path,
+    bias_subtract_via_prescan=True,
 )
-
 
 mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=0.0, vmax=10.0))
 array_plotter = aplt.Array2DPlotter(array=image_aa, mat_plot_2d=mat_plot_2d)
+array_plotter.figure_2d()
+
+array_plotter = aplt.Array2DPlotter(array=image_aa.header.bias, mat_plot_2d=mat_plot_2d)
 array_plotter.figure_2d()
 
 print("\n\nA Via AutoArray RESULTS:\n")
 print(
     f"Corner Values = {image_aa.native[0,0]}, {image_aa.native[0, -1]}, {image_aa.native[-1, 0]}, {image_aa.native[-1, -1]}"
 )
-print(f"Min / Max Values = {np.max(image_aa)}, {np.min(image_aa)}")
+print(f"Min / Max Values = {np.min(image_aa)}, {np.max(image_aa)}")
 print(f"Shape of Bias Extraction A (via autoarray) = {image_aa.shape_native}")
 
 residuals = image - image_aa
 
-array_plotter = aplt.Array2DPlotter(array=residuals)
+mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=-1.0, vmax=1))
+array_plotter = aplt.Array2DPlotter(array=residuals, mat_plot_2d=mat_plot_2d)
 array_plotter.figure_2d()
 
 print("\n\nResiduals of Two images:\n")
 print(
     f"Corner Values = {residuals.native[0,0]}, {residuals.native[0, -1]}, {residuals.native[-1, 0]}, {residuals.native[-1, -1]}"
 )
-print(f"Min / Max Values = {np.max(residuals)}, {np.min(residuals)}")
+print(f"Min / Max Values = {np.min(residuals)}, {np.max(residuals)}")
+print(f"Mean / Median Value = {np.mean(residuals)}, {np.median(residuals)}")
 print(f"Shape of Bias Extraction A (via autoarray) = {residuals.shape_native}")
+
+print(np.median(image.native[:, 0]))
+print(np.median(image.native[:, 100]))
+print(np.median(image.native[:, -1]))
+print()
+print(np.median(image.native[0, :]))
+print(np.median(image.native[-1, :]))
+print(np.median(image.native[100, :]))
+print(np.median(image.native[-100, :]))
+
+print(image.native[0, :])
+print(image.native[1, :])
+print(image.native[2, :])

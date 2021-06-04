@@ -18,31 +18,23 @@ The dataset path to the ACS data.
 """
 dataset_path = path.join("acs", "dataset")
 
-
 """
 Load and plot the already complete ACS data reduction of this example image, for extraction in half C.
 """
-
 file_path = path.join(dataset_path, "j9epf6kjq_rawC.fits")
 image = aa.Array2D.from_fits(file_path=file_path, hdu=0, pixel_scales=0.05)
 
-print(image.native[0, 0])
-print(image.native[0, -1])
-print(image.native[-1, 0])
-print(image.native[-1, -1])
 
 mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=0.0, vmax=10.0))
 array_plotter = aplt.Array2DPlotter(array=image, mat_plot_2d=mat_plot_2d)
 array_plotter.figure_2d()
 
-mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=100.0, vmax=300.0))
-array_plotter = aplt.Array2DPlotter(array=image, mat_plot_2d=mat_plot_2d)
-array_plotter.figure_2d()
-
+print("\nRAW C FILE RESULTS:\n")
+print(
+    f"Corner Values = {image.native[0,0]}, {image.native[0, -1]}, {image.native[-1, 0]}, {image.native[-1, -1]}"
+)
+print(f"Min / Max Values = {np.min(image)}, {np.max(image)}")
 print(f"Shape of Extraction C (HST reduction) = {image.shape_native}")
-
-cmap = aplt.Cmap(vmin=2000.0, vmax=3000.0)
-mat_plot_2d = aplt.MatPlot2D(cmap=cmap)
 
 """
 Extraction C: Lets now use PyAutoArray's `ImageACS` class method to load quadrant C from this data, which does the 
@@ -51,18 +43,55 @@ following:
  - Loads the data from HDU 1.
  - Loads the right hand half of data corresponding to the numpy indexes array[0:2068, 2072:4144].
 
-We will compare this to the already processed quadrant A dataset (which is in different units).
+We will compare this to the already processed quadrant C dataset (which is in different units).
 """
 file_path = path.join(dataset_path, "j9epf6kjq_raw.fits")
+bias_path = path.join(dataset_path, "q4a1532mj_bia.fits")
 
-image_aa = aa.acs.ImageACS.from_fits(file_path=file_path, quadrant_letter="C")
+image_aa = aa.acs.ImageACS.from_fits(
+    file_path=file_path,
+    quadrant_letter="C",
+    bias_path=bias_path,
+    bias_subtract_via_prescan=True,
+)
 
-print(image_aa.native[0, 0])
-print(image_aa.native[0, -1])
-print(image_aa.native[-1, 0])
-print(image_aa.native[-1, -1])
-
+mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=0.0, vmax=10.0))
 array_plotter = aplt.Array2DPlotter(array=image_aa, mat_plot_2d=mat_plot_2d)
 array_plotter.figure_2d()
 
-print(f"Shape of original Extraction C (via autoarray) = {image.shape_native}")
+array_plotter = aplt.Array2DPlotter(array=image_aa.header.bias, mat_plot_2d=mat_plot_2d)
+array_plotter.figure_2d()
+
+print("\n\nC Via AutoArray RESULTS:\n")
+print(
+    f"Corner Values = {image_aa.native[0,0]}, {image_aa.native[0, -1]}, {image_aa.native[-1, 0]}, {image_aa.native[-1, -1]}"
+)
+print(f"Min / Max Values = {np.min(image_aa)}, {np.max(image_aa)}")
+print(f"Shape of Bias Extraction C (via autoarray) = {image_aa.shape_native}")
+
+residuals = image - image_aa
+
+mat_plot_2d = aplt.MatPlot2D(cmap=aplt.Cmap(vmin=-1.0, vmax=1))
+array_plotter = aplt.Array2DPlotter(array=residuals, mat_plot_2d=mat_plot_2d)
+array_plotter.figure_2d()
+
+print("\n\nResiduals of Two images:\n")
+print(
+    f"Corner Values = {residuals.native[0,0]}, {residuals.native[0, -1]}, {residuals.native[-1, 0]}, {residuals.native[-1, -1]}"
+)
+print(f"Min / Max Values = {np.min(residuals)}, {np.max(residuals)}")
+print(f"Mean / Median Value = {np.mean(residuals)}, {np.median(residuals)}")
+print(f"Shape of Bias Extraction C (via autoarray) = {residuals.shape_native}")
+
+print(np.median(image.native[:, 0]))
+print(np.median(image.native[:, 100]))
+print(np.median(image.native[:, -1]))
+print()
+print(np.median(image.native[0, :]))
+print(np.median(image.native[-1, :]))
+print(np.median(image.native[100, :]))
+print(np.median(image.native[-100, :]))
+
+print(image.native[0, :])
+print(image.native[1, :])
+print(image.native[2, :])

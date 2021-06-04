@@ -117,7 +117,7 @@ for dataset_name in dataset_names:
         file_path=f"{dataset_path}/{dataset_name}{dataset_suffix}.fits",
         quadrant_letter="A",
     )
-    date = 2400000.5 + frame.exposure_info.modified_julian_date
+    date = 2400000.5 + frame.header.modified_julian_date
 
     # Subtract from all columns the fitted prescan bias
     frame -= prescan_fitted_bias_column(frame[:, 18:24])
