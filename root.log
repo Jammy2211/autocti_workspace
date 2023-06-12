@@ -225,3 +225,711 @@
 2023-06-08 13:55:47,970 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
 2023-06-08 13:55:47,973 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
 2023-06-08 13:55:48,072 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 11:58:36,342 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 11:58:36,344 - ccd_8x4 - INFO - Starting search
+2023-06-12 11:58:36,346 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,347 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,348 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,349 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,350 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,351 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,352 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,353 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,354 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,355 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,356 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,357 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,358 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,359 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,360 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,360 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,361 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,362 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,364 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,365 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,366 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,368 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,369 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,370 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,371 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,372 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,373 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,374 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,375 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,376 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,377 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 11:58:36,378 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:02:41,223 - ccd_8x4 - INFO - Saving path info
+2023-06-12 12:02:42,078 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:02:42,082 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:02:42,204 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:04:48,678 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:04:48,680 - fpa_0_0 - INFO - Starting search
+2023-06-12 12:04:48,682 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:04:48,683 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:05:03,573 - fpa_0_0 - INFO - Saving path info
+2023-06-12 12:05:03,642 - fpa_0_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:05:03,644 - fpa_0_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:05:03,728 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:06:02,257 - fpa_0_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:07:21,131 - fpa_0_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:07:23,920 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:08:00,363 - fpa_0_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:08:02,718 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:08:16,701 - fpa_0_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:08:19,126 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:08:33,380 - fpa_0_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:08:35,727 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:08:49,667 - fpa_0_0 - INFO - Removing zip file
+2023-06-12 12:08:50,444 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:08:50,445 - fpa_0_1 - INFO - Starting search
+2023-06-12 12:08:50,447 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:08:50,448 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:09:05,280 - fpa_0_1 - INFO - Saving path info
+2023-06-12 12:09:05,349 - fpa_0_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:09:05,351 - fpa_0_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:09:05,420 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:10:01,928 - fpa_0_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:10:04,308 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:11:23,602 - fpa_0_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:11:25,981 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:12:07,327 - fpa_0_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:12:09,629 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:12:23,501 - fpa_0_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:12:26,046 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:12:39,955 - fpa_0_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:12:42,469 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:12:56,406 - fpa_0_1 - INFO - Removing zip file
+2023-06-12 12:12:57,311 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:12:57,313 - fpa_0_2 - INFO - Starting search
+2023-06-12 12:12:57,316 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:12:57,317 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:13:12,958 - fpa_0_2 - INFO - Saving path info
+2023-06-12 12:13:13,023 - fpa_0_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:13:13,026 - fpa_0_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:13:13,094 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:14:10,867 - fpa_0_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:15:26,321 - fpa_0_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:15:28,792 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:16:15,578 - fpa_0_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:16:18,019 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:16:31,643 - fpa_0_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:16:34,034 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:16:48,151 - fpa_0_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:16:50,677 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:16:54,555 - ccd_8x4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:17:04,460 - fpa_0_2 - INFO - Removing zip file
+2023-06-12 12:17:05,215 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:17:05,217 - fpa_0_3 - INFO - Starting search
+2023-06-12 12:17:05,218 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:17:05,220 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:17:20,137 - fpa_0_3 - INFO - Saving path info
+2023-06-12 12:17:20,200 - fpa_0_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:17:20,203 - fpa_0_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:17:20,273 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:18:24,144 - fpa_0_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:19:48,357 - fpa_0_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:19:50,991 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:20:45,560 - fpa_0_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:20:47,925 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:21:02,641 - fpa_0_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:21:05,187 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:21:20,092 - fpa_0_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:21:22,834 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:21:38,069 - fpa_0_3 - INFO - Removing zip file
+2023-06-12 12:21:38,791 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:21:38,792 - fpa_0_4 - INFO - Starting search
+2023-06-12 12:21:38,794 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:21:38,795 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:21:55,010 - fpa_0_4 - INFO - Saving path info
+2023-06-12 12:21:55,076 - fpa_0_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:21:55,078 - fpa_0_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:21:55,146 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:22:59,976 - fpa_0_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:23:02,335 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:24:31,331 - fpa_0_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:24:33,682 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:25:07,905 - fpa_0_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:25:10,762 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:25:26,614 - fpa_0_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:25:28,931 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:25:44,143 - fpa_0_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:25:47,763 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:26:02,234 - fpa_0_4 - INFO - Removing zip file
+2023-06-12 12:26:02,923 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:26:02,924 - fpa_0_5 - INFO - Starting search
+2023-06-12 12:26:02,925 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:26:02,926 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:26:17,613 - fpa_0_5 - INFO - Saving path info
+2023-06-12 12:26:17,674 - fpa_0_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:26:17,677 - fpa_0_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:26:17,743 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:27:16,572 - fpa_0_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:28:35,489 - fpa_0_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:28:37,961 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:29:23,710 - fpa_0_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:29:26,113 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:29:40,217 - fpa_0_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:29:42,602 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:29:57,199 - fpa_0_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:29:59,571 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:30:13,751 - fpa_0_5 - INFO - Removing zip file
+2023-06-12 12:30:14,462 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:30:14,463 - fpa_1_0 - INFO - Starting search
+2023-06-12 12:30:14,465 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:30:14,466 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:30:29,860 - fpa_1_0 - INFO - Saving path info
+2023-06-12 12:30:29,926 - fpa_1_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:30:29,929 - fpa_1_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:30:29,999 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:31:30,409 - fpa_1_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:31:32,825 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:32:48,704 - fpa_1_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:32:51,258 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:33:45,724 - fpa_1_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:33:48,353 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:34:01,966 - fpa_1_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:34:04,518 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:34:18,136 - fpa_1_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:34:20,853 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:34:35,252 - fpa_1_0 - INFO - Removing zip file
+2023-06-12 12:34:35,978 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:34:35,979 - fpa_1_1 - INFO - Starting search
+2023-06-12 12:34:35,980 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:34:35,981 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:34:51,796 - fpa_1_1 - INFO - Saving path info
+2023-06-12 12:34:51,985 - fpa_1_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:34:51,991 - fpa_1_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:34:52,115 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:35:57,447 - fpa_1_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:37:16,371 - fpa_1_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:37:18,702 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:38:03,613 - fpa_1_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:38:06,505 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:38:09,459 - ccd_8x4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:38:12,214 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:38:21,372 - fpa_1_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:38:23,972 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:38:38,321 - fpa_1_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:38:41,052 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:38:59,558 - fpa_1_1 - INFO - Removing zip file
+2023-06-12 12:39:00,378 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:39:00,379 - fpa_1_2 - INFO - Starting search
+2023-06-12 12:39:00,380 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:39:00,382 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:39:16,893 - fpa_1_2 - INFO - Saving path info
+2023-06-12 12:39:16,955 - fpa_1_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:39:16,957 - fpa_1_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:39:17,026 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:40:19,292 - fpa_1_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:40:21,795 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:41:41,267 - fpa_1_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:41:44,250 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:42:27,023 - fpa_1_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:42:29,670 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:42:45,889 - fpa_1_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:42:48,330 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:43:03,505 - fpa_1_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:43:06,186 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:43:24,050 - fpa_1_2 - INFO - Removing zip file
+2023-06-12 12:43:24,822 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:43:24,823 - fpa_1_3 - INFO - Starting search
+2023-06-12 12:43:24,824 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:43:24,826 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:43:41,773 - fpa_1_3 - INFO - Saving path info
+2023-06-12 12:43:41,844 - fpa_1_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:43:41,847 - fpa_1_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:43:41,918 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:44:48,457 - fpa_1_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:44:50,795 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:46:13,506 - fpa_1_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:46:16,218 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:47:15,147 - fpa_1_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:47:17,764 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:47:33,168 - fpa_1_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:47:36,034 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:47:54,942 - fpa_1_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:47:58,178 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:48:14,678 - fpa_1_3 - INFO - Removing zip file
+2023-06-12 12:48:15,496 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:48:15,497 - fpa_1_4 - INFO - Starting search
+2023-06-12 12:48:15,499 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:48:15,500 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:48:33,005 - fpa_1_4 - INFO - Saving path info
+2023-06-12 12:48:33,073 - fpa_1_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:48:33,076 - fpa_1_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:48:33,141 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:49:33,374 - fpa_1_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:50:57,391 - fpa_1_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:51:00,185 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:51:46,509 - fpa_1_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:51:48,878 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:52:03,119 - fpa_1_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:52:05,697 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:52:21,600 - fpa_1_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:52:24,361 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:52:39,304 - fpa_1_4 - INFO - Removing zip file
+2023-06-12 12:52:40,080 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:52:40,082 - fpa_1_5 - INFO - Starting search
+2023-06-12 12:52:40,083 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:52:40,085 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:52:56,382 - fpa_1_5 - INFO - Saving path info
+2023-06-12 12:52:56,449 - fpa_1_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:52:56,451 - fpa_1_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:52:56,526 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:53:58,796 - fpa_1_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:54:01,085 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:55:25,345 - fpa_1_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:55:27,901 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:56:13,076 - fpa_1_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:56:15,563 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:56:32,725 - fpa_1_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:56:35,360 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:56:52,143 - fpa_1_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:56:54,713 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:57:10,705 - fpa_1_5 - INFO - Removing zip file
+2023-06-12 12:57:11,510 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 12:57:11,512 - fpa_2_0 - INFO - Starting search
+2023-06-12 12:57:11,514 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:57:11,515 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 12:57:26,934 - fpa_2_0 - INFO - Saving path info
+2023-06-12 12:57:26,997 - fpa_2_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 12:57:27,000 - fpa_2_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 12:57:27,065 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 12:58:30,808 - fpa_2_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:58:33,164 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 12:59:53,126 - fpa_2_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 12:59:55,503 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:00:05,023 - ccd_8x4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:00:07,699 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:00:38,166 - fpa_2_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:00:40,760 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:00:56,457 - fpa_2_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:00:59,020 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:01:13,614 - fpa_2_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:01:16,220 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:01:32,257 - fpa_2_0 - INFO - Removing zip file
+2023-06-12 13:01:33,014 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:01:33,015 - fpa_2_1 - INFO - Starting search
+2023-06-12 13:01:33,017 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:01:33,018 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:01:49,955 - fpa_2_1 - INFO - Saving path info
+2023-06-12 13:01:50,023 - fpa_2_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:01:50,027 - fpa_2_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:01:50,097 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:02:55,343 - fpa_2_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:04:47,954 - fpa_2_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:04:50,849 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:05:31,552 - fpa_2_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:05:34,201 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:05:37,574 - ccd_8x4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:05:40,866 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:05:51,476 - fpa_2_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:05:54,088 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:06:11,164 - fpa_2_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:06:14,318 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:06:32,210 - fpa_2_1 - INFO - Removing zip file
+2023-06-12 13:06:33,060 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:06:33,061 - fpa_2_2 - INFO - Starting search
+2023-06-12 13:06:33,063 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:06:33,065 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:06:51,883 - fpa_2_2 - INFO - Saving path info
+2023-06-12 13:06:51,948 - fpa_2_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:06:51,951 - fpa_2_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:06:52,026 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:08:02,019 - fpa_2_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:09:35,826 - fpa_2_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:09:39,056 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:09:54,529 - ccd_8x4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:09:57,526 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:10:19,374 - fpa_2_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:10:22,104 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:10:38,517 - fpa_2_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:10:41,563 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:10:59,819 - fpa_2_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:11:02,907 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:11:21,881 - fpa_2_2 - INFO - Removing zip file
+2023-06-12 13:11:22,589 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:11:22,590 - fpa_2_3 - INFO - Starting search
+2023-06-12 13:11:22,592 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:11:22,593 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:11:43,080 - fpa_2_3 - INFO - Saving path info
+2023-06-12 13:11:43,155 - fpa_2_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:11:43,158 - fpa_2_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:11:43,241 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:12:47,065 - fpa_2_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:14:01,039 - ccd_8x4 - INFO - 15000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:14:04,122 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:14:15,464 - fpa_2_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:14:18,133 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:15:09,326 - fpa_2_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:15:12,380 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:15:30,291 - fpa_2_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:15:33,414 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:15:49,641 - fpa_2_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:15:52,572 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:16:10,244 - fpa_2_3 - INFO - Removing zip file
+2023-06-12 13:16:11,290 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:16:11,291 - fpa_2_4 - INFO - Starting search
+2023-06-12 13:16:11,293 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:16:11,294 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:16:29,223 - fpa_2_4 - INFO - Saving path info
+2023-06-12 13:16:29,314 - fpa_2_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:16:29,317 - fpa_2_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:16:29,416 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:17:40,854 - fpa_2_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:18:10,570 - ccd_8x4 - INFO - Removing zip file
+2023-06-12 13:19:05,571 - fpa_2_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:19:07,777 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:20:01,815 - fpa_2_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:20:04,979 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:20:19,933 - fpa_2_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:20:22,208 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:20:35,503 - fpa_2_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:20:37,858 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:20:54,216 - fpa_2_4 - INFO - Removing zip file
+2023-06-12 13:20:55,042 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:20:55,043 - fpa_2_5 - INFO - Starting search
+2023-06-12 13:20:55,045 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:20:55,047 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:21:10,660 - fpa_2_5 - INFO - Saving path info
+2023-06-12 13:21:10,722 - fpa_2_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:21:10,725 - fpa_2_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:21:10,792 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:22:09,504 - fpa_2_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:23:28,719 - fpa_2_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:23:31,847 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:24:20,011 - fpa_2_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:24:22,432 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:24:36,131 - fpa_2_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:24:38,607 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:24:53,566 - fpa_2_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:24:56,325 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:25:11,396 - fpa_2_5 - INFO - Removing zip file
+2023-06-12 13:25:12,104 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:25:12,105 - fpa_3_0 - INFO - Starting search
+2023-06-12 13:25:12,107 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:25:12,108 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:25:27,038 - fpa_3_0 - INFO - Saving path info
+2023-06-12 13:25:27,103 - fpa_3_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:25:27,106 - fpa_3_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:25:27,175 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:26:24,077 - fpa_3_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:27:42,750 - fpa_3_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:27:45,127 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:28:15,265 - fpa_3_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:28:17,627 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:28:31,349 - fpa_3_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:28:33,909 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:28:48,413 - fpa_3_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:28:50,753 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:29:03,481 - fpa_3_0 - INFO - Removing zip file
+2023-06-12 13:29:04,135 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:29:04,135 - fpa_3_1 - INFO - Starting search
+2023-06-12 13:29:04,137 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:29:04,138 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:29:17,637 - fpa_3_1 - INFO - Saving path info
+2023-06-12 13:29:17,692 - fpa_3_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:29:17,695 - fpa_3_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:29:17,755 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:30:15,696 - fpa_3_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:31:22,291 - fpa_3_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:31:24,240 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:32:18,642 - fpa_3_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:32:20,749 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:32:32,485 - fpa_3_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:32:34,516 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:32:48,127 - fpa_3_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:32:50,602 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:33:04,540 - fpa_3_1 - INFO - Removing zip file
+2023-06-12 13:33:05,147 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:33:05,148 - fpa_3_2 - INFO - Starting search
+2023-06-12 13:33:05,149 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:33:05,150 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:33:19,869 - fpa_3_2 - INFO - Saving path info
+2023-06-12 13:33:19,930 - fpa_3_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:33:19,934 - fpa_3_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:33:19,999 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:34:11,151 - fpa_3_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:34:14,038 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:35:26,911 - fpa_3_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:35:29,209 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:35:52,980 - fpa_3_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:35:55,186 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:36:08,342 - fpa_3_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:36:10,866 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:36:22,416 - fpa_3_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:36:24,362 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:36:35,986 - fpa_3_2 - INFO - Removing zip file
+2023-06-12 13:36:36,584 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:36:36,585 - fpa_3_3 - INFO - Starting search
+2023-06-12 13:36:36,586 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:36:36,587 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:36:49,017 - fpa_3_3 - INFO - Saving path info
+2023-06-12 13:36:49,071 - fpa_3_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:36:49,073 - fpa_3_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:36:49,133 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:37:39,755 - fpa_3_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:38:49,103 - fpa_3_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:38:51,133 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:39:27,404 - fpa_3_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:39:29,446 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:39:41,500 - fpa_3_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:39:43,654 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:39:55,154 - fpa_3_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:39:57,276 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:40:09,176 - fpa_3_3 - INFO - Removing zip file
+2023-06-12 13:40:09,861 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:40:09,862 - fpa_3_4 - INFO - Starting search
+2023-06-12 13:40:09,863 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:40:09,864 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:40:22,760 - fpa_3_4 - INFO - Saving path info
+2023-06-12 13:40:22,815 - fpa_3_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:40:22,818 - fpa_3_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:40:22,876 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:41:11,903 - fpa_3_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:42:25,904 - fpa_3_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:42:30,678 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:44:03,045 - fpa_3_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:44:07,290 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:44:35,214 - fpa_3_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:44:40,317 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:45:09,841 - fpa_3_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:45:15,264 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:45:42,965 - fpa_3_4 - INFO - Removing zip file
+2023-06-12 13:45:44,223 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:45:44,224 - fpa_3_5 - INFO - Starting search
+2023-06-12 13:45:44,227 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:45:44,228 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:46:08,454 - fpa_3_5 - INFO - Saving path info
+2023-06-12 13:46:08,513 - fpa_3_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:46:08,516 - fpa_3_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:46:08,576 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:47:04,365 - fpa_3_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:48:13,752 - fpa_3_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:48:15,679 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:49:03,976 - fpa_3_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:49:06,202 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:49:19,659 - fpa_3_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:49:22,936 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:49:39,165 - fpa_3_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:49:41,451 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:49:53,930 - fpa_3_5 - INFO - Removing zip file
+2023-06-12 13:49:54,561 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:49:54,562 - fpa_4_0 - INFO - Starting search
+2023-06-12 13:49:54,564 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:49:54,565 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:50:08,116 - fpa_4_0 - INFO - Saving path info
+2023-06-12 13:50:08,176 - fpa_4_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:50:08,178 - fpa_4_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:50:08,240 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:51:04,312 - fpa_4_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:52:35,345 - fpa_4_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:52:38,360 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:53:27,024 - fpa_4_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:53:29,565 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:53:42,867 - fpa_4_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:53:45,146 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:54:00,532 - fpa_4_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:54:03,654 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:54:19,009 - fpa_4_0 - INFO - Removing zip file
+2023-06-12 13:54:19,703 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:54:19,704 - fpa_4_1 - INFO - Starting search
+2023-06-12 13:54:19,706 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:54:19,707 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:54:34,039 - fpa_4_1 - INFO - Saving path info
+2023-06-12 13:54:34,100 - fpa_4_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:54:34,103 - fpa_4_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:54:34,179 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:55:32,821 - fpa_4_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:56:49,081 - fpa_4_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:56:51,519 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:57:32,365 - fpa_4_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:57:34,964 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:57:49,358 - fpa_4_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:57:51,992 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:58:06,478 - fpa_4_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 13:58:08,852 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 13:58:23,792 - fpa_4_1 - INFO - Removing zip file
+2023-06-12 13:58:24,643 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 13:58:24,644 - fpa_4_2 - INFO - Starting search
+2023-06-12 13:58:24,646 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:58:24,647 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 13:58:40,541 - fpa_4_2 - INFO - Saving path info
+2023-06-12 13:58:40,598 - fpa_4_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 13:58:40,600 - fpa_4_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 13:58:40,664 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 13:59:36,151 - fpa_4_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:00:50,048 - fpa_4_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:00:52,606 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:01:31,896 - fpa_4_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:01:34,137 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:01:49,083 - fpa_4_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:01:51,315 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:02:05,597 - fpa_4_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:02:07,812 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:02:20,705 - fpa_4_2 - INFO - Removing zip file
+2023-06-12 14:02:21,352 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:02:21,353 - fpa_4_3 - INFO - Starting search
+2023-06-12 14:02:21,354 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:02:21,355 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:02:35,666 - fpa_4_3 - INFO - Saving path info
+2023-06-12 14:02:35,728 - fpa_4_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:02:35,731 - fpa_4_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:02:35,800 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:03:31,992 - fpa_4_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:04:48,511 - fpa_4_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:04:51,320 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:05:34,287 - fpa_4_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:05:36,877 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:05:53,962 - fpa_4_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:05:56,768 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:06:11,911 - fpa_4_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:06:14,937 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:06:28,708 - fpa_4_3 - INFO - Removing zip file
+2023-06-12 14:06:29,426 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:06:29,427 - fpa_4_4 - INFO - Starting search
+2023-06-12 14:06:29,428 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:06:29,430 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:06:43,568 - fpa_4_4 - INFO - Saving path info
+2023-06-12 14:06:43,623 - fpa_4_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:06:43,626 - fpa_4_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:06:43,687 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:07:37,488 - fpa_4_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:09:04,845 - fpa_4_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:09:07,476 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:09:51,823 - fpa_4_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:09:54,525 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:10:10,110 - fpa_4_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:10:12,697 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:10:29,711 - fpa_4_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:10:33,710 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:10:48,995 - fpa_4_4 - INFO - Removing zip file
+2023-06-12 14:10:49,765 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:10:49,766 - fpa_4_5 - INFO - Starting search
+2023-06-12 14:10:49,767 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:10:49,769 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:11:05,711 - fpa_4_5 - INFO - Saving path info
+2023-06-12 14:11:05,792 - fpa_4_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:11:05,795 - fpa_4_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:11:05,879 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:12:07,580 - fpa_4_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:13:30,410 - fpa_4_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:13:32,971 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:14:08,283 - fpa_4_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:14:10,692 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:14:27,655 - fpa_4_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:14:30,414 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:14:46,945 - fpa_4_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:14:49,761 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:15:05,862 - fpa_4_5 - INFO - Removing zip file
+2023-06-12 14:15:07,053 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:15:07,056 - fpa_5_0 - INFO - Starting search
+2023-06-12 14:15:07,060 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:15:07,062 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:15:24,437 - fpa_5_0 - INFO - Saving path info
+2023-06-12 14:15:24,502 - fpa_5_0 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:15:24,505 - fpa_5_0 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:15:24,576 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:16:24,935 - fpa_5_0 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:17:47,671 - fpa_5_0 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:17:50,403 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:18:34,825 - fpa_5_0 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:18:37,477 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:18:52,407 - fpa_5_0 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:18:54,722 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:19:09,411 - fpa_5_0 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:19:11,897 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:19:25,394 - fpa_5_0 - INFO - Removing zip file
+2023-06-12 14:19:26,061 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:19:26,062 - fpa_5_1 - INFO - Starting search
+2023-06-12 14:19:26,063 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:19:26,064 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:19:40,167 - fpa_5_1 - INFO - Saving path info
+2023-06-12 14:19:40,253 - fpa_5_1 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:19:40,257 - fpa_5_1 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:19:40,346 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:20:36,728 - fpa_5_1 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:20:38,891 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:21:52,552 - fpa_5_1 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:21:54,808 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:22:33,338 - fpa_5_1 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:22:36,174 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:22:50,319 - fpa_5_1 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:22:52,544 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:23:05,477 - fpa_5_1 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:23:07,950 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:23:21,877 - fpa_5_1 - INFO - Removing zip file
+2023-06-12 14:23:22,544 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:23:22,545 - fpa_5_2 - INFO - Starting search
+2023-06-12 14:23:22,546 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:23:22,548 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:23:36,578 - fpa_5_2 - INFO - Saving path info
+2023-06-12 14:23:36,639 - fpa_5_2 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:23:36,641 - fpa_5_2 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:23:36,710 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:24:41,489 - fpa_5_2 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:26:08,225 - fpa_5_2 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:26:10,914 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:26:49,672 - fpa_5_2 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:26:51,998 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:27:06,093 - fpa_5_2 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:27:08,506 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:27:22,673 - fpa_5_2 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:27:25,054 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:27:40,915 - fpa_5_2 - INFO - Removing zip file
+2023-06-12 14:27:41,568 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:27:41,569 - fpa_5_3 - INFO - Starting search
+2023-06-12 14:27:41,571 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:27:41,572 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:27:55,870 - fpa_5_3 - INFO - Saving path info
+2023-06-12 14:27:55,928 - fpa_5_3 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:27:55,931 - fpa_5_3 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:27:55,996 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:28:48,617 - fpa_5_3 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:30:05,459 - fpa_5_3 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:30:07,841 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:30:50,425 - fpa_5_3 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:30:52,766 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:31:06,847 - fpa_5_3 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:31:09,498 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:31:23,024 - fpa_5_3 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:31:25,757 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:31:40,927 - fpa_5_3 - INFO - Removing zip file
+2023-06-12 14:31:41,616 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:31:41,617 - fpa_5_4 - INFO - Starting search
+2023-06-12 14:31:41,619 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:31:41,620 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:31:56,827 - fpa_5_4 - INFO - Saving path info
+2023-06-12 14:31:56,891 - fpa_5_4 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:31:56,893 - fpa_5_4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:31:56,962 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:32:56,450 - fpa_5_4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:34:14,449 - fpa_5_4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:34:16,834 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:34:54,452 - fpa_5_4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:34:56,815 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:35:09,773 - fpa_5_4 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:35:12,146 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:35:25,311 - fpa_5_4 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:35:27,513 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:35:42,266 - fpa_5_4 - INFO - Removing zip file
+2023-06-12 14:35:42,951 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-12 14:35:42,952 - fpa_5_5 - INFO - Starting search
+2023-06-12 14:35:42,954 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:35:42,955 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-12 14:35:57,503 - fpa_5_5 - INFO - Saving path info
+2023-06-12 14:35:57,563 - fpa_5_5 - INFO - Not complete. Starting non-linear search.
+2023-06-12 14:35:57,566 - fpa_5_5 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-12 14:35:57,632 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-12 14:36:56,490 - fpa_5_5 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:36:58,883 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:38:14,274 - fpa_5_5 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:38:16,574 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:39:05,390 - fpa_5_5 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:39:07,692 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:39:21,862 - fpa_5_5 - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:39:24,444 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:39:38,850 - fpa_5_5 - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-12 14:39:41,120 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-12 14:39:54,400 - fpa_5_5 - INFO - Removing zip file
