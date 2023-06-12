@@ -56,7 +56,7 @@ The examples in the ``notebooks`` and ``scripts`` folders are structured as foll
 - ``overview``: Examples giving an overview of **PyAutoCTI**'s core features.
 
 - ``dataset_1d``: Examples for analysing and simulating 1D CTI datasets (e.g. warm pixels).
-- ``imaging``: Examples for analysing and simulating CCD charge injection imaging data (e.g. Euclid).
+- ``imaging_ci``: Examples for analysing and simulating CCD charge injection imaging data (e.g. Euclid).
 
 - ``results``: Examples using the results of a model-fit, including database tools which loads results from hard-disk.
 - ``plot``: An API reference guide for **PyAutoCTI**'s plotting tools.
@@ -66,7 +66,7 @@ Inside these packages are packages titled ``advanced`` which only users familiar
 
 In the ``dataset_1d`` and ``imaging_ci`` folders you'll find the following packages:
 
- - ``correction``: Examples of how to correct data with a CTI model.
+- ``correction``: Examples of how to correct data with a CTI model.
 - ``modeling``: Examples of how to fit a CTI model to data via a non-linear search.
 - ``simulators``: Scripts for simulating realistic CTI calibration datasets.
 - ``data_preparation``: Tools to preprocess CTI calibration data before an analysis (e.g. cosmic ray flagging).

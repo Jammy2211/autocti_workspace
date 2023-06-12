@@ -235,7 +235,13 @@ which are often applied to science data, which by default would flag the charge 
 
 Lets inspect a cosmic ray map which conforms to **PyAutoCTI** standards:
 """
-array_plotter = aplt.Array2DPlotter(array=dataset.cosmic_ray_map)
+dataset_path = path.join("dataset", "imaging_ci", "cosmic_rays")
+
+cosmic_ray_map = ac.Array2D.from_fits(
+    file_path=path.join(dataset_path, f"norm_{int(norm)}", "cosmic_ray_map.fits"), pixel_scales=0.1
+)
+
+array_plotter = aplt.Array2DPlotter(array=cosmic_ray_map)
 array_plotter.figure_2d()
 
 """
