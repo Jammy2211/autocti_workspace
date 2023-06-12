@@ -1,0 +1,23 @@
+Review:
+
+- results package.
+- database package.
+- Go over overview package.
+- Add time evoltuion exampels, incuding database example.
+- Go over all data preparation scripts (e.g. use new CR flagging).
+- Go over modeling / chaining scripts.
+- New no gsl package with Richard's improvements, add installation docs.
+
+Euclid:
+
+- FPR pixel label in all 1D datasets (e.g. normalized residuals).
+- Use region list to not plot irrelevant regions.
+- Zoom in on pixels based on where model fit goes close to zero.
+- Add chi2 to plots.
+
+
+- Data with noise map standard visusal.
+- Data Prepration (new CR stuff, remove LAcosmic)/
+- Plots start here
+- Results tutorials.
+- Database + temporal examples, make mature, include in readthedocs.
