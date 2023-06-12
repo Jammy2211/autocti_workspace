@@ -1,0 +1,227 @@
+2023-06-06 15:59:56,526 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-06 15:59:56,527 - autofit.non_linear.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-06-06 15:59:56,531 - ccd_8x4 - INFO - Starting search
+2023-06-06 15:59:56,535 - ccd_8x4 - INFO - Saving path info
+2023-06-06 15:59:56,931 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
+2023-06-06 15:59:56,933 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-06 15:59:56,989 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-06-06 15:59:57,112 - ccd_8x4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-06 15:59:57,232 - ccd_8x4 - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-06 15:59:57,267 - ccd_8x4 - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-06 15:59:57,314 - ccd_8x4 - INFO - Removing zip file
+2023-06-07 18:28:33,363 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-07 18:28:33,367 - ccd_8x4 - INFO - Starting search
+2023-06-07 18:28:33,369 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,370 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,372 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,373 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,374 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,375 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,377 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,378 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,380 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,381 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,382 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,383 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,384 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,385 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,387 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,388 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,389 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,390 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,391 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,392 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,394 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,395 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,396 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,397 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,399 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,400 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,402 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,403 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,404 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,405 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,406 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:28:33,407 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,281 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-07 18:38:27,284 - ccd_8x4 - INFO - Starting search
+2023-06-07 18:38:27,286 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,287 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,289 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,290 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,291 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,292 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,294 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,295 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,296 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,297 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,299 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,300 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,301 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,302 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,303 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,305 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,306 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,307 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,308 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,309 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,311 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,312 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,313 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,314 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,316 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,317 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,318 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,319 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,321 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,322 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,323 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:27,324 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,899 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-07 18:38:56,901 - ccd_8x4 - INFO - Starting search
+2023-06-07 18:38:56,903 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,905 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,906 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,907 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,909 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,910 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,912 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,913 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,914 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,916 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,917 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,918 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,920 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,921 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,922 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,923 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,925 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,926 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,927 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,928 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,930 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,931 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,932 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,934 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,935 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,937 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,938 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,939 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,940 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,942 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,943 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-07 18:38:56,944 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,136 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-08 13:14:02,139 - ccd_8x4 - INFO - Starting search
+2023-06-08 13:14:02,142 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,144 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,146 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,147 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,149 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,150 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,152 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,154 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,156 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,158 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,159 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,163 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,164 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,166 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,169 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,171 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,172 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,174 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,176 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,178 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,180 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,183 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,185 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,187 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,188 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,190 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,192 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,194 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,196 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,198 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,201 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:14:02,202 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,577 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-08 13:20:25,579 - ccd_8x4 - INFO - Starting search
+2023-06-08 13:20:25,582 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,585 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,586 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,587 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,590 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,592 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,593 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,594 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,595 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,597 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,599 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,600 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,601 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,603 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,605 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,607 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,608 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,610 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,611 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,613 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,614 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,616 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,617 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,618 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,619 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,620 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,621 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,622 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,623 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,625 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,626 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:20:25,628 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:24:37,506 - ccd_8x4 - INFO - Saving path info
+2023-06-08 13:24:38,666 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
+2023-06-08 13:24:38,670 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-08 13:24:38,837 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-08 13:39:42,154 - ccd_8x4 - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-08 13:39:46,321 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
+2023-06-08 13:51:57,492 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-08 13:51:57,495 - ccd_8x4 - INFO - Starting search
+2023-06-08 13:51:57,497 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,498 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,499 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,500 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,501 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,502 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,503 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,504 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,505 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,506 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,507 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,508 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,509 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,510 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,511 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,512 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,513 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,514 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,515 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,516 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,517 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,518 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,518 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,519 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,520 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,521 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,523 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,524 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,525 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,526 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,527 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:51:57,528 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-06-08 13:55:47,300 - ccd_8x4 - INFO - Saving path info
+2023-06-08 13:55:47,970 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
+2023-06-08 13:55:47,973 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-08 13:55:48,072 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
