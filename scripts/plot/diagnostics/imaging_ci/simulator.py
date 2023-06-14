@@ -73,11 +73,11 @@ total_datasets = len(norm_list)
 
 for fpa_i in range(6):
     for fpa_j in range(6):
-
         for quad_k in range(4):
-
             dataset_name = f"data_fpa_{fpa_i}_{fpa_j}_quad_{quad_k}"
-            dataset_path = path.join("dataset", dataset_type, "diagnostic_plot", dataset_name)
+            dataset_path = path.join(
+                "dataset", dataset_type, "diagnostic_plot", dataset_name
+            )
 
             layout_list = [
                 ac.Layout2DCI(
@@ -101,7 +101,9 @@ for fpa_i in range(6):
                 well_fill_power=0.58, well_notch_depth=0.0, full_well_depth=200000.0
             )
 
-            cti = ac.CTI2D(parallel_trap_list=parallel_trap_list, parallel_ccd=parallel_ccd)
+            cti = ac.CTI2D(
+                parallel_trap_list=parallel_trap_list, parallel_ccd=parallel_ccd
+            )
 
             norm_quad_list = [norm + quad_k * 5000 for norm in norm_list]
 
@@ -157,7 +159,9 @@ for fpa_i in range(6):
                 dataset_plotter = aplt.ImagingCIPlotter(
                     dataset=dataset, mat_plot_1d=mat_plot
                 )
-                dataset_plotter.figures_1d(region="parallel_fpr", data=True, data_logy=True)
+                dataset_plotter.figures_1d(
+                    region="parallel_fpr", data=True, data_logy=True
+                )
                 dataset_plotter.figures_1d(
                     region="parallel_eper", data=True, data_logy=True
                 )

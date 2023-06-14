@@ -81,7 +81,6 @@ region_list = [
 ]
 
 norm_list = [1000, 10000]
-total_datasets = len(norm_list)
 
 settings_dict = {
     "CCD": f"1-1.E",
@@ -94,19 +93,26 @@ settings_dict = {
 
 workspace_path = os.getcwd()
 
-output = aplt.Output(path=workspace_path, filename="fpr_vs_eper", format="png")
+output = aplt.Output(path=workspace_path, filename="fpa_quad_grid", format="png")
 
 multi_plotter_list = []
 
-for fpa_i in range(2):
-    for fpa_j in range(2):
-        plotter_list = []
+fpa_i_range = 6
+fpa_j_range = 6
 
-        for quad_k in range(4):
-            fpr_list = []
-            eper_list = []
+fpa_quad_array_list = []
 
-            for norm in norm_list:
+for norm in norm_list:
+    fpa_quad_array = np.zeros(shape=(fpa_i_range * 2, fpa_j_range * 2))
+
+    for fpa_i in range(fpa_i_range):
+        for fpa_j in range(fpa_j_range):
+            plotter_list = []
+
+            for quad_k in range(4):
+                fpa_y = (2 * fpa_i) + quad_k % 2
+                fpa_x = (2 * fpa_j) + quad_k % 2
+
                 dataset_name = f"data_fpa_{fpa_i}_{fpa_j}_quad_{quad_k}"
                 dataset_path = path.join(
                     "dataset", dataset_type, "diagnostic_plot", dataset_name
@@ -133,17 +139,6 @@ for fpa_i in range(2):
                     settings_dict=settings_dict,
                 )
 
-                fpr = np.mean(
-                    layout.extract.parallel_fpr.median_list_from(
-                        array=dataset_quad.data,
-                        settings=ac.SettingsExtract(
-                            pixels_from_end=min(
-                                10, layout.smallest_parallel_rows_within_ci_regions
-                            )
-                        ),
-                    )
-                )
-
                 eper = np.sum(
                     layout.extract.parallel_eper.binned_array_1d_from(
                         array=dataset_quad.data,
@@ -151,28 +146,21 @@ for fpa_i in range(2):
                     )
                 )
 
-                fpr_list.append(fpr)
-                eper_list.append(eper)
+                fpa_quad_array[fpa_y, fpa_x] = eper
 
-            legend = aplt.Legend(label=f"quad_{quad_k}")
-            units = aplt.Units(use_raw=True, ticks_label=r"e$^-$")
+    fpa_quad_array = ac.Array2D.no_mask(values=fpa_quad_array, pixel_scales=1.0)
 
-            yx_plotter = aplt.YX1DPlotter(
-                x=fpr_list,
-                y=eper_list,
-                mat_plot_1d=aplt.MatPlot1D(output=output, legend=legend, units=units),
-            )
+    fpa_quad_array_list.append(fpa_quad_array)
 
-            plotter_list.append(yx_plotter)
+mat_plot = aplt.MatPlot2D(output=output)
 
-        multi_plotter = aplt.MultiYX1DPlotter(
-            plotter_list=plotter_list,
-        )
-
-        multi_plotter_list.append(multi_plotter)
+array_plotter_list = [
+    aplt.Array2DPlotter(array=fpa_quad_array, mat_plot_2d=mat_plot)
+    for fpa_quad_array in fpa_quad_array_list
+]
 
 multi_plotter = aplt.MultiFigurePlotter(
-    plotter_list=multi_plotter_list, subplot_shape=(2, 2)
+    plotter_list=array_plotter_list, subplot_shape=(2, 2)
 )
 
-multi_plotter.subplot_of_multi_yx_1d()
+multi_plotter.subplot_of_figure(func_name="figure_2d", figure_name=None)

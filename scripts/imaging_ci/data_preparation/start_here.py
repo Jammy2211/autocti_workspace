@@ -238,7 +238,8 @@ Lets inspect a cosmic ray map which conforms to **PyAutoCTI** standards:
 dataset_path = path.join("dataset", "imaging_ci", "cosmic_rays")
 
 cosmic_ray_map = ac.Array2D.from_fits(
-    file_path=path.join(dataset_path, f"norm_{int(norm)}", "cosmic_ray_map.fits"), pixel_scales=0.1
+    file_path=path.join(dataset_path, f"norm_{int(norm)}", "cosmic_ray_map.fits"),
+    pixel_scales=0.1,
 )
 
 array_plotter = aplt.Array2DPlotter(array=cosmic_ray_map)
