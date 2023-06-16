@@ -170,7 +170,7 @@ We also need to simulate the cosmic ray map, which we pass to the imaging simula
 then be added to our ci pre-cti image in the simulate function below, and subject to CTI according to the CTI model.
 
 This uses the `SimulatorCosmicRayMap` to simulator cosmic rays via a random monte carlo process. The settings of the
-simulator can be customized via input `.fits` files, but we simply use the defaults suppliedtick_maker.min_value.
+simulator can be customized via input `.fits` files, but we simply use the defaults supplied.
 """
 simulator_cosmic_ray_map = ac.SimulatorCosmicRayMap.defaults(
     shape_native=shape_native,

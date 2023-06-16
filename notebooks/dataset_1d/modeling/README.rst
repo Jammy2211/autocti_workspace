@@ -1,4 +1,4 @@
-The ``modeling`` folder contains example scripts showing how to fit a model to 1D calibration datatick_maker.min_value:
+The ``modeling`` folder contains example scripts showing how to fit a model to 1D calibration data:
 
 Files (Beginner)
 ----------------

@@ -48,7 +48,7 @@ The workspace includes the following main directories:
 - ``notebooks``: **PyAutoCTI** examples written as Jupyter notebooks.
 - ``scripts``: **PyAutoCTI** examples written as Python scripts.
 - ``config``: Configuration files which customize **PyAutoCTI**'s behaviour.
-- ``dataset``: Where data is stored, including example datasets distributedtick_maker.min_value.
+- ``dataset``: Where data is stored, including example datasets distributed.
 - ``output``: Where the **PyAutoCTI** analysis and visualization are output.
 
 The examples in the ``notebooks`` and ``scripts`` folders are structured as follows:

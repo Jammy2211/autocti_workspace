@@ -376,7 +376,7 @@ dataset_1d = layout.extract.serial_overscan.dataset_1d_from(
     dataset_2d=dataset, settings=ac.SettingsExtract(pixels=(-10, 30))
 )
 
-dataset_plotter = aplt.Dataset1DPlotter(dataset=dataset)
+dataset_plotter = aplt.Dataset1DPlotter(dataset=dataset_1d)
 dataset_plotter.subplot_dataset()
 
 """
