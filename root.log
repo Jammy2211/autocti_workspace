@@ -1256,3 +1256,21 @@ FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/
 2023-07-04 14:16:37,226 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
 2023-07-04 14:16:37,229 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
 2023-07-04 14:16:37,328 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-07-05 15:21:20,209 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-07-05 15:21:20,235 - parallel[x2] - INFO - Starting search
+2023-07-05 15:21:20,239 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-05 15:21:20,242 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-05 15:21:20,246 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-05 15:21:20,249 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-05 15:22:10,293 - parallel[x2] - INFO - Saving path info
+2023-07-05 15:22:10,513 - parallel[x2] - INFO - Not complete. Starting non-linear search.
+2023-07-05 15:22:10,516 - parallel[x2] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-07-05 15:22:10,780 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-07-05 15:22:49,599 - parallel[x2] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:24:03,772 - parallel[x2] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:25:36,250 - parallel[x2] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:27:11,145 - parallel[x2] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:28:17,828 - parallel[x2] - INFO - 12500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:28:43,083 - parallel[x2] - INFO - 15000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:29:08,924 - parallel[x2] - INFO - 17500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-07-05 15:29:36,269 - parallel[x2] - INFO - Removing zip file
