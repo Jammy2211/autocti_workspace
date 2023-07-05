@@ -936,3 +936,323 @@
 2023-06-12 14:39:41,120 - autofit.plot.samples_plotters - INFO - DynestyPlotter unable to produce runplot visual: posterior estimate thereforenot yet sufficient for this model-fit is not yet robust enough to do this. Visualshould be produced in later update, once posterior estimate is updated.
 2023-06-12 14:39:54,400 - fpa_5_5 - INFO - Removing zip file
 >>>>>>> main
+2023-06-26 10:38:27,493 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 10:38:27,495 - species[x1] - INFO - Starting search
+2023-06-26 10:38:38,044 - species[x1] - INFO - Saving path info
+2023-06-26 10:38:38,089 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 10:38:38,091 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 10:38:38,152 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 10:38:50,482 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:39:22,866 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:39:43,704 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:40:06,004 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:40:22,880 - species[x1] - INFO - Removing zip file
+2023-06-26 10:40:23,087 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 10:40:23,088 - species[x1] - INFO - Starting search
+2023-06-26 10:40:33,331 - species[x1] - INFO - Saving path info
+2023-06-26 10:40:33,375 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 10:40:33,377 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 10:40:33,436 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 10:40:44,654 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:41:12,394 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:41:29,707 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:41:47,930 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:42:14,280 - species[x1] - INFO - Removing zip file
+2023-06-26 10:42:14,477 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 10:42:14,478 - species[x1] - INFO - Starting search
+2023-06-26 10:42:25,087 - species[x1] - INFO - Saving path info
+2023-06-26 10:42:25,127 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 10:42:25,129 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 10:42:25,184 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 10:42:36,885 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:43:05,467 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:43:22,658 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:43:40,866 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:44:04,712 - species[x1] - INFO - Removing zip file
+2023-06-26 10:44:04,927 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 10:44:04,927 - species[x1] - INFO - Starting search
+2023-06-26 10:44:15,029 - species[x1] - INFO - Saving path info
+2023-06-26 10:44:15,069 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 10:44:15,071 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 10:44:15,128 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 10:44:26,048 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:44:51,630 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:45:08,268 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:45:24,381 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:45:40,857 - species[x1] - INFO - Removing zip file
+2023-06-26 10:45:41,061 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 10:45:41,063 - species[x1] - INFO - Starting search
+2023-06-26 10:45:51,671 - species[x1] - INFO - Saving path info
+2023-06-26 10:45:51,715 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 10:45:51,717 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 10:45:51,771 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 10:46:02,158 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:46:28,000 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:46:45,252 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:47:01,218 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 10:47:17,037 - species[x1] - INFO - Removing zip file
+2023-06-26 14:48:06,587 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:48:06,590 - species[x1] - INFO - Starting search
+2023-06-26 14:48:18,136 - species[x1] - INFO - Saving path info
+2023-06-26 14:48:18,179 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:48:18,181 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:48:18,243 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:49:02,512 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:49:02,513 - species[x1] - INFO - Starting search
+2023-06-26 14:49:12,612 - species[x1] - INFO - Saving path info
+2023-06-26 14:49:12,654 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:49:12,656 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:49:12,720 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:49:23,626 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:49:54,099 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:49:54,101 - species[x1] - INFO - Starting search
+2023-06-26 14:50:05,263 - species[x1] - INFO - Saving path info
+2023-06-26 14:50:05,300 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:50:05,301 - species[x1] - INFO - Existing Dynesty samples found, resuming non-linear search.
+2023-06-26 14:50:13,417 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:50:30,334 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:50:47,983 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:51:04,954 - species[x1] - INFO - Removing zip file
+2023-06-26 14:51:05,142 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:51:05,142 - species[x1] - INFO - Starting search
+2023-06-26 14:51:15,891 - species[x1] - INFO - Saving path info
+2023-06-26 14:51:15,930 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:51:15,932 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:51:15,986 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:51:27,214 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:51:51,272 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:52:08,169 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:52:24,242 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:52:40,513 - species[x1] - INFO - Removing zip file
+2023-06-26 14:52:40,704 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:52:40,705 - species[x1] - INFO - Starting search
+2023-06-26 14:52:51,550 - species[x1] - INFO - Saving path info
+2023-06-26 14:52:51,589 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:52:51,591 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:52:51,648 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:52:58,241 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:52:58,243 - species[x1] - INFO - Starting search
+2023-06-26 14:53:08,356 - species[x1] - INFO - Already completed, skipping non-linear search.
+2023-06-26 14:53:24,157 - species[x1] - INFO - Removing zip file
+2023-06-26 14:53:24,354 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:53:24,354 - species[x1] - INFO - Starting search
+2023-06-26 14:53:34,470 - species[x1] - INFO - Already completed, skipping non-linear search.
+2023-06-26 14:53:52,101 - species[x1] - INFO - Removing zip file
+2023-06-26 14:53:52,373 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:53:52,373 - species[x1] - INFO - Starting search
+2023-06-26 14:54:02,366 - species[x1] - INFO - Saving path info
+2023-06-26 14:54:02,404 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:54:02,405 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:54:02,463 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:54:12,761 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:54:39,560 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:54:56,416 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:55:13,390 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:55:30,602 - species[x1] - INFO - Removing zip file
+2023-06-26 14:55:30,803 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:55:30,803 - species[x1] - INFO - Starting search
+2023-06-26 14:55:41,485 - species[x1] - INFO - Saving path info
+2023-06-26 14:55:41,536 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:55:41,538 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:55:41,604 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:55:52,302 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:56:14,579 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:56:30,579 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:56:47,711 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:57:05,537 - species[x1] - INFO - Removing zip file
+2023-06-26 14:57:05,780 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:57:05,781 - species[x1] - INFO - Starting search
+2023-06-26 14:57:15,954 - species[x1] - INFO - Saving path info
+2023-06-26 14:57:15,997 - species[x1] - INFO - Not complete. Starting non-linear search.
+2023-06-26 14:57:15,999 - species[x1] - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-06-26 14:57:16,062 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-06-26 14:57:26,359 - species[x1] - INFO - 2500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:57:51,454 - species[x1] - INFO - 5000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:58:07,554 - species[x1] - INFO - 7500 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:58:24,782 - species[x1] - INFO - 10000 Iterations: Performing update (Visualization, outputting samples, etc.).
+2023-06-26 14:58:40,919 - species[x1] - INFO - Removing zip file
+2023-06-26 14:58:48,752 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-06-26 14:58:49,384 - autofit.database.aggregator.scrape - INFO - 5 searches found
+2023-06-26 14:58:49,434 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:58:49,610 - autofit.database.aggregator.scrape - INFO - Creating fit for: temporal/time_0 None species[x1] 344d24f65d51ac9c7ca8cae01148f335 
+2023-06-26 14:58:49,651 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_0/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_0/jsons'
+2023-06-26 14:58:49,655 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_1/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_1/jsons'
+2023-06-26 14:58:49,659 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_2/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_2/jsons'
+2023-06-26 14:58:49,661 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_3/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_0/species[x1]/99448d144bc24904f3e04c8aba7efe60/analyses/analysis_3/jsons'
+2023-06-26 14:58:49,668 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:58:49,669 - autofit.database.aggregator.scrape - INFO - Creating fit for: temporal/time_1 None species[x1] 1c55d0ffdaa9663bac59bcea77cf7cbf 
+2023-06-26 14:58:49,699 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_0/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_0/jsons'
+2023-06-26 14:58:49,703 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_1/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_1/jsons'
+2023-06-26 14:58:49,707 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_2/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_2/jsons'
+2023-06-26 14:58:49,710 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_3/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_1/species[x1]/41b06e43069df678394027a7413b1a94/analyses/analysis_3/jsons'
+2023-06-26 14:58:49,717 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:58:49,718 - autofit.database.aggregator.scrape - INFO - Creating fit for: temporal/time_2 None species[x1] 97b171b23d187548fa1e17d2cfeecb26 
+2023-06-26 14:58:49,747 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_0/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_0/jsons'
+2023-06-26 14:58:49,750 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_1/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_1/jsons'
+2023-06-26 14:58:49,755 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_2/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_2/jsons'
+2023-06-26 14:58:49,759 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_3/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_2/species[x1]/2ff4db64326627a320e12ef7dc54e81a/analyses/analysis_3/jsons'
+2023-06-26 14:58:49,766 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:58:49,766 - autofit.database.aggregator.scrape - INFO - Creating fit for: temporal/time_3 None species[x1] 44ffaa38e100bdd3fbc881b81bfbf62a 
+2023-06-26 14:58:49,794 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_0/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_0/jsons'
+2023-06-26 14:58:49,797 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_1/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_1/jsons'
+2023-06-26 14:58:49,800 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_2/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_2/jsons'
+2023-06-26 14:58:49,803 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_3/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_3/species[x1]/a45ad491f763897197d30e60fd4a8978/analyses/analysis_3/jsons'
+2023-06-26 14:58:49,810 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-06-26 14:58:49,810 - autofit.database.aggregator.scrape - INFO - Creating fit for: temporal/time_4 None species[x1] d54537dc38bb65c4eed8d35fbbb28eaa 
+2023-06-26 14:58:49,838 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_0/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_0/jsons'
+2023-06-26 14:58:49,841 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_1/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_1/jsons'
+2023-06-26 14:58:49,844 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_2/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_2/jsons'
+2023-06-26 14:58:49,847 - autofit.database.aggregator.scrape - ERROR - [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_3/jsons'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Jammy/Code/PyAuto/PyAutoFit/autofit/database/aggregator/scrape.py", line 248, in _add_jsons
+    filenames = os.listdir(json_path)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/species[x1]/66eefe1e729c2fa7ad78b63452ca1ace/analyses/analysis_3/jsons'
+2023-06-26 14:58:49,930 - autofit.database.aggregator.aggregator - INFO - 25 fit(s) found matching query
+2023-07-04 14:09:16,522 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-07-04 14:09:16,524 - ccd_8x4 - INFO - Starting search
+2023-07-04 14:09:16,526 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,527 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,528 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,530 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,531 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,532 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,533 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,534 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,535 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,536 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,537 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,538 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,539 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,540 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,541 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,542 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,543 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,544 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,545 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,546 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,547 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,548 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,549 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,550 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,551 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,552 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,553 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,554 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,555 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,556 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,557 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:09:16,558 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,580 - autofit.non_linear.abstract_search - INFO - Creating search
+2023-07-04 14:12:19,584 - ccd_8x4 - INFO - Starting search
+2023-07-04 14:12:19,586 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,587 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,589 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,590 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,591 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,593 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,594 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,595 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,597 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,598 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,600 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,601 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,602 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,604 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,605 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,606 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,608 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,609 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,610 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,612 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,613 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,615 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,616 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,617 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,618 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,619 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,621 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,622 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,623 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,624 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,625 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:12:19,627 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-07-04 14:16:36,595 - ccd_8x4 - INFO - Saving path info
+2023-07-04 14:16:37,226 - ccd_8x4 - INFO - Not complete. Starting non-linear search.
+2023-07-04 14:16:37,229 - ccd_8x4 - INFO - No Dynesty samples found, beginning new non-linear search. 
+2023-07-04 14:16:37,328 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.

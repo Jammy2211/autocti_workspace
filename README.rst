@@ -84,7 +84,7 @@ tutorials.
 Workspace Version
 -----------------
 
-This version of the workspace is built and tested for using **PyAutoCTI v2023.6.12.5**.
+This version of the workspace is built and tested for using **PyAutoCTI v2023.6.18.3**.
 
 Contribution
 ------------
