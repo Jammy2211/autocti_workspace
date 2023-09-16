@@ -129,9 +129,7 @@ __Search + Dataset + Analysis + Model-Fit (Search 1)__
 To reduce run-times, we trim the `ImagingCI` data from the high resolution data (e.g. 2000 columns) to just 10 rows of 
 every charge injection region to speed up the model-fit at the expense of inferring larger errors on the CTI model.
 """
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_serial[x1]", nlive=50
-)
+search = af.Nautilus(path_prefix=path_prefix, name="search[1]_serial[x1]", n_live=100)
 
 imaging_ci_trim_list = [
     dataset.apply_settings(settings=ac.SettingsImagingCI(serial_pixels=(0, 10)))
@@ -187,8 +185,8 @@ This is necessary given that  many parameters in the model are not yet initializ
 
 We again use the trimmed `ImagingCI` data to speed up run-times.
 """
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_serial[multi]", nlive=50
+search = af.Nautilus(
+    path_prefix=path_prefix, name="search[2]_serial[multi]", n_live=100
 )
 
 analysis_list = [
@@ -227,8 +225,8 @@ model = af.Collection(
     )
 )
 
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[3]_serial[multi]", nlive=50
+search = af.Nautilus(
+    path_prefix=path_prefix, name="search[3]_serial[multi]", n_live=100
 )
 
 analysis_list = [

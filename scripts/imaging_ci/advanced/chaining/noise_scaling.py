@@ -202,8 +202,8 @@ By summing this list of analysis objects, we create an overall `Analysis` which 
 analysis_1 = sum(analysis_1_list)
 analysis_1.n_cores = 1
 
-search_1 = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_species[x1]", nlive=50
+search_1 = af.Nautilus(
+    path_prefix=path_prefix, name="search[1]_species[x1]", n_live=100
 )
 
 result_1_list = search_1.fit(model=model_1, analysis=analysis_1)
@@ -282,8 +282,8 @@ The `info` attribute shows the model, including how parameters and priors were p
 """
 print(model_2.info)
 
-search_2 = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_species[x2]", nlive=50
+search_2 = af.Nautilus(
+    path_prefix=path_prefix, name="search[2]_species[x2]", n_live=100
 )
 
 # result_2_list = search_2.fit(model=model_2, analysis=analysis_2)
@@ -355,8 +355,8 @@ analysis_3.n_cores = 1
 
 analysis_3 = analysis_3.with_free_parameters()
 
-search_3 = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[3]_species[x2]", nlive=50
+search_3 = af.Nautilus(
+    path_prefix=path_prefix, name="search[3]_species[x2]", n_live=100
 )
 
 result_3_list = search_3.fit(model=model_3, analysis=analysis_3)

@@ -197,14 +197,14 @@ print(model.info)
 """
 __Search__
 
-The model is fitted to the data using the nested sampling algorithm Dynesty (https://dynesty.readthedocs.io/en/latest/).
+The model is fitted to the data using the nested sampling algorithm Nautilus (https://nautilus.readthedocs.io/en/latest/).
 
 The `name` and `path_prefix` below specify the path where results ae stored in the output folder:  
 
  `/autocti_workspace/output/dataset_1d/visualize_full`.
 """
-search = af.DynestyStatic(
-    path_prefix=path.join("dataset_1d", dataset_name), name="visualize_full", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("dataset_1d", dataset_name), name="visualize_full", n_live=100
 )
 
 """

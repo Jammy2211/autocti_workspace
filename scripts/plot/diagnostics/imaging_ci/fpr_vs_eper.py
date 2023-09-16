@@ -93,13 +93,16 @@ settings_dict = {
 }
 
 workspace_path = os.getcwd()
+plot_path = path.join(workspace_path, "scripts", "plot", "diagnostics", "images")
 
-output = aplt.Output(path=workspace_path, filename="fpr_vs_eper", format="png")
+output = aplt.Output(path=plot_path, filename="fpr_vs_eper", format="png")
 
 multi_plotter_list = []
 
-for fpa_i in range(2):
-    for fpa_j in range(2):
+fpa_size = 6
+
+for fpa_i in range(fpa_size):
+    for fpa_j in range(fpa_size):
         plotter_list = []
 
         for quad_k in range(4):
@@ -128,10 +131,24 @@ for fpa_i in range(2):
                     pre_cti_data_path=path.join(
                         dataset_path, f"norm_{int(norm)}", "pre_cti_data.fits"
                     ),
+                    cosmic_ray_map_path=path.join(
+                        dataset_path, f"norm_{int(norm)}", "cosmic_ray_map.fits"
+                    ),
                     layout=layout,
                     pixel_scales=0.1,
                     settings_dict=settings_dict,
                 )
+
+                mask_quad = ac.Mask2D.from_cosmic_ray_map_buffed(
+                    cosmic_ray_map=dataset_quad.cosmic_ray_map,
+                    settings=ac.SettingsMask2D(
+                        cosmic_ray_parallel_buffer=3,
+                        cosmic_ray_serial_buffer=3,
+                        cosmic_ray_diagonal_buffer=1,
+                    ),
+                )
+
+                dataset_quad = dataset_quad.apply_mask(mask=mask_quad)
 
                 fpr = np.mean(
                     layout.extract.parallel_fpr.median_list_from(
@@ -155,12 +172,17 @@ for fpa_i in range(2):
                 eper_list.append(eper)
 
             legend = aplt.Legend(label=f"quad_{quad_k}")
+            title = aplt.Title(label=settings_dict["CCD"])
             units = aplt.Units(use_raw=True, ticks_label=r"e$^-$")
 
             yx_plotter = aplt.YX1DPlotter(
                 x=fpr_list,
                 y=eper_list,
-                mat_plot_1d=aplt.MatPlot1D(output=output, legend=legend, units=units),
+                plot_axis_type="semilogy",
+                should_plot_grid=True,
+                mat_plot_1d=aplt.MatPlot1D(
+                    output=output, legend=legend, title=title, units=units
+                ),
             )
 
             plotter_list.append(yx_plotter)
@@ -171,8 +193,12 @@ for fpa_i in range(2):
 
         multi_plotter_list.append(multi_plotter)
 
+subplot_title = (
+    "[x]: FPR signal excluding first 10 pixels\n[y]: EPER signal in first trail pixel"
+)
+
 multi_plotter = aplt.MultiFigurePlotter(
-    plotter_list=multi_plotter_list, subplot_shape=(2, 2)
+    plotter_list=multi_plotter_list, subplot_shape=(6, 6), subplot_title=subplot_title
 )
 
 multi_plotter.subplot_of_multi_yx_1d()

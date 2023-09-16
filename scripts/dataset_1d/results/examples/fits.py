@@ -36,7 +36,7 @@ import autocti.plot as aplt
 """
 __Model Fit__
 
-The code below performs a model-fit using dynesty. 
+The code below performs a model-fit using nautilus. 
 
 You should be familiar with modeling already, if not read the `modeling/start_here.py` script before reading this one!
 """
@@ -106,8 +106,8 @@ ccd.full_well_depth = 200000.0
 
 model = af.Collection(cti=af.Model(ac.CTI1D, trap_list=trap_list, ccd=ccd))
 
-search = af.DynestyStatic(
-    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", n_live=100
 )
 
 analysis_list = [
@@ -259,7 +259,7 @@ __Refitting__
 Using the API introduced in the first tutorial, we can also refit the data locally. 
 
 This allows us to inspect how the fit changes for models with similar log likelihoods. Below, we refit and plot
-the fit of the 100th last accepted model by dynesty.
+the fit of the 100th last accepted model by nautilus.
 """
 samples = result.samples
 

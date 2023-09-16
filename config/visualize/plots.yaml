@@ -2,6 +2,7 @@
 
 # For example, if `plots: fit: subplot_fit: true``, the ``fit_dataset.png`` subplot file will be plotted every time visualization is performed.
 
+combined_only: true
 dataset:
   subplot_dataset: true
   data: true
@@ -32,4 +33,4 @@ fit:
   subplot_fit: false
   all_at_end_png: false
   all_at_end_fits: false
-fit_imaging: {}
+

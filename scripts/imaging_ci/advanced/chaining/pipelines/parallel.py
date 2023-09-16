@@ -147,9 +147,7 @@ imaging_ci_trim_list = [
     for dataset in dataset_list
 ]
 
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_parallel[x1]", nlive=50
-)
+search = af.Nautilus(path_prefix=path_prefix, name="search[1]_parallel[x1]", n_live=100)
 
 analysis_list = [
     ac.AnalysisImagingCI(dataset=dataset, clocker=clocker)
@@ -208,8 +206,8 @@ imaging_ci_trim_list = [
     for dataset in dataset_list
 ]
 
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_parallel[multi]", nlive=50
+search = af.Nautilus(
+    path_prefix=path_prefix, name="search[2]_parallel[multi]", n_live=100
 )
 
 analysis_list = [
@@ -251,8 +249,8 @@ __Settings + Model + Search + Analysis + Model-Fit (Search 3)__
 Now the value of every parameter is initialized (ensuring a more accurate and efficient non-linear search) and we do 
 not trim the data to only 50 parallel columns and again use thorough non-linear search settings.
 """
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[3]_parallel[multi]", nlive=50
+search = af.Nautilus(
+    path_prefix=path_prefix, name="search[3]_parallel[multi]", n_live=100
 )
 
 analysis_list = [

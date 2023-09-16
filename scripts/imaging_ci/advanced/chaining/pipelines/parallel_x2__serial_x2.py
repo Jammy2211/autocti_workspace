@@ -132,8 +132,10 @@ parallel_clocker = ac.Clocker2D(
     parallel_express=5, parallel_roe=ac.ROEChargeInjection(), parallel_fast_mode=True
 )
 
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[1]_parallel[multi]", nlive=100, walks=10
+search = af.Nautilus(
+    path_prefix=path_prefix,
+    name="search[1]_parallel[multi]",
+    n_live=150,
 )
 
 imaging_ci_trim_list = [
@@ -212,8 +214,10 @@ __Search + Analysis + Model-Fit (Search 2)__
 
 We now perform the model-fit on this dataset, as per usual.
 """
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[2]_serial[multi]", nlive=100, walks=10
+search = af.Nautilus(
+    path_prefix=path_prefix,
+    name="search[2]_serial[multi]",
+    n_live=150,
 )
 
 serial_clocker = ac.Clocker2D(
@@ -275,8 +279,8 @@ parallel_serial_clocker = ac.Clocker2D(
     parallel_fast_mode=True,
 )
 
-search = af.DynestyStatic(
-    path_prefix=path_prefix, name="search[3]_parallel[multi]_serial[multi]", nlive=100
+search = af.Nautilus(
+    path_prefix=path_prefix, name="search[3]_parallel[multi]_serial[multi]", n_live=150
 )
 
 analysis_list = [

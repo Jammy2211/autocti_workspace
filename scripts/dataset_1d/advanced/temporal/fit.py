@@ -194,12 +194,12 @@ for time in time_list:
     __Search__
     
     The model is fitted to the data using the nested sampling algorithm 
-    Dynesty (https://dynesty.readthedocs.io/en/latest/).
+    Nautilus (https://nautilus.readthedocs.io/en/latest/).
     """
-    search = af.DynestyStatic(
+    search = af.Nautilus(
         path_prefix=path.join(dataset_label, dataset_time),
         name="species[x1]",
-        nlive=50,
+        n_live=100,
     )
 
     """

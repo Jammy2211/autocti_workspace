@@ -57,8 +57,6 @@ dataset_1d_agg = ac.agg.Dataset1DAgg(aggregator=agg)
 dataset_gen = dataset_1d_agg.dataset_list_gen_from()
 
 for dataset_list in dataset_gen:
-    print(dataset_list)
-
     dataset_plotter = aplt.Dataset1DPlotter(dataset=dataset_list[0])
     dataset_plotter.subplot_dataset()
 

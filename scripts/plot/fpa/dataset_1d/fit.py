@@ -150,11 +150,11 @@ for fpa_i in range(6):
         dataset_list += [dataset_1d_ccd]
         dataset_full_list += [dataset_1d_full_ccd]
 
-        search = af.DynestyStatic(
+        search = af.Nautilus(
             path_prefix=path.join("plot_fpa", "dataset_1d"),
             name=f"fpa_{fpa_i}_{fpa_j}",
             unique_tag=f"fpa_{fpa_i}_{fpa_j}",
-            nlive=50,
+            n_live=100,
         )
 
         analysis_list = [

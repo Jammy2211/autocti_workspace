@@ -71,8 +71,10 @@ region_list = [
 norm_list = [1000, 10000]
 total_datasets = len(norm_list)
 
-for fpa_i in range(6):
-    for fpa_j in range(6):
+fpa_size = 2
+
+for fpa_i in range(2):
+    for fpa_j in range(2):
         for quad_k in range(4):
             dataset_name = f"data_fpa_{fpa_i}_{fpa_j}_quad_{quad_k}"
             dataset_path = path.join(
@@ -94,7 +96,9 @@ for fpa_i in range(6):
                 parallel_express=5,
                 parallel_roe=ac.ROEChargeInjection(),
             )
-            parallel_trap_0 = ac.TrapInstantCapture(density=0.5, release_timescale=5.0)
+            parallel_trap_0 = ac.TrapInstantCapture(
+                density=1000.0, release_timescale=0.1
+            )
             parallel_trap_list = [parallel_trap_0]
 
             parallel_ccd = ac.CCDPhase(
@@ -112,9 +116,31 @@ for fpa_i in range(6):
                 for norm in norm_quad_list
             ]
 
+            simulator_cosmic_ray_map = ac.SimulatorCosmicRayMap.defaults(
+                shape_native=shape_native,
+                flux_scaling=1.0,
+                pixel_scale=0.1,
+            )
+
+            cosmic_ray_map_list = list(
+                map(
+                    lambda i: simulator_cosmic_ray_map.cosmic_ray_map_from(
+                        cover_fraction=1.6, limit=parallel_ccd.full_well_depth
+                    ),
+                    range(len(norm_list)),
+                )
+            )
+
             dataset_list = [
-                simulator.via_layout_from(clocker=clocker, layout=layout, cti=cti)
-                for layout, simulator in zip(layout_list, simulator_list)
+                simulator.via_layout_from(
+                    clocker=clocker,
+                    layout=layout_ci,
+                    cti=cti,
+                    cosmic_ray_map=cosmic_ray_map,
+                )
+                for layout_ci, simulator, cosmic_ray_map in zip(
+                    layout_list, simulator_list, cosmic_ray_map_list
+                )
             ]
 
             dataset_plotter = aplt.ImagingCIPlotter(dataset=dataset_list[0])
@@ -128,6 +154,9 @@ for fpa_i in range(6):
                     ),
                     pre_cti_data_path=path.join(
                         dataset_path, f"norm_{int(norm)}", "pre_cti_data.fits"
+                    ),
+                    cosmic_ray_map_path=path.join(
+                        dataset_path, f"norm_{int(norm)}", f"cosmic_ray_map.fits"
                     ),
                     overwrite=True,
                 )

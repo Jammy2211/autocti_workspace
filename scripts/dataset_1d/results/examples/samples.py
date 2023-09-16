@@ -2,16 +2,11 @@
 Results: Samples
 ================
 
-After fitting a CTI model a search returns a `result` variable. We have used this throughout the examples scripts to 
-plot the maximum log likelihood fits.
+After a non-linear search has completed, it returns a `Result` object that contains information on samples of
+the non-linear search, such as the maximum likelihood model instance, the errors on each parameter and the 
+Bayesian evidence.
 
-This `Result` object contains a lot more information which the results tutorials illustrate.
-
-This script describes the non-linear search samples of a model-fit, which for a `DynestyStatic` fit corresponds
-to every accepted live point in parameter space. 
-
-These are used to compute quantities like the maximum likelihood CTI model, the errors on the parameters and 
-visualization showing the parameter degeneracies.
+This script illustrates how to use the result to inspect the non-linear search samples.
 
 __Units__
 
@@ -32,7 +27,9 @@ import autocti.plot as aplt
 """
 __Model Fit__
 
-The code below performs a model-fit using dynesty. 
+To illustrate results, we need to perform a model-fit in order to create a `Result` object.
+
+The code below performs a model-fit using nautilus. 
 
 You should be familiar with modeling already, if not read the `modeling/start_here.py` script before reading this one!
 """
@@ -110,8 +107,8 @@ ccd.full_well_depth = 200000.0
 
 model = af.Collection(cti=af.Model(ac.CTI1D, trap_list=trap_list, ccd=ccd))
 
-search = af.DynestyStatic(
-    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", n_live=100
 )
 
 analysis_list = [
@@ -145,19 +142,20 @@ for result in result_list:
     fit_plotter.subplot_fit()
 
 """
-The results tutorial `fits.py` expands `max_log_likelihood_fit`, showing how it can be used to inspect many aspects 
-of a model.
+Results tutorials `cti.py` and `fits.py` expand on the `max_log_likelihood_instance` and `max_log_likelihood_fit`, 
+showing how they can be used to inspect many aspects of a model.
 
 __Samples__
 
-This tutorial covers the result's `Samples` object, which contains all of the non-linear search samples. Each sample 
-corresponds to a set of model parameters that were evaluated and accepted by our non linear search, in this example 
-dynesty. 
+The result contains a `Samples` object, which contains all samples of the non-linear search.
 
-This also includes their log likelihoods, which are used for computing additional information about the model-fit,
+Each sample corresponds to a set of model parameters that were evaluated and accepted by the non linear search, 
+in this example `nautilus`. 
+
+This includes their log likelihoods, which are used for computing additional information about the model-fit,
 for example the error on every parameter. 
 
-Our model-fit used the nested sampling algorithm Dynesty, so the `Samples` object returned is a `SamplesNest` object.
+Our model-fit used the nested sampling algorithm Nautilus, so the `Samples` object returned is a `SamplesNest` object.
 """
 samples = result.samples
 
@@ -167,7 +165,7 @@ print(samples)
 """
 __Parameters__
 
-The `Samples` class contains all the parameter samples, which is a list of lists where:
+The parameters are stored as a list of lists, where:
 
  - The outer list is the size of the total number of samples.
  - The inner list is the size of the number of free parameters in the fit.
@@ -180,19 +178,18 @@ print(samples.parameter_lists[9][3])
 """
 __Figures of Merit__
 
-The `Samples` class contains the log likelihood, log prior, log posterior and weight_list of every sample, where:
+The `Samples` class contains the log likelihood, log prior, log posterior and weight_list of every accepted sample, where:
 
- - The log likelihood is the value evaluated from the likelihood function (e.g. -0.5 * chi_squared + the noise 
-   normalization).
+- The `log_likelihood` is the value evaluated in the `log_likelihood_function`.
 
- - The log prior encodes information on how the priors on the parameters maps the log likelihood value to the log
-   posterior value.
+- The `log_prior` encodes information on how parameter priors map log likelihood values to log posterior values.
 
- - The log posterior is log_likelihood + log_prior.
+- The `log_posterior` is `log_likelihood + log_prior`.
 
- - The weight gives information on how samples should be combined to estimate the posterior. The weight values 
-   depend on the sampler used. For example for an MCMC search they will all be 1`s whereas for the nested sampling
-   method used in this example they are weighted as a combination of the log likelihood value and prior.
+- The `weight` gives information on how samples are combined to estimate the posterior, which depends on type of search
+  used (for `nautilus` they are all non-zero values which sum to 1).
+
+Lets inspect these values for the tenth sample.
 """
 print("log(likelihood), log(prior), log(posterior) and weight of the tenth sample.")
 print(samples.log_likelihood_list[9])
@@ -201,136 +198,116 @@ print(samples.log_posterior_list[9])
 print(samples.weight_list[9])
 
 """
-__Instances__
+__Maximum Likelihood__
 
-The `Samples` contains many results which are returned as an instance of the model, using the Python class structure
-of the model composition.
+Many results can be returned as an instance of the model, using the Python class structure of the model composition.
 
 For example, we can return the model parameters corresponding to the maximum log likelihood sample.
 """
-max_lh_instance = samples.max_log_likelihood()
+instance = samples.max_log_likelihood()
 print("Maximum Log Likelihood Model Instance: \n")
-print(max_lh_instance, "\n")
+print(instance, "\n")
 
 """
+The attributes of the `instance` (e.g. `cti`, `trap_list`) have these names due to how we composed the `CTI1D` object
+and its traps and CCD via the `Collection` and `Model` above. 
+
 A model instance contains all the model components of our fit, for example the `CTI1D` object we specified during 
 model composition with the name `cti`.
 """
-print(max_lh_instance.cti)
+print(instance.cti)
 
 """
 This object was composed with `trap_list` and `ccd` entries, which are also contained in the results instance.
 """
-print(max_lh_instance.cti.trap_list)
-print(max_lh_instance.cti.ccd)
+print(instance.cti.trap_list)
+print(instance.cti.ccd)
 
 """
-__Vectors__
-
-All results can alternatively be returned as a 1D vector of values, by passing `as_instance=False`:
+This allows individual parameters to be printed.
 """
-max_lh_vector = samples.max_log_likelihood(as_instance=False)
-print("Max Log Likelihood Model Parameters: \n")
-print(max_lh_vector, "\n\n")
-
-"""
-__Labels__
-
-Vectors return a lists of all model parameters, but do not tell us which values correspond to which parameters.
-
-The following quantities are available in the `Model`, where the order of their entries correspond to the parameters 
-in the `ml_vector` above:
- 
- - `paths`: a list of tuples which give the path of every parameter in the `Model`.
- - `parameter_names`: a list of shorthand parameter names derived from the `paths`.
- - `parameter_labels`: a list of parameter labels used when visualizing non-linear search results (see below).
-
-For simple models like the one fitted in this tutorial, the quantities below are somewhat redundant. For the
-more complex models illustrated in other tutorials their utility will become clear.
-"""
-model = samples.model
-
-print(model.paths)
-print(model.parameter_names)
-print(model.parameter_labels)
-print(model.model_component_and_parameter_names)
-print("\n")
+print(instance.cti.trap_list[0].density)
 
 
 """
 __Posterior / PDF__
 
-PDF stands for "Probability Density Function" and it quantifies the probability of each model sampled. It 
-therefore enables error estimation via a process called marginalization.
+The result contains the full posterior information of our non-linear search, which can be used for parameter 
+estimation. 
 
-We can access the `median_pdf` model, which is the model computed by marginalizing over the samples of every 
-parameter in 1D and taking the median of this PDF.
+PDF stands for "Probability Density Function" and it quantifies probability of each model parameter having values
+that are sampled. It therefore enables error estimation via a process called marginalization.
+
+The median pdf vector is available, which estimates every parameter via 1D marginalization of their PDFs.
 """
-median_pdf_instance = samples.median_pdf()
+instance = samples.median_pdf()
 
 print("Median PDF Model Instances: \n")
-print(median_pdf_instance, "\n")
-print(median_pdf_instance.cti.trap_list)
+print(instance, "\n")
+print(instance.cti.trap_list)
 print()
 
-median_pdf_vector = samples.median_pdf(as_instance=False)
+vector = samples.median_pdf(as_instance=False)
 
 print("Median PDF Model Parameter Lists: \n")
-print(median_pdf_vector, "\n")
+print(vector, "\n")
 
 """
 __Errors__
 
-We can compute the model parameters at a given sigma value (e.g. at 3.0 sigma limits).
+Methods for computing error estimates on all parameters are provided. 
 
-These parameter values and error estimates do not fully account for covariance between model parameters, which is
-explained in the "Derived Errors" section below.
+This again uses 1D marginalization, now at an input sigma confidence limit. 
 
-The `uv3` below signifies this is an upper value at 3 sigma confidence, with `lv3` indicating a the lower value.
+By inputting `sigma=3.0` margnialization find the values spanning 99.7% of 1D PDF. Changing this to `sigma=1.0`
+would give the errors at the 68.3% confidence limit.
 """
-uv3_instance = samples.values_at_upper_sigma(sigma=3.0)
-lv3_instance = samples.values_at_lower_sigma(sigma=3.0)
+instance_upper_sigma = samples.values_at_upper_sigma(sigma=3.0)
+instance_lower_sigma = samples.values_at_lower_sigma(sigma=3.0)
 
 print("Errors Instances: \n")
-print(uv3_instance, "\n")
-print(lv3_instance, "\n")
+print(instance_upper_sigma.cti.trap_list, "\n")
+print(instance_lower_sigma.cti.trap_list, "\n")
 
 """
-We can compute the upper and lower errors on each parameter at a given sigma limit.
-
-The `ue3` below signifies the upper error at 3 sigma. 
+They can also be returned at the values of the parameters at their error values.
 """
-ue3_instance = samples.errors_at_upper_sigma(sigma=3.0)
-le3_instance = samples.errors_at_lower_sigma(sigma=3.0)
+instance_upper_values = samples.errors_at_upper_sigma(sigma=3.0)
+instance_lower_values = samples.errors_at_lower_sigma(sigma=3.0)
 
 print("Errors Instances: \n")
-print(ue3_instance, "\n")
-print(le3_instance, "\n")
+print(instance.cti.trap_list, "\n")
+print(instance.cti.trap_list, "\n")
+
+"""
+__Sample Instance__
+
+A non-linear search retains every model that is accepted during the model-fit.
+
+We can create an instance of any model -- below we create an instance of the last accepted model.
+"""
+instance = samples.from_sample_index(sample_index=-1)
+
+print(instance.cti.trap_list)
+print(instance.cti.trap_list)
 
 """
 __Search Plots__
 
-The Probability Density Functions of the results can be plotted using Dynesty's in-built visualization tools, 
-which are wrapped via the `DynestyPlotter` object.
+The Probability Density Functions (PDF's) of the results can be plotted using the non-linear search in-built 
+visualization tools.
+
+This fit used `nautilus` therefore we use the `DynestyPlotter` for visualization, which wraps `nautilus`'s in-built
+visualization tools.
+
+The `autofit_workspace/*/plots` folder illustrates other packages that can be used to make these plots using
+the standard output results formats (e.g. `GetDist.py`).
 """
 search_plotter = aplt.DynestyPlotter(samples=result.samples)
 search_plotter.cornerplot()
 
 """
-__Sample Instance__
-
-A dynesty search retains every model that is accepted during the model-fit.
-
-We can create an instance of any model -- for example the 100th last model accepted -- and can compare its parameters 
-to the maximum log likelihood model.
-"""
-instance = samples.from_sample_index(sample_index=-10)
-
-print(max_lh_instance.cti.trap_list)
-print(instance.cti.trap_list)
-
-"""
-__Maximum Likelihood__
+__Instances__
 
 The maximum log likelihood value of the model-fit can be estimated by simple taking the maximum of all log
 likelihoods of the samples.
@@ -344,7 +321,7 @@ print(max(samples.log_likelihood_list))
 """
 __Bayesian Evidence__
 
-Nested sampling algorithms like dynesty also estimate the Bayesian evidence (estimated via the nested sampling 
+Nested sampling algorithms like nautilus also estimate the Bayesian evidence (estimated via the nested sampling 
 algorithm).
 
 The Bayesian evidence accounts for "Occam's Razor", whereby it penalizes models for being more complex (e.g. if a model
@@ -361,17 +338,55 @@ print("Maximum Log Likelihood and Log Evidence: \n")
 print(samples.log_evidence)
 
 """
+__Lists__
+
+All results can alternatively be returned as a 1D list of values, by passing `as_instance=False`:
+"""
+max_lh_list = samples.max_log_likelihood(as_instance=False)
+print("Max Log Likelihood Model Parameters: \n")
+print(max_lh_list, "\n\n")
+
+"""
+The list above does not tell us which values correspond to which parameters.
+
+The following quantities are available in the `Model`, where the order of their entries correspond to the parameters 
+in the `ml_vector` above:
+
+ - `paths`: a list of tuples which give the path of every parameter in the `Model`.
+ - `parameter_names`: a list of shorthand parameter names derived from the `paths`.
+ - `parameter_labels`: a list of parameter labels used when visualizing non-linear search results (see below).
+
+For simple models like the one fitted in this tutorial, the quantities below are somewhat redundant. For the
+more complex models they are important for tracking the parameters of the model.
+"""
+model = samples.model
+
+print(model.paths)
+print(model.parameter_names)
+print(model.parameter_labels)
+print(model.model_component_and_parameter_names)
+print("\n")
+
+"""
+All the methods above are available as lists.
+"""
+instance = samples.median_pdf(as_instance=False)
+values_at_upper_sigma = samples.values_at_upper_sigma(sigma=3.0, as_instance=False)
+values_at_lower_sigma = samples.values_at_lower_sigma(sigma=3.0, as_instance=False)
+errors_at_upper_sigma = samples.errors_at_upper_sigma(sigma=3.0, as_instance=False)
+errors_at_lower_sigma = samples.errors_at_lower_sigma(sigma=3.0, as_instance=False)
+
+"""
 __Latex__
 
-**PyAutoFit**'s latex tools can create latex table code which you can copy to a .tex document (e.g. a paper).
+If you are writing modeling results up in a paper, you can use inbuilt latex tools to create latex table code which 
+you can copy to your .tex document.
 
 By combining this with the filtering tools below, specific parameters can be included or removed from the latex.
 
-The superscripts of each parameter's latex string are loaded from the config file `notation/label.yaml`. Editing this
-config file provides high levels of customization for each parameter appears in the latex table. 
-
-This is especially useful if your CTI model uses the same model components with the same parameter (e.g. parallel and
-serial CTI), which therefore need to be distinguished via superscripts.
+Remember that the superscripts of a parameter are loaded from the config file `notation/label.yaml`, providing high
+levels of customization for how the parameter names appear in the latex table. This is especially useful if your model
+uses the same model components with the same parameter, which therefore need to be distinguished via superscripts.
 """
 latex = af.text.Samples.latex(
     samples=result.samples,
@@ -387,34 +402,20 @@ latex = af.text.Samples.latex(
 print(latex)
 
 """
-__Wrap Up__
-
-This tutorial illustrated how to analyse the non-linear samples of a model-fit. We saw that the API used for model 
-composition produced the instances of the results after fitting (for example, how we accessed the galaxy model 
-as `instance.cti.trap_list`).
-
-The remainder of this script provides advanced samples calculations which:
-
- - Calculate the most probable value with errors of a derived quantity by computing its PDF. For example, computing 
-   the total trap density of the model with errors (the total trap denisty is not directly accessible from the model).
- 
- - Filtering `Samples` objects to remove certain parameters or components from the model. This can help with,
-   for example, creating LaTex tables of specific parts of a model.
-
 __Derived Errors (Advanced)__
 
 Computing the errors of a quantity like the `release_timescale` is simple, because it is sampled by the non-linear 
 search. Errors are accessible using the `Samples` object's `errors_from` methods, which marginalize over the 
 parameters via the 1D Probability Density Function (PDF).
 
-Computing errors on derived quantities is more tricky, because it is not sampled directly by the non-linear search. 
+Computing errors on derived quantities is more tricky, because they are not sampled directly by the non-linear search. 
 For example, what if we want the error on the total trap density of the CTI model? In order to do this we need to create 
 the PDF of that derived quantity, which we can then marginalize over using the same function we use to marginalize 
 model parameters.
 
 Below, we compute the total trap density of every accepted model sampled by the non-linear search and use this 
 determine the PDF of the total trap density. When combining the axis-ratio's we weight each value by its `weight`. 
-For Dynesty, a nested sampling algorithm, the weight of every sample is different and thus must be included.
+For Nautilus, a nested sampling algorithm, the weight of every sample is different and thus must be included.
 
 In order to pass these samples to the function `marginalize`, which marginalizes over the PDF of the axis-ratio to 
 compute its error, we also pass the weight list of the samples.
@@ -438,12 +439,11 @@ print(
     f"total_density = {median_total_density} ({upper_total_density} {lower_total_density}"
 )
 
-
 """
 __Samples Filtering (Advanced)__
 
-The samples object has the results for all model parameter. It can be filtered to contain the results of specific 
-parameters of interest.
+Our samples object has the results for all three parameters in our model. However, we might only be interested in the
+results of a specific parameter.
 
 The basic form of filtering specifies parameters via their path, which was printed above via the model and is printed 
 again below.
@@ -473,10 +473,10 @@ print(
 print(samples.max_log_likelihood(as_instance=False))
 
 """
-Above, we specified each path as a list of tuples of strings. 
+We specified each path as a list of tuples of strings. 
 
-This is how the **PyAutoFit** source code stores the path to different components of the model, but it is not in-line 
-with the **PyAutoCTI** API used to compose a model.
+This is how the source code internally stores the path to different components of the model, but it is not 
+consistent with the API used to compose a model.
 
 We can alternatively use the following API:
 """

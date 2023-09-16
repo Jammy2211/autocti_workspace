@@ -145,10 +145,10 @@ __Non-linear Search__
 We now choose the non-linear search, which is the fitting method used to determine the set of CTI model parameters 
 that best-fit our data.
 
-In this example we use `dynesty` (https://github.com/joshspeagle/dynesty), a nested sampling algorithm that is
+In this example we use `nautilus` (https://github.com/joshspeagle/nautilus), a nested sampling algorithm that is
 very effective at lens modeling.
 """
-search = af.DynestyStatic(name="overview_modeling_2d")
+search = af.Nautilus(name="overview_modeling_2d")
 
 """
 __Analysis__
@@ -289,9 +289,9 @@ model = af.Collection(cti=af.Model(ac.CTI1D, trap_list=traps, ccd=ccd))
 """
 __Non-linear Search__
 
-We again use `dynesty` (https://github.com/joshspeagle/dynesty) to fit the model.
+We again use `nautilus` (https://github.com/joshspeagle/nautilus) to fit the model.
 """
-search = af.DynestyStatic(name="overview_modeling_1d")
+search = af.Nautilus(name="overview_modeling_1d")
 
 """
 __Analysis__

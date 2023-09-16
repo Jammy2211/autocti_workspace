@@ -2,6 +2,8 @@ general:
   backend: default                  # The matploblib backend used for visualization. `default` uses the system default, can specifiy specific backend (e.g. TKAgg, Qt5Agg, WXAgg).
   imshow_origin: upper              # The `origin` input of `imshow`, determining if pixel values are ascending or descending on the y-axis.
   zoom_around_mask: true            # If True, plots of data structures with a mask automatically zoom in the masked region.
+  symmetric_cmap_value: 100.0       # The vmin and vmax of all pre-cti data residual-maps.
+  subplot_ascending_fpr: true       # If True, subplots showing FPR / EPER trails of many datasets are in ascending order of FPR value.
 subplot_shape:                      # The shape of a subplots for figures with an input number of subplots (e.g. for a figure with 4 subplots, the shape is (2, 2)).
   2: (1, 2)                         # The shape of subplots for a figure with 2 subplots.
   4: (1, 4)                         # The shape of subplots for a figure with 4 (or less than the above value) of subplots.

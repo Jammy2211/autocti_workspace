@@ -163,8 +163,8 @@ model = af.Collection(
     )
 )
 
-search = af.DynestyStatic(
-    path_prefix=path.join("plot_ccd", "imaging_ci"), name="ccd_8x4", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("plot_ccd", "imaging_ci"), name="ccd_8x4", n_live=100
 )
 
 analysis_list = [

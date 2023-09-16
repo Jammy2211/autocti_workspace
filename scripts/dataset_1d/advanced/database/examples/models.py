@@ -49,7 +49,7 @@ cti_gen = cti_agg.max_log_likelihood_gen_from()
 """
 We can now iterate over our `CTI `object generator to make the plots we desire.
 """
-for CTI in cti_gen:
+for cti in cti_gen:
     print(cti)
 
 """
@@ -62,7 +62,7 @@ cti_gen = cti_agg.max_log_likelihood_gen_from()
 
 print("Maximum Log Likelihood Spurious Ellipticity:")
 
-for CTI in cti_gen:
+for cti in cti_gen:
     delta_ellipticity = cti.delta_ellipticity
 
     print("Delta Ellipticity = ", delta_ellipticity)
@@ -79,7 +79,7 @@ measurement that we want to calculate but was not sampled directly by the non-li
 object has everything we need to compute the errors of derived quantities.
 
 Below, we compute the delta ellipticity of every model sampled by the non-linear search and use this determine the PDF 
-of the delta ellipticity. When combining each delta ellipticity we weight each value by its `weight`. For Dynesty, 
+of the delta ellipticity. When combining each delta ellipticity we weight each value by its `weight`. For Nautilus, 
 the nested sampler used by the fit, this ensures models which gave a bad fit (and thus have a low weight) do not 
 contribute significantly to the delta ellipticity error estimate.
 
@@ -89,7 +89,7 @@ a delta ellipticity is cheap, and this is probably not necessary. However, certa
 computational overhead is being calculated and setting a minimum weight can speed up the calculation without 
 significantly changing the inferred errors.
 
-Below, we use the `CTIAgg` object to get the `CTI` object of every Dynesty sample in each model-fit. We extract from 
+Below, we use the `CTIAgg` object to get the `CTI` object of every Nautilus sample in each model-fit. We extract from 
 each `CTI `object the model's delta ellipticity, store them in a list and find the value via the PDF and quantile 
 method. This again uses generators, ensuring minimal memory use. 
 
@@ -104,7 +104,7 @@ weight_list_gen = cti_agg.weights_above_gen_from(minimum_weight=1e-4)
 for cti_gen, weight_gen in zip(cti_list_gen, weight_list_gen):
     delta_ellipticity_list = []
 
-    for CTI in cti_gen:
+    for cti in cti_gen:
         delta_ellipticity = cti.delta_ellipticity
 
         delta_ellipticity_list.append(delta_ellipticity)
@@ -139,7 +139,7 @@ cti_list_gen = cti_agg.randomly_drawn_via_pdf_gen_from(total_samples=2)
 for cti_gen in cti_list_gen:
     delta_ellipticity_list = []
 
-    for CTI in cti_gen:
+    for cti in cti_gen:
         delta_ellipticity = cti.delta_ellipticity
 
         delta_ellipticity_list.append(delta_ellipticity)

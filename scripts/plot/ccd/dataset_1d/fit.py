@@ -141,8 +141,8 @@ ccd.full_well_depth = 200000.0
 
 model = af.Collection(cti=af.Model(ac.CTI1D, trap_list=trap_list, ccd=ccd))
 
-search = af.DynestyStatic(
-    path_prefix=path.join("plot_ccd", "dataset_1d"), name="ccd_8x4", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("plot_ccd", "dataset_1d"), name="ccd_8x4", n_live=100
 )
 
 analysis_list = [

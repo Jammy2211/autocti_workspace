@@ -272,21 +272,21 @@ __Search__
 The CTI model is fitted to the data using a non-linear search. 
 
 All examples in the autoCTI workspace use the nested sampling algorithm 
-Dynesty (https://dynesty.readthedocs.io/en/latest/), which extensive testing has revealed gives the most accurate
+Nautilus (https://nautilus.readthedocs.io/en/latest/), which extensive testing has revealed gives the most accurate
 and efficient CTI modeling results.
 
-We make the following changes to the Dynesty settings:
+We make the following changes to the Nautilus settings:
 
  - Increase the number of live points, `nlive`, from the default value of 50 to 100. 
  - Increase the number of random walks per live point, `walks` from the default value of 5 to 10. 
 
-These are the two main Dynesty parameters that trade-off slower run time for a more reliable and accurate fit.
+These are the two main Nautilus parameters that trade-off slower run time for a more reliable and accurate fit.
 Increasing both of these parameter produces a more reliable fit at the expense of longer run-times.
 
 __Customization__
 
 The folders `autoCTI_workspace/*/imaging/modeling/searches` gives an overview of alternative non-linear searches,
-other than Dynesty, that can be used to fit CTI models. They also provide details on how to customize the
+other than Nautilus, that can be used to fit CTI models. They also provide details on how to customize the
 model-fit, for example the priors.
 
 The `name` and `path_prefix` below specify the path where results ae stored in the output folder:  
@@ -308,7 +308,7 @@ the `dataset_name` to the search's `unique_tag`.
 
 __Number Of Cores__
 
-We include an input `number_of_cores`, which when above 1 means that Dynesty uses parallel processing to sample multiple 
+We include an input `number_of_cores`, which when above 1 means that Nautilus uses parallel processing to sample multiple 
 CTI models at once on your CPU. When `number_of_cores=2` the search will run roughly two times as
 fast, for `number_of_cores=3` three times as fast, and so on. The downside is more cores on your CPU will be in-use
 which may hurt the general performance of your computer.
@@ -322,10 +322,16 @@ use a value above this.
 For users on a Windows Operating system, using `number_of_cores>1` may lead to an error, in which case it should be 
 reduced back to 1 to fix it.
 """
-search = af.DynestyStatic(
+# search = af.Nautilus(
+#     path_prefix=path.join("imaging_ci", dataset_name),
+#     name="parallel[x2]",
+#     n_live=100,
+# )
+
+search = af.Nautilus(
     path_prefix=path.join("imaging_ci", dataset_name),
     name="parallel[x2]",
-    nlive=50,
+    n_live=50,
 )
 
 """
@@ -363,7 +369,7 @@ analysis.n_cores = 1
 __Model-Fit__
 
 We can now begin the model-fit by passing the model and analysis object to the search, which performs the 
-dynesty non-linear search in order to find which models fit the data with the highest likelihood.
+nautilus non-linear search in order to find which models fit the data with the highest likelihood.
 
 __Output Folder__
 
@@ -375,7 +381,7 @@ to keep running Python code to see the result.
 
 __On The Fly Outputs__
 
-Even when the search is running, information about the highest likelihood model inferred by the search so-far 
+Even when the search is running, information about the highest likelihood model inferred by the search so far 
 is output to this folder on-the-fly. 
 
 If you navigate to the folder: 
@@ -417,7 +423,7 @@ The `Result` object also contains:
 
  - The model corresponding to the maximum log likelihood solution in parameter space.
  - The corresponding maximum log likelihood `CTI1D` and `FitDataset1D` objects.
- - Information on the posterior as estimated by the `Dynesty` non-linear search. 
+ - Information on the posterior as estimated by the `Nautilus` non-linear search. 
 """
 print(result_list[0].max_log_likelihood_instance.cti.parallel_trap_list[0].density)
 print(result_list[0].max_log_likelihood_instance.cti.parallel_ccd.well_fill_power)

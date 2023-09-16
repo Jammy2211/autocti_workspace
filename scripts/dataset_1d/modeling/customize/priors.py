@@ -15,7 +15,7 @@ confidence in the inferred parameters.
 The `autocti_workspace/*/imaging/modeling/customize/start_point.ipynb` shows an alternative API, which
 customizes where the non-linear search starts its search of parameter space.
 
-This cannot be used for a nested sampling method like `dynesty` (whose parameter space search is dictated by priors)
+This cannot be used for a nested sampling method like `nautilus` (whose parameter space search is dictated by priors)
 but can be used for the maximum likelihood estimator / MCMC methods PyAutoGalaxy supports.
 
 The benefit of the starting point API is that one can tell the non-linear search where to look in parameter space
@@ -235,14 +235,14 @@ print(model.info)
 """
 __Search__
 
-The model is fitted to the data using the nested sampling algorithm Dynesty (https://dynesty.readthedocs.io/en/latest/).
+The model is fitted to the data using the nested sampling algorithm Nautilus (https://nautilus.readthedocs.io/en/latest/).
 
 The `name` and `path_prefix` below specify the path where results ae stored in the output folder:  
 
  `/autocti_workspace/output/dataset_1d/species[x2]`.
 """
-search = af.DynestyStatic(
-    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", nlive=50
+search = af.Nautilus(
+    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", n_live=100
 )
 
 """

@@ -195,10 +195,10 @@ model = af.Collection(
     )
 )
 
-search = af.DynestyStatic(
+search = af.Nautilus(
     path_prefix=path.join("imaging_ci", "pre_cti_estimate_simple"),
     name="parallel[x1]",
-    nlive=50,
+    n_live=100,
 )
 
 analysis = ac.AnalysisImagingCI(dataset=dataset, clocker=clocker)
