@@ -108,7 +108,7 @@ is the total number of electrons in the FPR of every charge injection image.
 norm_list = [100, 5000, 25000, 200000]
 
 """
-The total number of charge injection images that are simulated, which is simply the number of normalizations 
+The total number of charge injection images that are simulated, which is the number of normalizations 
 specified above.
 """
 total_datasets = len(norm_list)

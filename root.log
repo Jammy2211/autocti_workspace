@@ -3481,3 +3481,324 @@ FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/
 2023-08-22 18:29:00,096 - ccd_8x4 - INFO - Outputting pre-fit files (e.g. model.info, visualization).
 2023-08-22 18:30:21,739 - ccd_8x4 - INFO - Starting new Dynesty non-linear search (no previous samples found).
 2023-08-22 18:30:21,836 - autofit.non_linear.initializer - INFO - Generating initial samples of model, which are subject to prior limits and other constraints.
+2023-09-19 15:28:46,687 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-09-19 15:28:46,712 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-09-19 15:28:46,713 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-09-19 15:28:46,715 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-09-19 15:28:46,717 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-09-19 15:28:46,717 - parallel[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/imaging_ci/simple/parallel[x2]/475d8b78523978bb424d92e99ee81117
+2023-09-19 15:28:46,717 - parallel[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-09-19 15:29:05,154 - parallel[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-09-19 15:29:05,155 - parallel[x2] - INFO - number of cores == 1
+2023-09-19 15:29:05,156 - parallel[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-09-19 15:29:05,157 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-09-19 15:32:39,684 - parallel[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-09-19 15:32:50,704 - parallel[x2] - INFO - Removing all files except for .zip file
+2023-10-04 15:34:35,458 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:34:35,463 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 15:34:35,463 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 15:34:45,644 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 15:34:45,645 - species[x1] - INFO - number of cores == 1
+2023-10-04 15:34:45,645 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 15:34:45,646 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 15:35:11,595 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 15:35:25,788 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:35:26,002 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:35:26,004 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_1/species[x1]/ae5475ea5fb9b4492d6220e6c3a4f71b
+2023-10-04 15:35:26,004 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 15:35:36,345 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 15:35:36,346 - species[x1] - INFO - number of cores == 1
+2023-10-04 15:35:36,346 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 15:35:36,347 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 15:36:01,039 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 15:36:16,254 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:36:16,497 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:36:16,498 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_2/species[x1]/af69c7d1e2db4041c3e611ed57dc6826
+2023-10-04 15:36:16,499 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 15:36:26,795 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 15:36:26,796 - species[x1] - INFO - number of cores == 1
+2023-10-04 15:36:26,797 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 15:36:26,797 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 15:36:52,702 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 15:37:07,819 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:37:08,050 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:37:08,052 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_3/species[x1]/11ada1a17fee79c57174e923ea9b2a7f
+2023-10-04 15:37:08,052 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 15:37:18,032 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 15:37:18,033 - species[x1] - INFO - number of cores == 1
+2023-10-04 15:37:18,033 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 15:37:18,034 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 15:37:43,991 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 15:37:58,455 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:37:58,690 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:37:58,691 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_4/species[x1]/4ecdc323aeb4e20667ac903f0aff058b
+2023-10-04 15:37:58,692 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 15:38:08,911 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 15:38:08,912 - species[x1] - INFO - number of cores == 1
+2023-10-04 15:38:08,912 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 15:38:08,913 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 15:38:38,433 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 15:38:53,502 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:41:10,933 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:41:11,089 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 15:41:20,912 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:41:36,801 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:41:37,018 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:41:37,176 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_1/species[x1]/ae5475ea5fb9b4492d6220e6c3a4f71b
+2023-10-04 15:41:48,067 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:42:03,642 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:42:04,004 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:42:04,250 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_2/species[x1]/af69c7d1e2db4041c3e611ed57dc6826
+2023-10-04 15:42:15,797 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:42:31,523 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:42:31,760 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:42:31,917 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_3/species[x1]/11ada1a17fee79c57174e923ea9b2a7f
+2023-10-04 15:42:43,620 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:42:58,830 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:42:59,108 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:42:59,282 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_4/species[x1]/4ecdc323aeb4e20667ac903f0aff058b
+2023-10-04 15:43:10,445 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:43:26,078 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:44:03,084 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:44:03,254 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 15:44:15,175 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:44:30,582 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:44:30,808 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:44:30,987 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_1/species[x1]/ae5475ea5fb9b4492d6220e6c3a4f71b
+2023-10-04 15:44:41,949 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:44:58,304 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:44:58,613 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:44:58,798 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_2/species[x1]/af69c7d1e2db4041c3e611ed57dc6826
+2023-10-04 15:45:09,706 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:45:26,592 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:45:26,811 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:45:26,972 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_3/species[x1]/11ada1a17fee79c57174e923ea9b2a7f
+2023-10-04 15:45:38,262 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:45:53,494 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:45:53,717 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:45:53,865 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_4/species[x1]/4ecdc323aeb4e20667ac903f0aff058b
+2023-10-04 15:46:04,263 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:46:18,869 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:47:04,473 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:47:04,623 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 15:47:14,867 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 15:47:30,666 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 15:47:54,274 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 15:47:54,914 - autofit.database.aggregator.scrape - INFO - 5 searches found
+2023-10-04 15:47:54,961 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:47:55,139 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 15:47:56,566 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:47:56,567 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 15:48:00,490 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:00,492 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 6413815d06103a439e38f53b710358f9 
+2023-10-04 15:48:05,868 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:05,869 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 397f18c7ca6331aad29110f4532839c8 
+2023-10-04 15:48:10,239 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:10,239 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] e9a924020bc3e765ea83bc12dca21cfb 
+2023-10-04 15:48:18,000 - autofit.database.aggregator.aggregator - INFO - 25 fit(s) found matching query
+2023-10-04 15:48:48,008 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 15:48:48,669 - autofit.database.aggregator.scrape - INFO - 5 searches found
+2023-10-04 15:48:48,719 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:48,893 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 15:48:50,318 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:50,319 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 15:48:55,163 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:55,164 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 6413815d06103a439e38f53b710358f9 
+2023-10-04 15:48:59,622 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:48:59,622 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 397f18c7ca6331aad29110f4532839c8 
+2023-10-04 15:49:03,733 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 15:49:03,734 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] e9a924020bc3e765ea83bc12dca21cfb 
+2023-10-04 15:49:11,378 - autofit.database.aggregator.aggregator - INFO - 25 fit(s) found matching query
+2023-10-04 17:57:30,904 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 17:57:31,533 - autofit.database.aggregator.scrape - INFO - 5 searches found
+2023-10-04 17:57:31,576 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 17:57:31,744 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 17:57:33,152 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 17:57:33,153 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 17:57:37,040 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 17:57:37,041 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 6413815d06103a439e38f53b710358f9 
+2023-10-04 17:57:41,126 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 17:57:41,127 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 397f18c7ca6331aad29110f4532839c8 
+2023-10-04 17:57:45,310 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 17:57:45,311 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] e9a924020bc3e765ea83bc12dca21cfb 
+2023-10-04 17:57:54,649 - autofit.database.aggregator.aggregator - INFO - 25 fit(s) found matching query
+2023-10-04 17:59:39,598 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 17:59:39,598 - autofit.database.aggregator.scrape - INFO - 0 searches found
+2023-10-04 17:59:39,599 - autofit.database.aggregator.aggregator - INFO - 0 fit(s) found matching query
+2023-10-04 18:00:06,097 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:00:06,100 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 18:00:06,100 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:00:16,370 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:00:16,371 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:00:16,372 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:00:16,373 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:00:41,800 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:00:55,637 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:00:55,844 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:00:55,846 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_1/species[x1]/ae5475ea5fb9b4492d6220e6c3a4f71b
+2023-10-04 18:00:55,847 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:01:05,638 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:01:05,639 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:01:05,639 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:01:05,640 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:01:29,623 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:01:44,071 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:02:07,606 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 18:02:07,878 - autofit.database.aggregator.scrape - INFO - 2 searches found
+2023-10-04 18:02:07,923 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:02:08,089 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 18:02:09,479 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:02:09,480 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 18:02:15,955 - autofit.database.aggregator.aggregator - INFO - 10 fit(s) found matching query
+2023-10-04 18:02:44,046 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 18:02:44,290 - autofit.database.aggregator.scrape - INFO - 2 searches found
+2023-10-04 18:02:44,333 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:02:44,494 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 18:02:45,862 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:02:45,863 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 18:02:52,210 - autofit.database.aggregator.aggregator - INFO - 10 fit(s) found matching query
+2023-10-04 18:07:17,242 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:07:17,243 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 18:07:17,244 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:07:19,206 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:07:19,207 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:07:19,207 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:07:19,208 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:07:32,330 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:07:34,439 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:07:54,757 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:07:54,803 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_0/species[x1]/3d96a30a3e973f6fa18aa6e4992fbdb6
+2023-10-04 18:07:56,901 - species[x1] - INFO - Fit Already Completed: skipping non-linear search.
+2023-10-04 18:07:59,080 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:07:59,173 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:07:59,174 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_1/species[x1]/ae5475ea5fb9b4492d6220e6c3a4f71b
+2023-10-04 18:07:59,174 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:08:00,965 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:08:00,966 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:08:00,966 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:08:00,967 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:08:09,607 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:08:12,327 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:08:12,423 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:08:12,425 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_2/species[x1]/af69c7d1e2db4041c3e611ed57dc6826
+2023-10-04 18:08:12,425 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:08:14,306 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:08:14,307 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:08:14,307 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:08:14,308 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:08:21,960 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:08:24,197 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:08:24,280 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:08:24,281 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_3/species[x1]/11ada1a17fee79c57174e923ea9b2a7f
+2023-10-04 18:08:24,281 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:08:26,233 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:08:26,233 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:08:26,234 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:08:26,234 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:08:33,069 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:08:35,657 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:08:35,746 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:08:35,747 - species[x1] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/temporal/time_4/species[x1]/4ecdc323aeb4e20667ac903f0aff058b
+2023-10-04 18:08:35,748 - species[x1] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-04 18:08:38,302 - species[x1] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-04 18:08:38,304 - species[x1] - INFO - number of cores == 1
+2023-10-04 18:08:38,304 - species[x1] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-04 18:08:38,306 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-04 18:08:46,971 - species[x1] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-04 18:08:49,220 - species[x1] - INFO - Removing all files except for .zip file
+2023-10-04 18:11:01,891 - autofit.database.aggregator.scrape - INFO - Scraping directory output/temporal
+2023-10-04 18:11:02,055 - autofit.database.aggregator.scrape - INFO - 5 searches found
+2023-10-04 18:11:02,095 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:11:02,250 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 5b74aff5572eb74b100c1202751e8d43 
+2023-10-04 18:11:03,022 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:11:03,023 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 2d8179023085b7cd2e07bd89b16dbabc 
+2023-10-04 18:11:04,961 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:11:04,962 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 6413815d06103a439e38f53b710358f9 
+2023-10-04 18:11:07,257 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:11:07,257 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] 397f18c7ca6331aad29110f4532839c8 
+2023-10-04 18:11:09,239 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-04 18:11:09,239 - autofit.database.aggregator.scrape - INFO - Creating fit for: . None species[x1] e9a924020bc3e765ea83bc12dca21cfb 
+2023-10-04 18:11:12,847 - autofit.database.aggregator.aggregator - INFO - 5 fit(s) found matching query
+2023-10-09 17:39:33,189 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:39:33,190 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-09 17:39:33,192 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:39:33,192 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-09 17:39:33,194 - species[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/dataset_1d/simple/species[x2]/ef06dc4665eb34ad5e3a7275ccdbad63
+2023-10-09 17:39:33,194 - species[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:39:33,314 - species[x2] - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-09 17:39:33,369 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-09 17:39:33,476 - species[x2] - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-09 17:39:33,593 - species[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:39:33,635 - species[x2] - INFO - Removing all files except for .zip file
+2023-10-09 17:39:43,716 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:39:43,716 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-09 17:39:43,718 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:39:43,719 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-09 17:39:43,720 - species[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/dataset_1d/simple/species[x2]/ef06dc4665eb34ad5e3a7275ccdbad63
+2023-10-09 17:39:43,720 - species[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:39:43,835 - species[x2] - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-09 17:39:43,893 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-09 17:39:55,240 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:39:55,243 - species[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/dataset_1d/simple/species[x2]/80f7c3550e0977e82bdc939068c633b5
+2023-10-09 17:39:55,243 - species[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:40:03,953 - species[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-09 17:40:03,954 - species[x2] - INFO - number of cores == 1
+2023-10-09 17:40:03,954 - species[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-09 17:40:03,955 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-09 17:40:43,611 - species[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:40:56,068 - species[x2] - INFO - Removing all files except for .zip file
+2023-10-09 17:41:26,322 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:41:26,325 - species[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/dataset_1d/simple/species[x2]/80f7c3550e0977e82bdc939068c633b5
+2023-10-09 17:41:26,325 - species[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:41:35,432 - species[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-09 17:41:35,434 - species[x2] - INFO - number of cores == 1
+2023-10-09 17:41:35,434 - species[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-09 17:41:35,435 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-09 17:43:11,248 - species[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:43:27,356 - species[x2] - INFO - Removing all files except for .zip file
+2023-10-09 17:45:13,778 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:45:13,805 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:45:13,807 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:45:13,809 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:45:13,811 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:45:13,811 - parallel[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/imaging_ci/simple/parallel[x2]/b9a433d63847a83c047a001152ccea54
+2023-10-09 17:45:13,812 - parallel[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:45:34,609 - parallel[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-09 17:45:34,611 - parallel[x2] - INFO - number of cores == 1
+2023-10-09 17:45:34,611 - parallel[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-09 17:45:34,612 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-09 17:47:31,047 - parallel[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:47:39,888 - parallel[x2] - INFO - Removing all files except for .zip file
+2023-10-09 17:49:51,255 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:49:51,277 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:49:51,279 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:49:51,280 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:49:51,281 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:49:51,282 - parallel[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/imaging_ci/simple/parallel[x2]/b9a433d63847a83c047a001152ccea54
+2023-10-09 17:49:51,282 - parallel[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:50:10,289 - parallel[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-09 17:50:10,290 - parallel[x2] - INFO - number of cores == 1
+2023-10-09 17:50:10,291 - parallel[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-09 17:50:10,292 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-09 17:51:55,292 - parallel[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:52:15,552 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-09 17:52:15,575 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:52:15,577 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:52:15,579 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:52:15,580 - autocti.charge_injection.model.analysis - INFO - PRELOADS - Noise Normalization preloaded for model-fit (noise-map is fixed).
+2023-10-09 17:52:15,580 - parallel[x2] - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/imaging_ci/simple/parallel[x2]/b9a433d63847a83c047a001152ccea54
+2023-10-09 17:52:15,581 - parallel[x2] - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-09 17:52:38,653 - parallel[x2] - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-09 17:52:38,654 - parallel[x2] - INFO - number of cores == 1
+2023-10-09 17:52:38,655 - parallel[x2] - INFO - Creating multiprocessing Pool of size 1...
+2023-10-09 17:52:38,656 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
+2023-10-09 17:55:39,413 - parallel[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-09 17:55:49,130 - parallel[x2] - INFO - Removing all files except for .zip file

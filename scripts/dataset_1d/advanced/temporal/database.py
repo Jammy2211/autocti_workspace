@@ -38,7 +38,6 @@ except FileNotFoundError:
 agg = af.Aggregator.from_database(
     filename=f"{database_name}.sqlite", completed_only=False
 )
-
 agg.add_directory(directory=path.join("output", database_name))
 
 """
@@ -75,6 +74,7 @@ instance = interpolator[interpolator.time == 1.5]
 The `density` of the `TrapInstantCapture` at time 1.5 is between the value inferred for the first and second fits taken
 at times 1.0 and 2.0.
 """
-print(instance.cti.trap_list[0].density)
-print(ml_instances_list[0].cti.trap_list[0].density)
-print(ml_instances_list[1].cti.trap_list[0].density)
+print(f"Trap density of fit 1 (t = 1): {ml_instances_list[0].cti.trap_list[0].density}")
+print(f"Trap density of fit 2 (t = 2): {ml_instances_list[1].cti.trap_list[0].density}")
+
+print(f"Trap Density interpolated at t = 1.5 {instance.cti.trap_list[0].density}")

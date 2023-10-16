@@ -29,6 +29,7 @@ fit:
   post_cti_data: false
   normalized_residual_map: false
   chi_squared_map: false
+  residual_flux_fraction: false            # Plot individual plots of the residual_flux_fraction?
   noise_scaling_map_dict: false
   subplot_fit: false
   all_at_end_png: false

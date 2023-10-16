@@ -32,6 +32,7 @@ In this script, we will fit multiple charge injection imaging to calibrate CTI, 
 
 import numpy as np
 from os import path
+
 import autofit as af
 import autocti as ac
 
@@ -257,17 +258,23 @@ instance = interpolator[interpolator.time == 1.5]
 The `density` of the `TrapInstantCapture` at time 1.5 is between the value inferred for the first and second fits taken
 at times 1.0 and 2.0.
 """
-print(instance.cti.trap_list[0].density)
-print(ml_instances_list[0].cti.trap_list[0].density)
-print(ml_instances_list[1].cti.trap_list[0].density)
+print(f"Trap density of fit 1 (t = 1): {ml_instances_list[0].cti.trap_list[0].density}")
+print(f"Trap density of fit 2 (t = 2): {ml_instances_list[1].cti.trap_list[0].density}")
+
+print(f"Trap Density interpolated at t = 1.5 {instance.cti.trap_list[0].density}")
+
 
 """
 __Serialization__
 
-The interpolator and model can be serialized to a .json file, so they can easily be loaded into other scripts.
+The interpolator and model can be serialized to a .json file using **PyAutoConf**'s dedicated serialization methods. 
+
+This means an interpolator can easily be loaded into other scripts.
 """
+from autoconf.dictable import output_to_json, from_json
+
 json_file = path.join(dataset_path, "interpolator.json")
 
-interpolator.output_to_json(file_path=json_file)
+output_to_json(obj=interpolator, file_path=json_file)
 
-interpolator = af.LinearInterpolator.from_json(file_path=json_file)
+interpolator = from_json(file_path=json_file)
