@@ -223,8 +223,14 @@ for time in time_list:
 
     This can be loaded via the method `TrapInstantCapture.from_json`.
     """
-    cti.output_to_json(file_path=path.join(dataset_output_path, "cti.json"))
-    clocker.output_to_json(file_path=path.join(dataset_output_path, "clocker.json"))
+    ac.output_to_json(
+        obj=cti,
+        file_path=path.join(dataset_output_path, "cti.json"),
+    )
+    ac.output_to_json(
+        obj=clocker,
+        file_path=path.join(dataset_output_path, "clocker.json"),
+    )
 
 """
 Finished.

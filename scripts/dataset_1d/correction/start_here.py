@@ -165,8 +165,14 @@ perform the correction are safely stored and available to check how the dataset 
 
 This can be loaded via the method `CTI2D.from_json`.
 """
-cti.output_to_json(file_path=path.join(dataset_path, "cti_correction.json"))
-clocker.output_to_json(file_path=path.join(dataset_path, "clocker_correction.json"))
+ac.output_to_json(
+    obj=cti,
+    file_path=path.join(dataset_path, "cti_correction.json"),
+)
+ac.output_to_json(
+    obj=clocker,
+    file_path=path.join(dataset_path, "clocker_correction.json"),
+)
 
 """
 Finished.

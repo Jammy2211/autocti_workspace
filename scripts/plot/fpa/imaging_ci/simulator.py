@@ -157,8 +157,11 @@ for fpa_i in range(6):
                 region="parallel_eper", data=True, data_logy=True
             )
 
-        cti.output_to_json(file_path=path.join(dataset_path, "cti.json"))
-        clocker.output_to_json(file_path=path.join(dataset_path, "clocker.json"))
+        40
+        ac.output_to_json(
+            obj=clocker,
+            file_path=path.join(dataset_path, "clocker.json"),
+        )
 
 """
 Finish.

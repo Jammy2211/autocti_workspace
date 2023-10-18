@@ -101,7 +101,7 @@ The `ImagingCI` object has the following three attributes:
  - `pre_cti_data`: an image which estimates what the charge injection image looked like before clocking and therefore
  without CTI.
  
- __Simulators__
+__Simulators__
  
 To avoid storing large .fits files on GitHub, the files below must be simulated locally in your workspace.
 

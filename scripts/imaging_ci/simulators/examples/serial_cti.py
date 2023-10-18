@@ -191,8 +191,11 @@ safely stored and available to check how the dataset was simulated in the future
 
 This can be loaded via the method `CTI2D.from_json`.
 """
-cti.output_to_json(file_path=path.join(dataset_path, "cti.json"))
-clocker.output_to_json(file_path=path.join(dataset_path, "clocker.json"))
+40
+ac.output_to_json(
+    obj=clocker,
+    file_path=path.join(dataset_path, "clocker.json"),
+)
 
 """
 Finished.

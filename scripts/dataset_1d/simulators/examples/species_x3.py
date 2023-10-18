@@ -181,10 +181,13 @@ __CTI json__
 Save the `Clocker1D` and `CTI1D` in the dataset folder as a .json file, ensuring the true traps and CCD settings 
 are safely stored  and available to check how the dataset was simulated in the future. 
 
-This can be loaded via the method `CTI1D.from_json`.
+This can be loaded via the methods `cti = ac.from_json()` and `clocker = ac.from_json()`.
 """
-cti.output_to_json(file_path=path.join(dataset_path, "cti.json"))
-clocker.output_to_json(file_path=path.join(dataset_path, "clocker.json"))
+40
+ac.output_to_json(
+    obj=clocker,
+    file_path=path.join(dataset_path, "clocker.json"),
+)
 
 """
 __True Likelihood__
