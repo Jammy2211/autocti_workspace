@@ -264,23 +264,26 @@ We can compute the upper and lower errors on each parameter at a given sigma lim
 
 The `ue3` below signifies the upper error at 3 sigma. 
 """
-ue3_lists = [samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")]
+try:
+    ue3_lists = [samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")]
 
-# ue3_instances = [
-#     samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")
-# ]
+    # ue3_instances = [
+    #     samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")
+    # ]
 
-le3_lists = [samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")]
-# le3_instances = [
-#     samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")
-# ]
+    le3_lists = [samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")]
+    # le3_instances = [
+    #     samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")
+    # ]
 
-print("Errors Lists: \n")
-print(ue3_lists, "\n")
-print(le3_lists, "\n")
-print("Errors Instances: \n")
-# print(ue3_instances, "\n")
-# print(le3_instances, "\n")
+    print("Errors Lists: \n")
+    print(ue3_lists, "\n")
+    print(le3_lists, "\n")
+    print("Errors Instances: \n")
+    # print(ue3_instances, "\n")
+    # print(le3_instances, "\n")
+except af.exc.FitException:
+    pass
 
 """
 __Sample Instance__
@@ -319,7 +322,7 @@ likelihoods of the samples.
 If different models are fitted to the same dataset, this value can be compared to determine which model provides
 the best fit (e.g. which model has the highest maximum likelihood)?
 """
-print([max(samps.log_likelihod_list) for samps in agg.values("samples")])
+print([max(samps.log_likelihood_list) for samps in agg.values("samples")])
 
 """
 __Bayesian Evidence__
@@ -338,7 +341,7 @@ Using the Bayesian evidence for model comparison is well documented on the inter
 wikipedia page: https://en.wikipedia.org/wiki/Bayes_factor
 """
 print("Log Evidences: \n")
-print([samps.log_evidence for samps in agg.values("samples")])
+# print([samps.log_evidence for samps in agg.values("samples")])
 
 """
 __Lists__

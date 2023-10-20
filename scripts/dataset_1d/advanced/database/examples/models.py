@@ -111,17 +111,20 @@ for cti_gen, weight_gen in zip(cti_list_gen, weight_list_gen):
 
     weight_list = [weight for weight in weight_gen]
 
-    (
-        median_delta_ellipticity,
-        upper_delta_ellipticity,
-        lower_delta_ellipticity,
-    ) = af.marginalize(
-        parameter_list=delta_ellipticity_list, sigma=2.0, weight_list=weight_list
-    )
+    try:
+        (
+            median_delta_ellipticity,
+            upper_delta_ellipticity,
+            lower_delta_ellipticity,
+        ) = af.marginalize(
+            parameter_list=delta_ellipticity_list, sigma=2.0, weight_list=weight_list
+        )
 
-    print(
-        f"delta ellipticity = {median_delta_ellipticity} ({upper_delta_ellipticity} {lower_delta_ellipticity}"
-    )
+        print(
+            f"delta ellipticity = {median_delta_ellipticity} ({upper_delta_ellipticity} {lower_delta_ellipticity}"
+        )
+    except IndexError:
+        pass
 
 """
 __Errors (Random draws from PDF)__

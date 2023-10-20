@@ -3874,3 +3874,414 @@ FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/
 
 2023-10-20 19:01:57,355 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_2 simple_2 database_example 44fc928acc58a23c284f0a4f30e7d76d 
 2023-10-20 19:01:57,510 - autofit.database.aggregator.aggregator - INFO - 20 fit(s) found matching query
+2023-10-20 19:20:21,507 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:21,508 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:21,511 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:21,512 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:21,515 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_0/simple_0/database_example/d38d53f5586647422ea40266a06036ad
+2023-10-20 19:20:21,515 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:20:21,665 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:20:21,720 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:20:21,889 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:20:22,008 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:20:22,043 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:20:22,110 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:22,111 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:22,112 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:22,112 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:22,114 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_1/simple_1/database_example/5a2f374ce60b1f12214ab25f9a818b02
+2023-10-20 19:20:22,115 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:20:22,252 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:20:22,486 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:20:22,663 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:20:22,816 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:20:22,862 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:20:22,933 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:22,934 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:22,935 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:22,936 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:22,937 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_2/simple_2/database_example/bfdfa21982039807fb466d1a22a21a7c
+2023-10-20 19:20:22,938 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:20:23,075 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:20:23,128 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:20:23,257 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:20:23,367 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:20:23,408 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:20:23,514 - autofit.database.aggregator.scrape - INFO - Scraping directory output/database
+2023-10-20 19:20:23,684 - autofit.database.aggregator.scrape - INFO - 3 searches found
+2023-10-20 19:20:23,706 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:23,706 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:23,709 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_0 simple_0 database_example 866f8ad3cc99f19323192fbd2fce2839 
+2023-10-20 19:20:23,833 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:23,833 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:23,836 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_1 simple_1 database_example 50a47438a56caca1f05e4737d12ec110 
+2023-10-20 19:20:24,065 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:20:24,066 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:20:24,068 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_2 simple_2 database_example 44fc928acc58a23c284f0a4f30e7d76d 
+2023-10-20 19:20:24,225 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:20:32,894 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:20:32,895 - autofit.database.migration.migration - INFO - revision_id updated to 285ca7981f6c389441074ef513c1ba8e
+2023-10-20 19:20:32,895 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:20:48,185 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:20:48,186 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:20:48,187 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:20:48,241 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:20:48,254 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:20:48,265 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:20:48,267 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,897 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:21:33,898 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:21:33,899 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:21:33,958 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,972 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,984 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,985 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,986 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:33,987 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:21:34,147 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:22:22,123 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:22:22,124 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:22:22,124 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:23:22,804 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:23:22,805 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:23:22,805 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:23:22,860 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:22,872 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:22,883 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:22,884 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:22,885 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:22,885 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:23,031 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,536 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:23:52,537 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:23:52,538 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:23:52,599 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,611 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,622 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,625 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,625 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,626 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:52,763 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,904 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:23:57,905 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:23:57,905 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:23:57,957 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,970 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,983 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,984 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,985 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:57,985 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,122 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,141 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,160 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,166 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,167 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,170 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,171 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,173 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:23:58,173 - autocti.aggregator.cti - INFO - 
+            Using database for a fit with multiple summed Analysis objects.
+
+            CTI objects do not fully support this yet (e.g. adapt images may not be set up correctly)
+            so proceed with caution!
+            
+2023-10-20 19:24:06,822 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:24:06,823 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:24:06,824 - autofit.database.aggregator.aggregator - INFO - 1 fit(s) found matching query
+2023-10-20 19:24:06,872 - autofit.database.aggregator.aggregator - INFO - 0 fit(s) found matching query
+2023-10-20 19:24:06,875 - autofit.database.aggregator.aggregator - INFO - 3 fit(s) found matching query
+2023-10-20 19:24:06,901 - autofit.database.aggregator.aggregator - INFO - 0 fit(s) found matching query
+2023-10-20 19:24:13,155 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:24:13,156 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:24:13,157 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:24:21,656 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:24:21,657 - autofit.database.migration.migration - INFO - revision_id updated to None
+2023-10-20 19:24:21,657 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:25:01,684 - autofit.database.aggregator.aggregator - INFO - 0 fit(s) found matching query
+2023-10-20 19:25:11,331 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:11,332 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:11,334 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:11,335 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:11,336 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_0/simple_0/database_example/d38d53f5586647422ea40266a06036ad
+2023-10-20 19:25:11,336 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:25:11,481 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:25:11,540 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:25:11,748 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:25:11,881 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:25:11,923 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:25:11,994 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:11,995 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:11,996 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:11,996 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:11,998 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_1/simple_1/database_example/5a2f374ce60b1f12214ab25f9a818b02
+2023-10-20 19:25:11,998 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:25:12,138 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:25:12,188 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:25:12,332 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:25:12,441 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:25:12,484 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:25:12,551 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:12,552 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:12,553 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:12,553 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:12,554 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_2/simple_2/database_example/bfdfa21982039807fb466d1a22a21a7c
+2023-10-20 19:25:12,555 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:25:12,691 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:25:12,871 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:25:13,015 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:25:13,119 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:25:13,156 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:25:13,215 - autofit.database.migration.migration - INFO - Performing migration from None to 285ca7981f6c389441074ef513c1ba8e in 6 steps
+2023-10-20 19:25:13,217 - autofit.database.migration.migration - INFO - revision_id updated to 285ca7981f6c389441074ef513c1ba8e
+2023-10-20 19:25:13,217 - autofit.database.aggregator.scrape - INFO - Scraping directory output/database
+2023-10-20 19:25:13,363 - autofit.database.aggregator.scrape - INFO - 3 searches found
+2023-10-20 19:25:13,383 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:13,383 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:13,386 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_0 simple_0 database_example 866f8ad3cc99f19323192fbd2fce2839 
+2023-10-20 19:25:13,511 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:13,512 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:13,514 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_1 simple_1 database_example 50a47438a56caca1f05e4737d12ec110 
+2023-10-20 19:25:13,739 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:25:13,739 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:25:13,742 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_2 simple_2 database_example 44fc928acc58a23c284f0a4f30e7d76d 
+2023-10-20 19:25:13,889 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:25:44,003 - autofit.database.migration.migration - INFO - Database already at latest revision
+2023-10-20 19:25:44,003 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:26:32,847 - autofit.database.migration.migration - INFO - Database already at latest revision
+2023-10-20 19:26:32,847 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:26:47,791 - autofit.database.migration.migration - INFO - Database already at latest revision
+2023-10-20 19:26:47,791 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:27:16,600 - autofit.database.migration.migration - INFO - Database already at latest revision
+2023-10-20 19:27:16,600 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
+2023-10-20 19:27:16,971 - autofit.database.aggregator.aggregator - INFO - 15 fit(s) found matching query
