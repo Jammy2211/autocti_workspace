@@ -3802,3 +3802,75 @@ FileNotFoundError: [Errno 2] No such file or directory: 'output/temporal/time_4/
 2023-10-09 17:52:38,656 - autofit.non_linear.parallel.sneaky - INFO - ... using multiprocessing
 2023-10-09 17:55:39,413 - parallel[x2] - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
 2023-10-09 17:55:49,130 - parallel[x2] - INFO - Removing all files except for .zip file
+2023-10-20 19:01:34,869 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:34,873 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_0/database_example/29b61c436bd6319aa7e67dd489f8b162
+2023-10-20 19:01:34,874 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:01:42,999 - database_example - INFO - Starting new Nautilus non-linear search (no previous samples found).
+2023-10-20 19:01:54,887 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:54,888 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:54,890 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:54,890 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:54,892 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_0/simple_0/database_example/d38d53f5586647422ea40266a06036ad
+2023-10-20 19:01:54,892 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:01:55,027 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:01:55,082 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:01:55,261 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:01:55,380 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:01:55,418 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:01:55,485 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:55,485 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:55,487 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:55,487 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:55,488 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_1/simple_1/database_example/5a2f374ce60b1f12214ab25f9a818b02
+2023-10-20 19:01:55,489 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:01:55,619 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:01:55,676 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:01:55,811 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:01:56,049 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:01:56,089 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:01:56,157 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:56,158 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:56,159 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:56,159 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:56,160 - database_example - INFO - The output path of this fit is /mnt/c/Users/Jammy/Code/PyAuto/autocti_workspace/output/database/simple_2/simple_2/database_example/bfdfa21982039807fb466d1a22a21a7c
+2023-10-20 19:01:56,161 - database_example - INFO - Outputting pre-fit files (e.g. model.info, visualization).
+2023-10-20 19:01:56,293 - database_example - INFO - Starting new Dynesty non-linear search (no previous samples found).
+2023-10-20 19:01:56,340 - autofit.non_linear.initializer - WARNING - TEST MODE ON: SAMPLES BEING ASSIGNED ABRITRARY LARGE LIKELIHOODS
+2023-10-20 19:01:56,455 - database_example - INFO - Fit Still Running: Updating results after 2500 iterations (see output folder for latest visualization, samples, etc.)
+2023-10-20 19:01:56,559 - database_example - INFO - Fit Complete: Updating final results (see output folder for final visualization, samples, etc.)
+2023-10-20 19:01:56,593 - database_example - INFO - Removing all files except for .zip file
+2023-10-20 19:01:56,736 - autofit.database.aggregator.scrape - INFO - Scraping directory output/database
+2023-10-20 19:01:56,908 - autofit.database.aggregator.scrape - INFO - 4 searches found
+2023-10-20 19:01:56,912 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:56,912 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:56,915 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_0 simple_0 database_example 02e79845d84bd95fe7651a858fd49386 
+2023-10-20 19:01:57,021 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:57,021 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:57,024 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_0 simple_0 database_example 866f8ad3cc99f19323192fbd2fce2839 
+2023-10-20 19:01:57,127 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:57,127 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:57,130 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_1 simple_1 database_example 50a47438a56caca1f05e4737d12ec110 
+2023-10-20 19:01:57,352 - autofit.non_linear.search.abstract_search - INFO - Creating non-linear search
+2023-10-20 19:01:57,353 - autofit.non_linear.search.abstract_search - WARNING - TEST MODE ON: SEARCH WILL SKIP SAMPLING
+
+
+2023-10-20 19:01:57,355 - autofit.database.aggregator.scrape - INFO - Creating fit for: simple_2 simple_2 database_example 44fc928acc58a23c284f0a4f30e7d76d 
+2023-10-20 19:01:57,510 - autofit.database.aggregator.aggregator - INFO - 20 fit(s) found matching query
