@@ -265,13 +265,17 @@ We can compute the upper and lower errors on each parameter at a given sigma lim
 The `ue3` below signifies the upper error at 3 sigma. 
 """
 try:
-    ue3_lists = [samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")]
+    ue3_lists = [
+        samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")
+    ]
 
     # ue3_instances = [
     #     samps.errors_at_upper_sigma(sigma=3.0) for samps in agg.values("samples")
     # ]
 
-    le3_lists = [samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")]
+    le3_lists = [
+        samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")
+    ]
     # le3_instances = [
     #     samps.errors_at_lower_sigma(sigma=3.0) for samps in agg.values("samples")
     # ]
