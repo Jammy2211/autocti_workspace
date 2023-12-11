@@ -35,10 +35,12 @@ try:
 except FileNotFoundError:
     pass
 
-agg = af.Aggregator.from_database(
-    filename=f"{database_name}.sqlite", completed_only=False
+from autofit.aggregator.aggregator import Aggregator
+
+agg = Aggregator.from_directory(
+    directory=path.join("output", "temporal"), completed_only=False
 )
-agg.add_directory(directory=path.join("output", database_name))
+# agg.add_directory(directory=path.join("output", database_name))
 
 """
 __Instances__
@@ -78,3 +80,7 @@ print(f"Trap density of fit 1 (t = 1): {ml_instances_list[0].cti.trap_list[0].de
 print(f"Trap density of fit 2 (t = 2): {ml_instances_list[1].cti.trap_list[0].density}")
 
 print(f"Trap Density interpolated at t = 1.5 {instance.cti.trap_list[0].density}")
+
+"""
+Finish.
+"""

@@ -244,6 +244,7 @@ time linearly between the values computed by the model-fits above.
 
 More advanced interpolation schemes are available and described in the `interpolation.py` example.
 """
+
 interpolator = af.LinearInterpolator(instances=ml_instances_list)
 
 """

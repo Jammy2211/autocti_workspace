@@ -13,9 +13,11 @@ dataset:
   pre_cti_data: false
   cosmic_ray_map: false
   noise_scaling_map_dict: false
-  absolute_signal_to_noise_map: false
-  potential_chi_squared_map: false
   fpr_non_uniformity: false
+  rows_fpr: true                          # Plot the data, binned over rows, where only the FPR is visible?
+  rows_no_fpr: true                       # Plot the data, binned over rows, where the FPR is masked?
+  columns_fpr: true                       # Plot the data, binned over columns, where only the FPR is visible?
+  columns_no_fpr: true                    # Plot the data, binned over columns, where the FPR is masked?
 imaging:
   psf: false
 fit:
@@ -31,7 +33,10 @@ fit:
   chi_squared_map: false
   residual_flux_fraction: false            # Plot individual plots of the residual_flux_fraction?
   noise_scaling_map_dict: false
+  rows_fpr: true                          # Plot the data, binned over rows, where only the FPR is visible?
+  rows_no_fpr: true                       # Plot the data, binned over rows, where the FPR is masked?
+  columns_fpr: true                       # Plot the data, binned over columns, where only the FPR is visible?
+  columns_no_fpr: true                    # Plot the data, binned over columns, where the FPR is masked?
   subplot_fit: false
   all_at_end_png: false
   all_at_end_fits: false
-

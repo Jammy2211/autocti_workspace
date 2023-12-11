@@ -14,7 +14,7 @@ In this script, we will fit charge injection imaging to calibrate CTI, where:
 
 __Start Here Notebook__
 
-If any code in this script is unclear, refer to the modeling `start_here.ipynb` notebook for more detailed comments.
+If any code in this script is unclear, refer to the `modeling/start_here.ipynb` notebook.
 """
 # %matplotlib inline
 # from pyprojroot import here
@@ -64,7 +64,7 @@ region_list = [
 """
 The normalization of every charge injection image, which determines how many images are simulated.
 """
-norm_list = [100, 5000, 25000, 200000] * 8
+norm_list = [100, 5000, 25000, 200000]
 
 """
 The total number of charge injection images that are fitted.
