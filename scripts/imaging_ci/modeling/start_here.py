@@ -226,7 +226,7 @@ __Model Composition__
 The API below for composing a CTI model uses the `Model` and `Collection` objects, which are imported from 
 **PyAutoCTI**'s parent project **PyAutoFit** 
 
-The API is is fairly self explanatory and is straight forward to extend, for example adding more light profiles
+The API is fairly self explanatory and is straight forward to extend, for example adding more light profiles
 to the CTI and source or using a different mass profile.
 
 __Model Cookbook__

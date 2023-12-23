@@ -66,6 +66,21 @@ density_le3_list = [instance.cti.trap_list[0].density for instance in le3_instan
 
 time_list = [instance.time for instance in mp_instances_list]
 
+interpolator = af.LinearInterpolator(instances=mp_instances_list)
+
+density_interpolate_list = []
+
+for time in sorted(time_list):
+    instance = interpolator[interpolator.time == time]
+
+    density_interpolate_list.append(instance.cti.trap_list[0].density)
+
+from scipy.stats import stats
+
+slope, intercept, r, p, std_err = stats.linregress(time_list, density_mp_list)
+
+print(time_list, density_mp_list)
+
 mat_plot = aplt.MatPlot1D(
     output=aplt.Output(
         path=path.join("scripts", "dataset_1d", "advanced", "temporal", "images"),
@@ -75,15 +90,20 @@ mat_plot = aplt.MatPlot1D(
 
 from autoarray.plot.auto_labels import AutoLabels
 
-mat_plot_1d.plot_yx(
-    y=density_mp_list,
-    x=time_list,
+print(density_interpolate_list)
+
+mat_plot.plot_yx(
+    y=ac.ArrayIrregular(values=density_mp_list),
+    x=ac.ArrayIrregular(time_list),
     plot_axis_type_override="errorbar",
     visuals_1d=aplt.Visuals1D(),
+    y_extra=ac.ArrayIrregular(values=density_interpolate_list),
     y_errors=[density_le3_list, density_ue3_list],
     auto_labels=AutoLabels(
         title=f"Density vs Time",
         yunit="",
         filename=f"density_versus_time",
+        xlabel=r"Time (s)",
+        ylabel="Density (e-/pixel)",
     ),
 )
