@@ -93,7 +93,7 @@ for i, dataset_name in enumerate(dataset_name_list):
             prescan=prescan,
             overscan=overscan,
         )
-        for i in range(total_datasets)
+        for _ in range(total_datasets)
     ]
 
     """
