@@ -14,7 +14,7 @@ include_2d:
   border: false                     # Include the border of the mask (all pixels on the outside of the mask) ?
   grid: false                       # Include the data's 2D grid of (y,x) coordinates ?
   positions: true                   # Include (y,x) coordinates specified via `Visuals2d.positions` ?
-  mapper_image_plane_mesh_grid: true       # For an Inversion, include the pixel centres computed in the image-plane / data frame?
+  mapper_image_plane_mesh_grid: false       # For an Inversion, include the pixel centres computed in the image-plane / data frame?
   mapper_source_plane_data_grid: false    # For an Inversion, include the centres of the image-plane grid mapped to the source-plane / frame in source-plane figures?
   mapper_source_plane_mesh_grid: false    # For an Inversion, include the centres of the mesh pixels in the source-plane / source-plane?
   parallel_overscan: true
