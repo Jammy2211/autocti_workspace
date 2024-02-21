@@ -176,7 +176,6 @@ are safely stored  and available to check how the dataset was simulated in the f
 
 This can be loaded via the methods `cti = ac.from_json()` and `clocker = ac.from_json()`.
 """
-40
 ac.output_to_json(
     obj=clocker,
     file_path=path.join(dataset_path, "clocker.json"),

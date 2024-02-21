@@ -314,7 +314,10 @@ injection data.
 """
 dataset_plotter = aplt.Dataset1DPlotter(
     dataset=dataset,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Dataset")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Dataset")
+    ),
 )
 dataset_plotter.subplot_dataset()
 
@@ -353,16 +356,26 @@ fit = ac.FitDataset1D(dataset=dataset, post_cti_data=post_cti_data)
 Plotting the fit shows this model gives a good fit, with minimal residuals.
 """
 fit_plotter = aplt.FitDataset1DPlotter(
-    fit=fit, mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Residual Map"))
+    fit=fit,
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Residual Map")
+    )
 )
 fit_plotter.figures_1d(residual_map=True)
 fit_plotter = aplt.FitDataset1DPlotter(
     fit=fit,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Normalized Residual Map")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Normalized Residual Map")
+    ),
 )
 fit_plotter.figures_1d(normalized_residual_map=True)
 fit_plotter = aplt.FitDataset1DPlotter(
-    fit=fit, mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Chi-Squared Map"))
+    fit=fit, mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Chi-Squared Map")
+    )
 )
 fit_plotter.figures_1d(chi_squared_map=True)
 

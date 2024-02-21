@@ -51,11 +51,12 @@ input(
 
     To fix this in PyAutoCTI, try changing the backend entry in the config file to one of the following values:"
 
-
     backend=TKAgg
     backend=Qt5Agg
     backeknd=Qt4Agg
 
+    NOTE: If a matplotlib figure window appears, you may need to close it via the X button and then press 
+    enter to continue the script.
 
     [Press Enter to continue]
     """
@@ -70,22 +71,22 @@ except ModuleNotFoundError:
         "##################\n\n"
         """
         Numba is not currently installed.
-
-        Numba is a library which makes PyAutoCTI run a lot faster. Certain functionality is disabled without numba"
+        
+        Numba is a library which makes PyAutoCTI run a lot faster. Certain functionality is disabled without numba
         and will raise an exception if it is used.
-
+        
         If you have not tried installing numba, I recommend you try and do so now by running the following 
         commands in your command line / bash terminal now:
-
+        
         pip install --upgrade pip
         pip install numba
+        
+        If your numba installation raises an error and fails, you should go ahead and use PyAutoCTI without numba to 
+        decide if it is the right software for you. If it is, you should then commit time to bug-fixing the numba
+        installation. Feel free to raise an issue on GitHub for support with installing numba.
 
-        If your numba installations are not working, feel free to go ahead and use PyAutoGalaxy to decide if it
-        is the right software for you. If it is and you are still having difficult installing numba, feel free to 
-        raise an issue on GitHub for support with installing numba.
-
-        The following warning will crop up throughout your *PyAutoCTI** use until you install numba:
-
+        A warning will crop up throughout your *PyAutoCTI** use until you install numba, to remind you to do so.
+        
         [Press Enter to continue]
         """
     )
@@ -119,7 +120,7 @@ dataset_plotter.subplot_dataset()
 input(
     "\n"
     "###############################\n"
-    "## EXAMPLE NOISY 1D GAUSIAN ###\n"
+    "## EXAMPLE CTI DATASET ###\n"
     "###############################\n\n"
     """
     The image displayed on your screen shows a 1D CTI calibration dataset, which will be fitted in example tutorials.

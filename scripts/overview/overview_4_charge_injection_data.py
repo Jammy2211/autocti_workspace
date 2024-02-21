@@ -177,7 +177,10 @@ parallel_eper_1d = layout.extract.parallel_eper.binned_array_1d_from(
 
 array_1d_plotter = aplt.Array1DPlotter(
     y=parallel_eper_1d,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Binned Parallel EPERs")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Binned Parallel EPERs")
+    ),
 )
 array_1d_plotter.figure_1d()
 
@@ -189,7 +192,10 @@ parallel_fpr_1d = layout.extract.parallel_fpr.binned_array_1d_from(
 )
 array_1d_plotter = aplt.Array1DPlotter(
     y=parallel_fpr_1d,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Binned Parallel FPRs")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Binned Parallel FPRs")
+    ),
 )
 array_1d_plotter.figure_1d()
 
@@ -198,7 +204,10 @@ serial_eper_1d = layout.extract.serial_eper.binned_array_1d_from(
 )
 array_1d_plotter = aplt.Array1DPlotter(
     y=serial_eper_1d,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Binned Serial EPERs")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Binned Serial EPERs")
+    ),
 )
 array_1d_plotter.figure_1d()
 
@@ -207,7 +216,10 @@ serial_fpr_1d = layout.extract.serial_fpr.binned_array_1d_from(
 )
 array_1d_plotter = aplt.Array1DPlotter(
     y=serial_fpr_1d,
-    mat_plot_1d=aplt.MatPlot1D(title=aplt.Title(label=r"1D Binned Serial FPRs")),
+    mat_plot_1d=aplt.MatPlot1D(
+        yticks=aplt.YTicks(manual_suffix="e-"),
+        title=aplt.Title(label=r"1D Binned Serial FPRs")
+    ),
 )
 array_1d_plotter.figure_1d()
 
