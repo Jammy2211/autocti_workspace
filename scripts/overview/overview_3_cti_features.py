@@ -293,4 +293,9 @@ array_1d_plotter.figure_1d()
 """
 __Wrap Up__
 
+In this overview, we have learnt about the different features the CTI model introduces into data clocked out of a CCD.
+
+This includes the First Pixel Response (FPR), the Extended Pixel Edge Response (EPER) and the volume filling of
+electrons in the CCD. We have also learnt how these features inform us about the CTI model, for example the density of
+traps and how they release electrons.
 """

@@ -60,7 +60,7 @@ massive over simplification, but in order to understand CTI this process can be 
 The animation below shows this process in action (this will display automatically in a Jupyter notebook, if you are 
 viewing the Python script go manually to the URL):
 
-![CCD Animation](https://github.com/Jammy2211/autocti_workspace/blob/main/dataset/ccd.gif "ccd")
+![CCD Animation](https://github.com/Jammy2211/autocti_workspace/blob/main/dataset/overview/ccd.gif "ccd")
 
 __CTI__
 
@@ -82,7 +82,7 @@ electron, one of two things can happen:
 The animation below shows the CCD clocking process, but now includes one of these traps (this will display automatically 
 in a Jupyter notebook, if you are viewing the Python script go manually to the URL):
 
-![CTI Animation](https://github.com/Jammy2211/autocti_workspace/blob/main/dataset/cti.gif "cti")
+![CTI Animation](https://github.com/Jammy2211/autocti_workspace/blob/main/dataset/overview/cti.gif "cti")
 
 __Charge Transfer__
 

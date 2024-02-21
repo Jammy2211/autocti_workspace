@@ -128,7 +128,9 @@ We can plot the charge injection imaging using a `ImagingCI` object.
 """
 dataset_plotter = aplt.ImagingCIPlotter(
     dataset=dataset,
-    mat_plot_2d=aplt.MatPlot2D(title=aplt.Title(label=r"2D Charge Injection Image")),
+    mat_plot_2d=aplt.MatPlot2D(
+        title=aplt.Title(label=r"2D Charge Injection Image", fontsize=20)
+    ),
 )
 dataset_plotter.figures_2d(data=True)
 
@@ -146,7 +148,7 @@ We can zoom in on one of these regions and change the color scheme to properly h
 """
 mat_plot = aplt.MatPlot2D(
     axis=aplt.Axis(extent=[-106.0, -96.0, 88.0, 98.0]),
-    cmap=aplt.Cmap(vmin=0.0, vmax=100.0),
+    cmap=aplt.Cmap(vmin=0.0, vmax=5.0),
     title=aplt.Title(label=r"2D Charge Injection FPRs"),
 )
 
@@ -256,7 +258,9 @@ More realistic charge injection imaging has many other features, for example:
  - There may be cosmic rays which hit the CCD during data acquisition and are read-out in the data. This is not a 
  problem for CTI calibration provided we can detect, flag and mask these cosmic rays.
 
-**PyAutoCTI** has built in tools for both these tasks which are illustrated at ?.
+**PyAutoCTI** has built in tools for both these tasks which are illustrated at:
+ 
+https://github.com/Jammy2211/autocti_workspace/tree/main/notebooks/imaging_ci/data_preparation.
 """
 dataset_name = "overview"
 dataset_type = "non_uniform_cosmic_rays"

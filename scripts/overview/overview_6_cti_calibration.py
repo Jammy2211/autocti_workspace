@@ -9,10 +9,10 @@ We are now in a position to perform CTI calibration, that is determine the best-
 dataset. This requires us to perform model-fitting, whereby we use a non-linear search algorithm to fit the
 model to the data.
 
-CTI modeling uses the probabilistic programming language
-`PyAutoFit <https://github.com/rhayes777/PyAutoFit>`_, an open-source Python framework that allows complex model
-fitting techniques to be straightforwardly integrated into scientific modeling software. Check it out if you
-are interested in developing your own software to perform advanced model-fitting!
+CTI modeling uses the probabilistic programming language [PyAutoFit](https://github.com/rhayes777/PyAutoFit), an
+open-source Python framework that allows complex model fitting techniques to be straightforwardly integrated into
+scientific modeling software. Check it out if you are interested in developing your own software to perform
+advanced model-fitting!
 
 Whereas previous tutorials loaded a single charge injection dataset, this tutorial will load and fit three datasets
 each with a different injection normalizations. This is necessary for us to be able to calibrate the CTI model's

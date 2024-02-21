@@ -53,7 +53,7 @@ Clocking and read-out of a 2D image extends the 1D description above as follows:
  3) At the far end of the read-out register are the read-out electronics. This was seen in the 1D animations in the
     previous overview and is located at the top-left of the schematic above. The electrons in this row of 2066 pixels, 
     read-out register, are clocked towards read out electronics and converted from an analogue to digital signal.
-    This is called '**serial** clocking.
+    This is called '**serial**' clocking.
 
  3) After the electrons in these 2066 pixels are read out, the read-out register is now empty and the next row of 
     electrons are shifted into it.

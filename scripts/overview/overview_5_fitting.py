@@ -205,6 +205,7 @@ fit_plotter = aplt.FitImagingCIPlotter(
     ),
 )
 fit_plotter.figures_2d(chi_squared_map=True)
+
 """
 If we compare the `log_likelihood` to the value above, we can see that it has increased by a lot, again indicating a
 good fit.
