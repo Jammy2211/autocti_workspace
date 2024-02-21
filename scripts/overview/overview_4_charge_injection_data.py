@@ -8,6 +8,10 @@ Now we know how CTI information is contained in the First-Pixel Response (FPR) a
 of a dataset, lets consider how a charge injection dataset contains everything we need to calibrate a CTI model.
 
 Lets again load our 2D schematic of a charge injection image:
+
+Numba Warning: This is the first overview example which will run a lot slower (at least 50 times slower) due to
+numba not being installed. Now is a good time to install numba using pip, if you have not done so already. More
+information can be found at the following link: https://pyautocti.readthedocs.io/en/latest/installation/numba.html
 """
 # %matplotlib inline
 # from pyprojroot import here
@@ -110,6 +114,12 @@ This is done by running the following scripts:
 - `python scripts/imaging_ci/simulators/overview/uniform.py`
 - `python scripts/imaging_ci/simulators/overview/non_uniform_cosmic_rays.py`
 - `python scripts/imaging_ci/simulators/overview/calibrate.py`
+
+If you are running this example in a Jupiter notebook, you can use the follow magic method to run the script:
+
+!python scripts/imaging_ci/simulators/overview/uniform.py
+!python scripts/imaging_ci/simulators/overview/non_uniform_cosmic_rays.py
+!python scripts/imaging_ci/simulators/overview/calibrate.py
 """
 dataset_name = "overview"
 dataset_type = "uniform"
