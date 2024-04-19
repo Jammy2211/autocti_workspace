@@ -74,7 +74,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_0,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $\rho = 250.0$")
+        title=aplt.Title(label=r"1D CTI Data Density $\rho = 250.0$"),
     ),
 )
 array_1d_plotter.figure_1d()
@@ -83,7 +83,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_1,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $\rho = 500.0$")
+        title=aplt.Title(label=r"1D CTI Data Density $\rho = 500.0$"),
     ),
 )
 array_1d_plotter.figure_1d()
@@ -141,7 +141,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_0,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $\tau = 0.5$")
+        title=aplt.Title(label=r"1D CTI Data Density $\tau = 0.5$"),
     ),
 )
 array_1d_plotter.figure_1d()
@@ -150,7 +150,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_1,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $\tau = 3.0$")
+        title=aplt.Title(label=r"1D CTI Data Density $\tau = 3.0$"),
     ),
 )
 array_1d_plotter.figure_1d()
@@ -276,7 +276,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_0,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $n_{\rm e} = 10.0$")
+        title=aplt.Title(label=r"1D CTI Data Density $n_{\rm e} = 10.0$"),
     ),
 )
 array_1d_plotter.figure_1d()
@@ -285,7 +285,7 @@ array_1d_plotter = aplt.Array1DPlotter(
     y=post_cti_data_1d_1,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D CTI Data Density $n_{\rm e} = 100.0$")
+        title=aplt.Title(label=r"1D CTI Data Density $n_{\rm e} = 100.0$"),
     ),
 )
 array_1d_plotter.figure_1d()

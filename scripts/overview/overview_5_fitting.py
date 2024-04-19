@@ -316,8 +316,7 @@ injection data.
 dataset_plotter = aplt.Dataset1DPlotter(
     dataset=dataset,
     mat_plot_1d=aplt.MatPlot1D(
-        yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D Dataset")
+        yticks=aplt.YTicks(manual_suffix="e-"), title=aplt.Title(label=r"1D Dataset")
     ),
 )
 dataset_plotter.subplot_dataset()
@@ -360,23 +359,24 @@ fit_plotter = aplt.FitDataset1DPlotter(
     fit=fit,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D Residual Map")
-    )
+        title=aplt.Title(label=r"1D Residual Map"),
+    ),
 )
 fit_plotter.figures_1d(residual_map=True)
 fit_plotter = aplt.FitDataset1DPlotter(
     fit=fit,
     mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D Normalized Residual Map")
+        title=aplt.Title(label=r"1D Normalized Residual Map"),
     ),
 )
 fit_plotter.figures_1d(normalized_residual_map=True)
 fit_plotter = aplt.FitDataset1DPlotter(
-    fit=fit, mat_plot_1d=aplt.MatPlot1D(
+    fit=fit,
+    mat_plot_1d=aplt.MatPlot1D(
         yticks=aplt.YTicks(manual_suffix="e-"),
-        title=aplt.Title(label=r"1D Chi-Squared Map")
-    )
+        title=aplt.Title(label=r"1D Chi-Squared Map"),
+    ),
 )
 fit_plotter.figures_1d(chi_squared_map=True)
 
