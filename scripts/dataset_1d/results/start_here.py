@@ -90,7 +90,7 @@ clocker = ac.Clocker1D(express=5)
 trap_0 = af.Model(ac.TrapInstantCapture)
 trap_1 = af.Model(ac.TrapInstantCapture)
 
-trap_0.add_assertion(trap_0.release_timescale < trap_1.release_timescale)
+# trap_0.add_assertion(trap_0.release_timescale < trap_1.release_timescale)
 
 trap_list = [trap_0, trap_1]
 
@@ -101,7 +101,9 @@ ccd.full_well_depth = 200000.0
 model = af.Collection(cti=af.Model(ac.CTI1D, trap_list=trap_list, ccd=ccd))
 
 search = af.Nautilus(
-    path_prefix=path.join("dataset_1d", dataset_name), name="species[x2]", n_live=100
+    path_prefix=path.join("results_folder"),
+    name="results",
+    n_live=100
 )
 
 analysis_list = [
@@ -155,7 +157,7 @@ but if not you can revert to the `samples.
 from autofit.aggregator.aggregator import Aggregator
 
 agg = Aggregator.from_directory(
-    directory=path.join("output", "cookbook_result"),
+    directory=path.join("output", "results_folder"),
 )
 
 """
