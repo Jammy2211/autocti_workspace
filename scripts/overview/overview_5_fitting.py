@@ -116,7 +116,7 @@ The `FitImagingCI` object contains both these terms as properties, however they 
 array.
 """
 print(fit.post_cti_data.native[0, 0])
-print(fit.model_image.native[0, 0])
+print(fit.model_data.native[0, 0])
 
 """
 The `FitImagingCI` contains the following NumPy arrays as properties which quantify the goodness-of-fit:

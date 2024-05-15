@@ -141,8 +141,8 @@ imaging data's PSF.
 This is the image that is fitted to the data in order to compute the log likelihood and therefore quantify the 
 goodness-of-fit.
 """
-print(fit.model_image.slim)
-print(fit.model_image.native)
+print(fit.model_data.slim)
+print(fit.model_data.native)
 
 """
 There are numerous ndarrays showing the goodness of fit: 
@@ -173,24 +173,6 @@ There are single valued floats which quantify the goodness of fit:
 print(fit.chi_squared)
 print(fit.noise_normalization)
 print(fit.log_likelihood)
-
-"""
-__Galaxy Quantities__
-
-The `FitImaging` object has specific quantities which break down each image of each galaxy:
-
- - `model_images_of_galaxies_list`: Model-images of each individual galaxy, which in this example is a model image of 
- the two galaxies in the model. Both images are convolved with the imaging's PSF.
- 
- - `subtracted_images_of_galaxies_list`: Subtracted images of each individual galaxy, which are the data's image with
- all other galaxy's model-images subtracted. For example, the first subtracted image has the second galaxy's model image
- subtracted and therefore is of only the right galaxy's emission.
-"""
-print(fit.model_images_of_galaxies_list[0].slim)
-print(fit.model_images_of_galaxies_list[1].slim)
-
-print(fit.subtracted_images_of_galaxies_list[0].slim)
-print(fit.subtracted_images_of_galaxies_list[1].slim)
 
 """
 __Unmasked Quantities__
