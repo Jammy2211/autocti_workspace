@@ -201,7 +201,7 @@ this object, including:
 Below, is an example of how to use the `Samples` object to estimate the mass model parameters which are 
 the median of the probability distribution function and its errors at 3 sigma confidence intervals.
 """
-samples = result_list.samples
+samples = result_list[0].samples
 
 median_pdf_instance = samples.median_pdf()
 
