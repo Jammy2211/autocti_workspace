@@ -165,7 +165,7 @@ for i, dataset_name in enumerate(dataset_name_list):
 
     # Bug means cant combine session with assertion for now.
 
-    # trap_0.add_assertion(trap_0.release_timescale < trap_1.release_timescale)
+    trap_0.add_assertion(trap_0.release_timescale < trap_1.release_timescale)
 
     trap_list = [trap_0, trap_1]
 
