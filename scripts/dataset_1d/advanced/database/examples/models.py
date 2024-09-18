@@ -30,7 +30,7 @@ agg = af.Aggregator.from_database("database.sqlite")
 __CTI via Database__
 
 Having performed a model-fit, we now want to interpret and visualize the results. In this example, we want to inspect
-the `CTI` object objects that gave good fits to the data. 
+the `CTI` objects that gave good fits to the data. 
 
 Using the API shown in the `start_here.py` example this would require us to create a `Samples` object and manually 
 compose our own `CTI` object. For large datasets, this would require us to use generators to ensure it is memory-light,
