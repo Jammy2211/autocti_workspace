@@ -425,7 +425,7 @@ total_density_list = []
 for sample in samples.sample_list:
     instance = sample.instance_for_model(model=samples.model, ignore_assertions=True)
 
-    trap_list = instance.galaxies.cti.trap_list
+    trap_list = instance.cti.trap_list
 
     total_density = sum([trap.density for trap in trap_list])
 
@@ -458,7 +458,7 @@ print(samples.parameter_lists[0])
 
 samples = samples.with_paths(
     [
-        ("cti", "trap_list", "density"),
+        ("cti", "trap_list"),
     ]
 )
 
@@ -482,7 +482,7 @@ We can alternatively use the following API:
 """
 samples = result.samples
 
-samples = samples.with_paths(["cti.trap_list.density", "cti.ccd.well_fill_power"])
+samples = samples.with_paths(["cti.trap_list", "cti.ccd.well_fill_power"])
 
 print(
     "All parameters of the very first sample (containing only the galaxy bulge's effective radius and sersic index)."
@@ -503,7 +503,7 @@ print(samples.parameter_lists[0])
 
 print(samples.model.prior_count)
 
-samples = samples.without_paths(["cti.trap_list.density"])
+samples = samples.without_paths(["cti.trap_list"])
 
 print("Parameters of first sample without trap densities.")
 print(samples.parameter_lists[0])
