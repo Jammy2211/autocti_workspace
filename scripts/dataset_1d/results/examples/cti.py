@@ -107,7 +107,7 @@ delta_ellipticity_list = []
 print(samples.model.info)
 
 for sample in samples.sample_list:
-    instance = sample.instance_for_model(model=samples.model)
+    instance = sample.instance_for_model(model=samples.model, ignore_assertions=True)
     delta_ellipticity_list.append(instance.cti.delta_ellipticity)
 
 (

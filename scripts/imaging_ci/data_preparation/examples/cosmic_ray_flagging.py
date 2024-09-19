@@ -148,6 +148,9 @@ with such high signal to noise values other than a cosmic ray.
 cr_threshold = 4.0
 
 cosmic_ray_flag_mask = data_corrected.native > cr_threshold * dataset.noise_map.native
+cosmic_ray_flag_mask = ac.Array2D.no_mask(
+    values=cosmic_ray_flag_mask, pixel_scales=dataset.pixel_scales
+)
 
 """
 We now plot the cosmic ray flag mask, which is a boolean array that contained `True` for any pixel 
@@ -185,6 +188,9 @@ To mitigate this effect, we can simply subtract off the charge injection pattern
 image only containing cosmic rays which we can flag. 
 """
 cosmic_ray_flag_mask = data_charge_subtracted > cr_threshold * dataset.noise_map.native
+cosmic_ray_flag_mask = ac.Array2D.no_mask(
+    values=cosmic_ray_flag_mask, pixel_scales=dataset.pixel_scales
+)
 
 array_2d_plotter = aplt.Array2DPlotter(array=cosmic_ray_flag_mask)
 array_2d_plotter.figure_2d()
@@ -192,7 +198,10 @@ array_2d_plotter.figure_2d()
 """
 We can also use the cosmic ray mask to create a `cosmic_ray_map`, which only contains the flagged cosmic rays.
 """
-cosmic_ray_map = data_charge_subtracted * cosmic_ray_flag_mask
+cosmic_ray_map = data_charge_subtracted * cosmic_ray_flag_mask.native
+cosmic_ray_map = ac.Array2D.no_mask(
+    values=cosmic_ray_map, pixel_scales=dataset.pixel_scales
+)
 
 array_2d_plotter = aplt.Array2DPlotter(array=cosmic_ray_map)
 array_2d_plotter.figure_2d()

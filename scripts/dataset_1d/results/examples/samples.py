@@ -423,7 +423,7 @@ compute its error, we also pass the weight list of the samples.
 total_density_list = []
 
 for sample in samples.sample_list:
-    instance = sample.instance_for_model(model=samples.model)
+    instance = sample.instance_for_model(model=samples.model, ignore_assertions=True)
 
     trap_list = instance.galaxies.cti.trap_list
 
