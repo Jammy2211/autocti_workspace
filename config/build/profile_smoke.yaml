@@ -10,6 +10,14 @@
 defaults:
   PYAUTO_TEST_MODE: "2"
   PYAUTO_SKIP_WORKSPACE_VERSION_CHECK: "1"
+  # Drop every figure before it is rasterised or saved, as the autolens /
+  # autogalaxy smoke profiles do. The bypassed fit still exercises every plot
+  # call (the data/model extraction, the zoom, the subplot layout) — only the
+  # matplotlib draw + PNG write and the mask-edge overlay are skipped. Measured
+  # locally on imaging_ci/modeling/start_here.py (PyAutoBrain /ci_speedup,
+  # 2026-09-08): ~17s of image rasterisation + ~20-40s of per-figure mask-edge
+  # derivation on the 2000x100 frame, across ~100 on-the-fly figures per run.
+  PYAUTO_FAST_PLOTS: "1"
   MPLBACKEND: "Agg"
   NUMBA_CACHE_DIR: "/tmp/numba_cache"
   MPLCONFIGDIR: "/tmp/matplotlib"
